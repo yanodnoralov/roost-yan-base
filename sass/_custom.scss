@@ -92,6 +92,9 @@ b, strong {
 	text-align: center;
 }
 
+.jumbotron {
+	background-color: transparent;
+}
 
 // header
 .site-header {
@@ -904,4 +907,103 @@ nav {
 			}
 		}
 	}
+}
+.page-hero {
+	background-size: cover;
+	background-repeat: no-repeat;
+	h1 {
+		font-size: 70px;
+	}
+	p {
+		font-size: 42px;
+	}
+	height: 100vh;
+	.border-green-left {
+		border-left: 3px solid #81d134;
+	}
+}
+.section-claims {
+	padding: 100px 0px;
+	background-image: url(img/save-millions-wave-bg.png);
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-color: #f9f9f9;
+	h2 {
+		font-size: 60px;
+		margin-bottom: 60px;
+	}
+	text-align: center;
+	p {
+		font-size: 42px;
+	}
+	.first-sec{
+		margin-bottom: 100px;
+		&:after {
+			content: url(img/seperators/line.png);
+			text-align: center;
+			display: block;
+		}
+	}
+	.white-sec-cont {
+		background: rgba(255, 255, 255, 0.95);
+		img {
+			max-height: 102px;
+			width: auto;
+		}
+		padding: 30px;
+
+	}
+
+	.top-cont-card {
+		padding: 30px 70px;
+		top: -80px;
+		.price {
+			font-weight: 700;
+		}
+		font-size: 40px;
+		color: rgb(255, 255, 255);
+		line-height: 1.15;
+		text-align: center;
+		background-color: rgb(42, 72, 120);
+	}
+
+	.card-text {
+		font-size: 34px;
+	}
+	.card-title {
+		font-size: 40px;
+		color: rgb(42, 72, 120);
+		line-height: 1.55;
+		text-align: center;
+	}
+	.card-footer{
+		font-size: 40px;
+		color: white;
+		line-height: 1.15;
+		text-align: center;
+		p {
+
+			line-height: 1;
+			text-align: center;
+			font-size: 23px;
+		}
+		height: 200px;
+		width: 200px;
+		margin: 0 auto;
+
+			border-radius: 50%;
+			background-color: rgb(23, 70, 143);
+		.middle-vert {
+			margin-top: 25%;
+		}
+
+	}
+	.card-deck {
+		margin-bottom: 50px;
+	}
+	.card {
+		border: 0px;
+		background-color: transparent;
+	}
+
 }
