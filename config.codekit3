@@ -23,10 +23,18 @@
 		"oAP": "\/404.php",
 		"oF": 0
 		},
-	"\/acf-json\/group_5b8e5cd5b50c6.json": {
+	"\/acf-json\/group_5b8ea7eecdc98.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/acf-json\/group_5b8e5cd5b50c6-min.json",
+		"oAP": "\/acf-json\/group_5b8ea7eecdc98-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b8f8fc0ed7d0.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b8f8fc0ed7d0-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -368,6 +376,17 @@
 		"iS": 56540,
 		"oA": 0,
 		"oAP": "\/img\/usaa.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/vertical_divider.png": {
+		"ft": 32768,
+		"iS": 121,
+		"oA": 0,
+		"oAP": "\/img\/vertical_divider.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,

@@ -145,12 +145,12 @@
         -->
                         </div><!-- .site-info -->
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6 text-right footer-sub-menu">
                         <small>
                             <?php
                             wp_nav_menu( array(
-                                'theme_location' => 'menu-3',
-                                'container' => 'div',
+                                'theme_location' => 'menu-6',
+                                'container' => '',
                                 'items_wrap' => '%3$s',
                                 'before' => '', 'after' => '',
 
@@ -163,8 +163,37 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
-
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('.modal-target-contact').find('a').attr('data-toggle', 'modal');
+        jQuery('.modal-target-contact').find('a').attr('data-target', '#myModal');
+    });
+</script>
 </body>
 </html>

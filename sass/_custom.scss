@@ -566,7 +566,9 @@ nav {
 	left: 0; top: 0;
 	z-index: 2;
 }
-
+.container {
+	max-width: 1680px;
+}
 //buttons
 .btn {
 	background: none;
@@ -644,6 +646,8 @@ nav {
 
 // inside pages
 .hero {
+	padding-top: 55px;
+	/*
 	background: #0892c9;
 	background: -moz-linear-gradient(top, #0892c9 30%, #1839c6 100%);
 	background: -webkit-linear-gradient(top, #0892c9 30%,#1839c6 100%);
@@ -653,6 +657,7 @@ nav {
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+	*/
 	.container {
 		z-index: 5;
 		position: relative;
@@ -715,8 +720,9 @@ nav {
 	}
 }
 
-// homepage slider with boxes
+// testemonials
 .slider-cont{
+	padding-bottom: 50px;
 	.section-title {
 		padding-bottom: 50px;
 		&:after {
@@ -729,12 +735,16 @@ nav {
 		padding:0px 50px 0px 50px;
 		text-align: center;
 	}
+	.cta-carousel {
+		margin-top: 50px;
+	}
 	.carousel {
 		width: 100%;
 		.caro-item {
 			text-align: center;
 		}
 		.card {
+			position: static;
 			display: flex;
 			.hover-content {
 				display: none;
@@ -745,17 +755,20 @@ nav {
 					position: absolute;
 					background-color: white;
 					height: 100%;
-					min-height: 510px;
+					min-height: 490px;
 					top: 0px;
-					z-index: 999;
-					width: 100%;
-					left: 0px;
+					overflow: visible;
+					z-index: 99999;
+					width: 405px;
+					//left: 0px;
 					padding: 20px;
 					img {
 						padding: 10px 0px;
 					}
 					border: 1px solid rgba(0,0,0,.125);
 					border-radius: 4px;
+					margin-left: -21px;
+					max-height: 512px;
 
 				}
 			}
@@ -787,15 +800,17 @@ nav {
 		background-image: url(img/next.png);
 	}
 	.carousel-control-prev {
-		left: -100px;
+		left: -150px;
 	}
 	.carousel-control-next {
-		right: -100px;
+		right: -150px;
 	}
 
 }
 .globe-area {
-	background-image: url(img/globe.png);
+	background: #4698dd;
+	background-position: left center;
+	background-repeat: no-repeat;
 	min-height: 600px;
 	h2 {
 		color: white;
@@ -810,7 +825,9 @@ nav {
 		font-weight: 800;
 
 	}
-
+	padding: 0px;
+	margin: 0px;
+	border-radius: 0px;
 }
 
 .site-footer {
@@ -866,5 +883,25 @@ nav {
 	.bottom-footer {
 		border-top: 2px solid grey;
 		padding: 30px 0px;
+		.footer-sub-menu {
+			li {
+				list-style: none;
+				display: inline-flex;
+				&::after{
+					content: ' / ';
+
+					padding-left: 5px;
+				}
+				&:last-child {
+					&::after {
+						content: '';
+					}
+				}
+
+			}
+			li a {
+				color: white;
+			}
+		}
 	}
 }
