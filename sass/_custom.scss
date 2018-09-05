@@ -94,6 +94,7 @@ b, strong {
 
 .jumbotron {
 	background-color: transparent;
+	margin-bottom: 0px;
 }
 
 // header
@@ -922,6 +923,30 @@ nav {
 		border-left: 3px solid #81d134;
 	}
 }
+.section {
+	padding: 100px 0px;
+	.title {
+		text-align: center;
+		.h2 {
+			font-size: 60px;
+			margin-bottom: 60px;
+		}
+		p {
+			text-align: center;
+			font-size: 42px;
+		}
+
+		.green_border {
+			&:after {
+				content: url(img/seperators/line.png);
+				text-align: center;
+				display: block;
+			}
+		}
+
+	}
+
+}
 .section-claims {
 	padding: 100px 0px;
 	background-image: url(img/save-millions-wave-bg.png);
@@ -1006,4 +1031,30 @@ nav {
 		background-color: transparent;
 	}
 
+}
+.brand {
+	p {
+		font-size: 34px;
+		color: rgb(35, 31, 32);
+		line-height: 1.529;
+		text-align: left;
+	}
+	.brand-small {
+		text-align: center;
+		font-size: 30px;
+		color: rgb(118, 118, 118);
+		line-height: 1.4;
+	}
+	.brand-extra {
+		border-width: 2px;
+		border-color: rgb(238, 238, 238);
+		border-style: solid;
+		border-radius: 10px;
+		background-color: rgb(249, 249, 249);
+		padding: 10px 20px;
+		p {
+			margin-bottom: 0px;
+		}
+		margin-left: 20px;
+	}
 }

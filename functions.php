@@ -191,3 +191,8 @@ add_filter('upload_mimes', 'cc_mime_types');
  * Implement ACF options pages.
  */
 require get_template_directory() . '/inc/acf.php';
+
+/**
+ * Implement Custom Post Types
+ */
+require get_template_directory() . '/inc/cpt.php';

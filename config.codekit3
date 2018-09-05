@@ -104,6 +104,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/brand.png": {
+		"ft": 32768,
+		"iS": 124858,
+		"oA": 0,
+		"oAP": "\/img\/brand.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/card1.png": {
 		"ft": 32768,
 		"iS": 37512,
@@ -627,6 +638,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/acf.php",
+		"oF": 0
+		},
+	"\/inc\/cpt.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/cpt.php",
 		"oF": 0
 		},
 	"\/inc\/custom-header.php": {

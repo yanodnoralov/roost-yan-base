@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Template 1
+Template Name: Loss Mitigation
 */
 get_header();
 ?>
@@ -103,11 +103,43 @@ get_header();
                 </div>
         </div>
     </div>
-
 </div>
 
 
+<div class="container section brand">
+    <div class="row">
+        <div class="col-md-12 first-sec title green_border">
+            <h2 class="section-title">The Roost Ecosystem</h2>
+            <p>
+                Monitor real life situations, in real time.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Smart Sensors</h4>
+            <p>Users deploy smoke alarm, water leak and garage door sensors throughout their homes.</p>
 
+            <h4>Mobile App & Services</h4>
+            <p>
+                If something goes wrong, the app will send a notification to both the policyholder and insurer with the ability to communicate in real time.<br>
+                Plus, the app offers quicklinks to local service pros, weather alerts and self-service carrier support content .
+            </p>
+            <h4>Actionable Data</h4>
+            <p>Use data analytics to proactively contact your policyholder, inform underwriting decisions and assess policyholder risk.</p>
+            <div class="brand-extra">
+                <h4>Your Brand</h4>
+                <p>Increase NPS, retention and brand affinity by putting your brand in front of your policyholders 1-2 times / month.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="<?php echo get_template_directory_uri();?>/img/brand.png">
+            <div class="brand-small">
+                Smaller disclaimer text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
