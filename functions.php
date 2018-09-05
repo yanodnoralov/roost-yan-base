@@ -46,6 +46,10 @@ if ( ! function_exists( 'yan_base_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'yan-base' ),
 			'menu-2' => esc_html__( 'Right', 'yan-base' ),
+            'menu-3' => esc_html__( 'Footer 1', 'yan-base' ),
+            'menu-4' => esc_html__( 'Footer 2', 'yan-base' ),
+            'menu-5' => esc_html__( 'Footer 3', 'yan-base' ),
+            'menu-6' => esc_html__( 'Footer 4', 'yan-base' ),
 		) );
 
 		/*
@@ -181,3 +185,9 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+/**
+ * Implement ACF options pages.
+ */
+require get_template_directory() . '/inc/acf.php';
