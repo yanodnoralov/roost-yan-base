@@ -104,6 +104,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/bgmore.png": {
+		"ft": 32768,
+		"iS": 18871,
+		"oA": 0,
+		"oAP": "\/img\/bgmore.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/brand.png": {
 		"ft": 32768,
 		"iS": 124858,
@@ -236,6 +247,17 @@
 		"iS": 33415,
 		"oA": 0,
 		"oAP": "\/img\/guide.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ha.png": {
+		"ft": 32768,
+		"iS": 10882,
+		"oA": 0,
+		"oAP": "\/img\/ha.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -571,6 +593,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/slides.png": {
+		"ft": 32768,
+		"iS": 279648,
+		"oA": 0,
+		"oAP": "\/img\/slides.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/theft.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -580,6 +613,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/tvc.png": {
+		"ft": 32768,
+		"iS": 8189,
+		"oA": 0,
+		"oAP": "\/img\/tvc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/usaa.png": {
 		"ft": 32768,
@@ -848,11 +892,25 @@
 		"oAP": "\/page-templates\/home-page.php",
 		"oF": 0
 		},
-	"\/page-templates\/Template1.php": {
+	"\/page-templates\/sections\/slider.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/page-templates\/Template1.php",
+		"oAP": "\/page-templates\/sections\/slider.php",
+		"oF": 0
+		},
+	"\/page-templates\/sections\/team-talk.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/sections\/team-talk.php",
+		"oF": 0
+		},
+	"\/page-templates\/template-loss-mitigation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/template-loss-mitigation.php",
 		"oF": 0
 		},
 	"\/page.php": {
