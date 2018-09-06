@@ -231,6 +231,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/garage-door-sensor.jpg": {
+		"ft": 16384,
+		"iS": 18909,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/garage-door-sensor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/globe.png": {
 		"ft": 32768,
 		"iS": 32212,
@@ -604,6 +615,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/smart-battery.jpg": {
+		"ft": 16384,
+		"iS": 13429,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/smart-battery.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/theft.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -655,6 +677,17 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/water-leak-detector.jpg": {
+		"ft": 16384,
+		"iS": 22220,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/water-leak-detector.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/water-leaks.svg": {

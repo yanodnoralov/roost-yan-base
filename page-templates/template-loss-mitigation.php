@@ -188,7 +188,7 @@ get_header();
     <div class="row">
         <div class="col-md-4">
             <div class="card c1">
-                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/usaa.png" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leak-detector.jpg" alt="Card image cap">
                 <div class="card-footer">
                     <h5 class="card-title">sometitle</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -199,7 +199,7 @@ get_header();
 
         <div class="col-md-4">
             <div class="card c2">
-                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/usaa.png" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/smart-battery.jpg" alt="Card image cap">
                 <div class="card-footer">
                     <h5 class="card-title">sometitle</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -208,7 +208,7 @@ get_header();
         </div>
         <div class="col-md-4">
             <div class="card c3">
-                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/usaa.png" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/garage-door-sensor.jpg" alt="Card image cap">
                 <div class="card-footer">
                 <h5 class="card-title">sometitle</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
