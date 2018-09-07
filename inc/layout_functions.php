@@ -305,6 +305,22 @@ function get_template_by_layout($layout){
             </div>
             <?php
             break;
+        // Roost connects
+        case 'layout_7':
+            ?>
+
+
+
+            <?php
+            break;
+        // empty
+        case 'layout_8':
+            ?>
+
+
+
+            <?php
+            break;
     }
     $template = ob_get_clean();
 
