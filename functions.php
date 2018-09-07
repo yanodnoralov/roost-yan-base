@@ -196,3 +196,8 @@ require get_template_directory() . '/inc/acf.php';
  * Implement Custom Post Types
  */
 require get_template_directory() . '/inc/cpt.php';
+
+/**
+ * Include layout functions
+ */
+require get_template_directory() . '/inc/layout_functions.php';

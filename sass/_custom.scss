@@ -914,6 +914,7 @@ nav {
 	}
 }
 .page-hero {
+	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 	h1 {
@@ -927,6 +928,11 @@ nav {
 	.border-green-left {
 		border-left: 3px solid #81d134;
 	}
+}
+.align-b {
+	bottom: 50px;
+	position: absolute;
+	left: 100px;
 }
 .section {
 	padding: 100px 0px;
