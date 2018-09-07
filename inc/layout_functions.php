@@ -11,85 +11,41 @@ function get_template_by_layout($layout){
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec">
-                            <h2 class="section-title">Save Millions in Claims Every Year</h2>
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
                             <p>
-                                Fire, water and theft claims in the US exceed $42B per year. Insurance companies that deploy Roost Home Telematic solutions can expect to cut their annual claims cost, savings millions each year.
+                                <?php the_sub_field('subtitle');?>
                             </p>
                         </div>
                     </div>
                     <div class="row white-sec-cont">
                         <div class="col-md-6 offset-md-3 top-cont-card">
-                            <span class="price">$42B</span> in Annual Claims (US)
+                            <?php the_sub_field('top_text');?>
                         </div>
                         <div class="col-md-12 card-deck">
+                            <?php
+                            if ( have_rows('columns') ) :
+                            while ( have_rows('columns') ) : the_row();
+                            ?>
                             <div class="card">
-                                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leaks.svg" alt="Card image cap">
+                                <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
                                 <div class="card-body">
-                                    <h2 class="card-title">Water Leaks</h2>
-                                    <p class="card-text">Severity: $7,958<br>
-                                        Frequency: 1.86
+                                    <h2 class="card-title"><?php the_sub_field('title');?></h2>
+                                    <p class="card-text">S<?php the_sub_field('text');?>
                                     </p>
                                 </div>
                                 <div class="card-footer">
                                     <div class="middle-vert">
-                                        $9,6 B
+                                        <?php the_sub_field('circle_title');?>
                                         <p>
-                                            in Annual Claims
+                                            <?php the_sub_field('circle_subtext');?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leaks.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h2 class="card-title">Water Leaks</h2>
-                                    <p class="card-text">Severity: $7,958<br>
-                                        Frequency: 1.86
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="middle-vert">
-                                        $9,6 B
-                                        <p>
-                                            in Annual Claims
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leaks.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h2 class="card-title">Water Leaks</h2>
-                                    <p class="card-text">Severity: $7,958<br>
-                                        Frequency: 1.86
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="middle-vert">
-                                        $9,6 B
-                                        <p>
-                                            in Annual Claims
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leaks.svg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h2 class="card-title">Water Leaks</h2>
-                                    <p class="card-text">Severity: $7,958<br>
-                                        Frequency: 1.86
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="middle-vert">
-                                        $9,6 B
-                                        <p>
-                                            in Annual Claims
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            endwhile;
+                            endif;
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -103,33 +59,34 @@ function get_template_by_layout($layout){
             <div class="container section brand">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
-                        <h2 class="section-title">The Roost Ecosystem</h2>
+                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
                         <p class="sub-title-section">
-                            Monitor real life situations, in real time.
+                            <?php the_sub_field('subtitle');?>
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4>Smart Sensors</h4>
-                        <p>Users deploy smoke alarm, water leak and garage door sensors throughout their homes.</p>
+                        <?php
+                        if ( have_rows('subitems_left') ) :
+                        while ( have_rows('subitems_left') ) : the_row();
+                        ?>
+                        <h4><?php the_sub_field('title');?></h4>
+                        <p><?php the_sub_field('text');?></p>
+                        <?php
+                        endwhile;
+                        endif;
+                        ?>
 
-                        <h4>Mobile App & Services</h4>
-                        <p>
-                            If something goes wrong, the app will send a notification to both the policyholder and insurer with the ability to communicate in real time.<br>
-                            Plus, the app offers quicklinks to local service pros, weather alerts and self-service carrier support content .
-                        </p>
-                        <h4>Actionable Data</h4>
-                        <p>Use data analytics to proactively contact your policyholder, inform underwriting decisions and assess policyholder risk.</p>
                         <div class="brand-extra">
-                            <h4>Your Brand</h4>
-                            <p>Increase NPS, retention and brand affinity by putting your brand in front of your policyholders 1-2 times / month.</p>
+                            <h4><?php the_sub_field('subitem_last_title');?></h4>
+                            <p><?php the_sub_field('subitem_last_text');?></p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="<?php echo get_template_directory_uri();?>/img/brand.png">
+                        <img <?php ar_responsive_image(get_sub_field('ride_side_image'),'full','555px');?>>
                         <div class="brand-small">
-                            Smaller disclaimer text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                            <?php the_sub_field('text_below_image');?>
                         </div>
                     </div>
                 </div>
@@ -140,38 +97,59 @@ function get_template_by_layout($layout){
         // Turn key development
         case 'layout_3':
             ?>
-            <div class="jumbotron section key-dev">
+            <div class="jumbotron section key-dev" style="background: url(<?php echo get_sub_field('background_image'); ?>) no-repeat bottom left; background-size: 200px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec title">
-                            <h2 class="section-title">Turn Key Development</h2>
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
                             <p class="sub-title-section">
-                                No IT resources or big budget required, Roost takes care of it all!
+                                <?php the_sub_field('subtitle');?>
                             </p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 ">
-                            <div class="checkboxes">
-                                <h4><i class="fas fa-check"></i>Easy to implement</h4>
-                                <p>Takes less than 90 days to launch and deploy.</p>
-                            </div>
-                            <div class="checkboxes">
-                                <h4><i class="fas fa-check"></i>Easy to implement</h4>
-                                <p>Takes less than 90 days to launch and deploy.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="checkboxes">
-                                <h4><i class="fas fa-check"></i>Easy to implement</h4>
-                                <p>Takes less than 90 days to launch and deploy.</p>
-                            </div>
-                            <div class="checkboxes">
-                                <h4><i class="fas fa-check"></i>Easy to implement</h4>
-                                <p>Takes less than 90 days to launch and deploy.</p>
-                            </div>
-                        </div>
+                        <?php
+                        // how many ites do we have here?
+                        $count=0;
+                        $column_items=0;
+                        $count = count( get_sub_field('check_fields') );
+
+                        $column_items = ceil($count/2);
+
+                        $column_count=0;
+                        if ( have_rows('check_fields') ) :
+                            while ( have_rows('check_fields') ) : the_row();
+                                if ($column_count==0) {
+                                    ?>
+                                    <div class="col-md-6">
+                                    <?php
+                                }
+                                ?>
+                                <div class="checkboxes">
+                                    <h4><i class="fas fa-check"></i><?php the_sub_field('title');?></h4>
+                                    <p><?php the_sub_field('text');?></p>
+                                </div>
+
+
+
+                                <?php
+                                $column_count++;
+                                if ($column_count==$column_items) {
+                                    $column_count=0;
+                                    ?>
+                                    </div>
+                                    <?php
+                                }
+                            endwhile;
+                        endif;
+
+                        ?>
+
                     </div>
+
+
+
+
                 </div>
             </div>
             <?php
@@ -182,47 +160,41 @@ function get_template_by_layout($layout){
             <div class="container section sensors">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
-                        <h2 class="section-title">Smart Sensors Your Customers Will Trust and Love</h2>
+                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
                         <p class="sub-title-section">
-                            Monitor real life situations, in real time.
+                            <?php the_sub_field('subtitle');?>
                         </p>
                     </div>
                 </div>
                 <div class="row">
+                    <?php
+                    $cnt=0;
+
+                    if ( have_rows('cards') ) :
+                    while ( have_rows('cards') ) : the_row();
+                        $cnt++;
+                    ?>
+
                     <div class="col-md-4">
-                        <div class="card c1">
-                            <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/water-leak-detector.jpg" alt="Card image cap">
+                        <div class="card c<?php echo $cnt;?>">
+                            <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
                             <div class="card-footer">
-                                <h5 class="card-title">sometitle</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title"><?php the_sub_field('title');?></h5>
+                                <div class="card-text"><?php echo get_sub_field('text');?></div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="col-md-4">
-                        <div class="card c2">
-                            <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/smart-battery.jpg" alt="Card image cap">
-                            <div class="card-footer">
-                                <h5 class="card-title">sometitle</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card c3">
-                            <img class="card-img-top" src="<?php echo get_template_directory_uri();?>/img/garage-door-sensor.jpg" alt="Card image cap">
-                            <div class="card-footer">
-                                <h5 class="card-title">sometitle</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    endwhile;
+                    endif;
+                    ?>
 
                 </div>
                 <div class="row">
                     <div class="col-md-12 cta-button">
-                        <a href="#" class="btn btn-primary">Learn more about Roost Sensors</a>
+                        <a href="<?php the_sub_field('cta_url');?>" class="btn btn-primary"><?php the_sub_field('cta_text');?></a>
                     </div>
                 </div>
             </div>
@@ -237,63 +209,52 @@ function get_template_by_layout($layout){
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec title green_border">
-                            <h2 class="section-title">More Details</h2>
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
                             <p class="sub-title-section">
-                                Monitor real life situations, in real time.
+                                <?php the_sub_field('subtitle');?>
                             </p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
-                                </div>
-                            </div>
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
-                                </div>
-                            </div>
+                        <?php
+                        // how many ites do we have here?
+                        $count=0;
+                        $column_items=0;
+                        $count = count( get_sub_field('boxes') );
 
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
-                                </div>
-                            </div>
+                        $column_items = ceil($count/2);
 
-                        </div>
-                        <div class="col-md-6">
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
-                                </div>
-                            </div>
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
-                                </div>
-                            </div>
+                        $column_count=0;
+                        if ( have_rows('boxes') ) :
+                            while ( have_rows('boxes') ) : the_row();
+                                if ($column_count==0) {
+                                    ?>
+                                    <div class="col-md-6">
+                                    <?php
+                                }
+                                ?>
 
-                            <div class="img-text-cont">
-                                <img class="img-more float-left" src="<?php echo get_template_directory_uri();?>/img/cusomter-engagement.svg" alt="Card image cap">
-                                <div class="text float-left">
-                                    <h5>User friendly</h5>
-                                    <p>Roost sensors and app are easy to install, use and manage.</p>
+                                <div class="img-text-cont">
+                                    <img class="img-more float-left" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                    <div class="text float-left">
+                                        <h5><?php the_sub_field('title');?></h5>
+                                        <p><?php the_sub_field('text');?></p>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
+
+                            <?php
+                                $column_count++;
+                                if ($column_count==$column_items) {
+                                    $column_count=0;
+                                    ?>
+                                    </div>
+                                    <?php
+                                }
+                            endwhile;
+                        endif;
+
+                        ?>
                     </div>
                 </div>
             </div>
@@ -309,38 +270,35 @@ function get_template_by_layout($layout){
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="col-md-12 first-sec title green_border">
-                                <h2 class="section-title">Intelligent App Services</h2>
+                                <h2 class="section-title"><?php the_sub_field('title');?></h2>
                                 <p class="sub-title-section">
-                                    Integrated services make the co-branded app useful on a regular basis – putting your brand visibility at the forefront of every notification and interaction.
+                                    <?php the_sub_field('subtitle');?>
                                 </p>
                             </div>
                             <div class="col-md-12">
-                                <div class="img-text-cont">
-                                    <div class="img-more float-left">
-                                        <img class="img-fluid " src="<?php echo get_template_directory_uri();?>/img/tvc.png" alt="Card image cap">
-                                    </div>
-                                    <div class="text float-left">
-                                        <h5>IBM The Weather Company Integration</h5>
-                                        <p>Users can get weather updates through the Roost
-                                            app to help alert them of situations that may impact
-                                            their home. </p>
-                                    </div>
-                                </div>
-                                <div class="img-text-cont">
-                                    <div class="img-more float-left vertical-middle align-middle align-items-center">
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri();?>/img/ha.png" alt="Card image cap">
-                                    </div>
+                                <?php
+                                if ( have_rows('image_text') ) :
+                                    while ( have_rows('image_text') ) : the_row();
+                                        ?>
+                                        <div class="img-text-cont">
+                                            <div class="img-more float-left">
+                                                <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                            </div>
+                                            <div class="text float-left">
+                                                <h5><?php the_sub_field('title');?></h5>
+                                                <p><?php the_sub_field('text');?></p>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    endwhile;
+                                endif;
+                                ?>
 
-                                    <div class="text float-left">
-                                        <h5>User friendly</h5>
-                                        <p>Roost sensors and app are easy to install, use and manage.</p>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
                         <div class="col-md-6 pull-right">
-                            <img class="sli" src="<?php echo get_template_directory_uri();?>/img/slides.png">
+                            <img class="sli" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','540px');?>>
                         </div>
                     </div>
                 </div>

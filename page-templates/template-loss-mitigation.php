@@ -28,17 +28,6 @@ get_header();
         }
     ?>
 
-
-
-
-
-
-
-
-
-
-
-
     <?php include ('sections/slider.php'); ?>
 
     <?php include ('sections/team-talk.php'); ?>

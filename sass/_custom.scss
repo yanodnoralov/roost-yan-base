@@ -1100,9 +1100,6 @@ nav {
 	}
 }
 .key-dev {
-	background: url('img/launch.svg') no-repeat bottom left;
-	fill: green;
-	background-size: 200px;
 	h4 {
 		font-size:20px;
 		.fas {
@@ -1137,6 +1134,7 @@ nav {
 		text-align: -webkit-center;
 		border-radius: 0px;
 		border: 0px;
+		min-height: 495px;
 	}
 	.c1 {
 		background-color: #fafafa;
@@ -1186,6 +1184,8 @@ nav {
 	border: 1px solid #eaeaea;
 	border-radius: 5px;
 	display: inline-flex;
+	width: 100%;
+	min-height: 190px;
 	div {
 
 		float: left;
