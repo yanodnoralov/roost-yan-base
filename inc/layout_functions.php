@@ -308,7 +308,45 @@ function get_template_by_layout($layout){
         // Roost connects
         case 'layout_7':
             ?>
+            <div class="container section roost-connects">
+                <div class="row">
+                    <div class="col-md-12 first-sec title green_border">
+                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+                        <p class="sub-title-section">
+                            <?php the_sub_field('subtitle');?>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                    $cnt=0;
 
+                    if ( have_rows('boxes') ) :
+                        while ( have_rows('boxes') ) : the_row();
+                            $cnt++;
+                            ?>
+
+                            <div class="col-md-4">
+                                <div class="card c<?php echo $cnt;?>">
+                                    <div class="c-img">
+                                    <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','260px');?>>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h5 class="card-title"><?php the_sub_field('title');?></h5>
+                                        <div class="card-text"><?php echo get_sub_field('subtitle');?></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
+
+                </div>
+
+            </div>
 
 
             <?php
