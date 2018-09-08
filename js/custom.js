@@ -23,16 +23,6 @@ inView('.hide').on('enter', function(t) {
 		}, 200);
 });
 
-var rellax = new Rellax('.rellax', {
-    center: false,
-    round: true,
-    vertical: true,
-    horizontal: false
-});
-if ($(window).width() < 576) {
-	rellax.destroy();
-}
-
 
 
 //navigation stuff
@@ -49,17 +39,16 @@ var menuBtn = $("#nav-toggle"),
 		menuPanel    = $("#site-navigation"),
 		menuAs		 = $("#site-navigation #primary-menu > li"),
 		//menuTopStuff = $(".navbar-collapse-top-links"),
-		preMenuContainer = $(".pre-menu-container"),
-		streamer	 = $(".navbar-streamer");
+		preMenuContainer = $(".pre-menu-container");
 		
 	menuIn.to(preMenuBG, 0.5, {scaleY:1, ease:Power3. easeOut, onReverseComplete:hidePreMenu})
 		  .to(collapsingMenu, 0, {css:{display:"block"}}, "-=0.5")
 		  .from(collapsingMenu, 0.3, {autoAlpha: 0, ease:  Power4. easeIn}, "-=0.4")
-		  .staggerFrom(menuAs, 0.3, {autoAlpha: 0,  ease:Power2. easeIn}, 0.15, "-=.2")
-		  .from(streamer, 0.3, {right:-80, ease:Power3. easeOut}, "-=0.3");
+		  .staggerFrom(menuAs, 0.3, {autoAlpha: 0,  ease:Power2. easeIn}, 0.08, "-=.4")
 
 
 menuBtn.on('click touchstart', function() {
+	console.log("click");
 	if (menuOpenFlag == false) {
 		openMenuFunction();
 	}
@@ -72,7 +61,6 @@ function openMenuFunction() {
 	preMenuContainer.css("display", "block");
 	bod.addClass("open-menu");
 	setTimeout(function(){
-		menuBtn.addClass("close-language");
 		menuOpenFlag = true;
 	}, 1000)
     menuIn.play().timeScale(1);
@@ -83,7 +71,6 @@ function closeMenuFunction() {
 	preMenuContainer.css("display", "block");
 	bod.removeClass("open-menu");
 	setTimeout(function(){
-		menuBtn.removeClass("close-language");
 		menuOpenFlag = false;
 	}, 1000)
 	menuIn.play().reverse().timeScale(2.5);
@@ -99,7 +86,6 @@ menuItemWithSub.on('click touchstart', function(e) {
 	e.preventDefault();
 	$(this).parent(".menu-item").toggleClass("show-sub");
 	$(this).siblings(".sub-menu").slideToggle(200);
-	console.log("item with children clicked");
 });
 
 //navigation anchors links
