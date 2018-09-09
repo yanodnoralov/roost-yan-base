@@ -60,7 +60,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="container">
+		<div class="container-wide">
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-logo">
