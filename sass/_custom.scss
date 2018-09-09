@@ -16,6 +16,7 @@ $transition-header: all 0.2s ease-out;
 $font-body: "museo-sans", helvetica, sans-serif;
 //$font-condensed: "futura-pt-condensed", helvetica, sans-serif;
 $font-headings: $font-body;
+$font-awesome: "FontAwesome";
 
 //misc
 $nav-breakpoint: 1100px;
@@ -793,6 +794,7 @@ nav {
 .site-footer {
 	color: white;
 	padding: 100px 0px 0px 0px;
+	font-size: .89em;
 	.footer-text-logo {
 		color: white;
 	}
@@ -801,6 +803,7 @@ nav {
 	}
 	.signup-text, .footer-menu-title {
 		margin-bottom: 20px;
+		font-weight: 900;
 	}
 	.footer-logo {
 		padding-bottom: 30px;
@@ -827,24 +830,39 @@ nav {
 			padding-left: 15px;
 		}
 		ul li:before{
-			content: url(img/arrow_menu.png);
+			font-family: $font-awesome;
+			content: '\f0da';
 			position: absolute;
 			width: 15px;
 			height: 15px;
-			top: calc(50% - 10px);
-			/*
-			border-right: 2px solid grey;
-			border-bottom: 2px solid grey;
-			transform: translateY(-50%) rotate(-45deg);
-			*/
 			left: 0px;
-
 		}
-
+	}
+	.footer-social-icons {
+		display: flex;
+		margin-top: 30px;
+		a {
+			background: #5a5b5c;
+			color: #999999;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			flex-wrap: nowrap;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+			i {
+				display: flex;
+				align-items: center;
+			}
+		}
 	}
 	.bottom-footer {
 		border-top: 2px solid grey;
-		padding: 30px 0px;
+		padding: 20px 0px;
 		.footer-sub-menu {
 			li {
 				list-style: none;
