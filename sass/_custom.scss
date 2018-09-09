@@ -1289,3 +1289,81 @@ nav {
 		min-height: 135px;
 	}
 }
+.meet-roost {
+	text-align: center;
+	.card {
+		border: 0px;
+	}
+	.card-footer {
+		border: 0px;
+		background-color: transparent;
+	}
+	h5 {
+		font-size: 20px;
+		font-weight: 900;
+		color: #2a4878;
+	}
+	.btn {
+		border: 2px solid #378fdb;
+		border-radius: 2px;
+		text-transform: none;
+		font-weight: 900;
+		font-size: 16px;
+	}
+}
+.whats-new {
+	min-height: 600px;
+	text-align: center;
+	color: #fff;
+	h2 {
+		color: #fff;
+		font-size: 30px;
+	}
+	p {
+		font-size: 21px;
+		padding: 20px 190px;
+
+	}
+	.btn {
+		text-transform: none;
+		font-weight: 900;
+		font-size: 16px;
+		background-color: #fff;
+		color: #378fdb;
+	}
+	.align-items-center {
+		margin-top:60px;
+	}
+}
+.the-team {
+	.top-name-title {
+		font-style: italic;
+		font-size: 16px;
+		font-weight: 500;
+		padding-bottom: 10px;
+	}
+	.name {
+		font-style: normal;
+		font-size: 20px;
+		font-weight: 900;
+	}
+	p{
+		font-size: 17px;
+	}
+}
+.roost-careers {
+	padding: 0px;
+	color: white;
+	text-align: center;
+	h2 {
+		color: white;
+	}
+	.btn {
+		background-color: #378fdb;
+		color: white;
+		margin-top: 40px;
+	}
+	.title {
+		padding-bottom: 50px;
+	}
+}

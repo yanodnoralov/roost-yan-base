@@ -351,14 +351,167 @@ function get_template_by_layout($layout){
 
             <?php
             break;
-        // empty
+        // Meet Roost
         case 'layout_8':
             ?>
+            <div class="container section meet-roost">
+                <div class="row">
+                    <div class="col-md-12 first-sec title green_border">
+                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+                        <p class="sub-title-section">
+                            <?php the_sub_field('subtitle');?>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <?php
+                    $cnt=0;
+
+                    if ( have_rows('boxes') ) :
+                        while ( have_rows('boxes') ) : the_row();
+                            $cnt++;
+                            ?>
+
+                            <div class="col-md-4">
+                                <div class="card c<?php echo $cnt;?>">
+                                    <div class="c-img">
+                                        <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','260px');?>>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h5 class="card-title"><?php the_sub_field('title');?></h5>
+                                        <div class="card-text"><?php echo get_sub_field('subtitle');?></div>
+                                        <div class="card-link"><a class="btn" href="<?php echo get_sub_field('link'); ?>">Learn More</a></div>
+                                    </div>
+                                </div>
+                            </div>
 
 
+                        <?php
+                        endwhile;
+                    endif;
+                    ?>
+
+
+                </div>
+            </div>
+            <?php
+            break;
+        // What's New
+        case 'layout_9':
+            ?>
+
+            <div class="jumotron section whats-new jumbotron-fluid" style="background: url('<?php the_sub_field('background');?>') no-repeat center center; background-size: cover;">
+                <div class="container">
+                    <div class="row align-items-center atop">
+                        <div class="col">
+                            <h2><?php the_sub_field('title');?></h2>
+                            <p><?php the_sub_field('subtitle');?></p>
+                            <a href="<?php the_sub_field('cta_1_url');?>" class="btn"><?php the_sub_field('cta_1_text');?></a>
+                            <a href="<?php the_sub_field('cta_2_url');?>" class="btn"><?php the_sub_field('cta_2_text');?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <?php
             break;
+
+            // meet the team
+                case 'layout_10':
+                    ?>
+                    <div class="container section the-team">
+                        <div class="row">
+                            <div class="col-md-12 first-sec title green_border">
+                                <h2 class="section-title"><?php the_sub_field('title');?></h2>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                            $cnt=0;
+                            $size='offset-2';
+                            if ( have_rows('team_members') ) :
+                            while ( have_rows('team_members') ) : the_row();
+                            $cnt++;
+                            if ($cnt>1) { $size='';}
+                            ?>
+                            <div class="col-4 <?php echo $size;?>">
+                                <div class="image">
+                                    <?php
+                                    if (get_sub_field('image')){
+                                        ?>
+                                        <img <?php ar_responsive_image(get_sub_field('image'),'full','260px');?> >
+                                        <?php
+                                    }
+                                    else {
+                                        ?>
+                                        <img src="<?php echo get_template_directory_uri();?>/img/no_face.png">
+                                        <?php
+                                    }
+                                    ?>
+
+                                </div>
+                                <div class="top-name-title">
+                                    <span class="name"><?php the_sub_field('name');?></span> - <?php the_sub_field('title');?>
+                                </div>
+
+                                    <?php the_sub_field('about');?>
+
+                            </div>
+                            <?php
+                            endwhile;
+                            endif;
+                            ?>
+                        </div>
+                    </div>
+
+                    <?php
+                    break;
+
+
+
+        // roost careers
+        case 'layout_11':
+            ?>
+            <div class="jumbotron roost-careers" style="background: url(<?php the_sub_field('background_image');?>);">
+                <div class="container section " >
+                    <div class="row">
+                        <div class="col-md-12 first-sec title green_border">
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
+                        </div>
+                        <div class="col-md-12 sub">
+                            <?php the_sub_field('subtitle'); ?>
+                        </div>
+                        <div class="col-md-12">
+                            <a class="btn" href="<?php the_sub_field('cta_link');?>"><?php the_sub_field('cta_text');?></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            break;
+
+
+        case 'layout_16' :
+            include (get_template_directory().'/page-templates/sections/learn_more.php');
+            break;
+
+        case 'layout_17' :
+            include (get_template_directory().'/page-templates/sections/slider.php');
+            break;
+
+
+            
+        /*
+                // empty
+                case 'layout_8':
+                    ?>
+
+
+
+                    <?php
+                    break;
+        */
     }
     $template = ob_get_clean();
 

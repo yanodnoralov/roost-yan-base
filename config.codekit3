@@ -388,6 +388,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/no_face.png": {
+		"ft": 32768,
+		"iS": 34336,
+		"oA": 0,
+		"oAP": "\/img\/no_face.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/png-fallback\/cusomter-engagement-png.png": {
 		"ft": 32768,
 		"iS": 1894,
@@ -949,6 +960,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page-templates\/home-page.php",
+		"oF": 0
+		},
+	"\/page-templates\/sections\/learn_more.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/sections\/learn_more.php",
 		"oF": 0
 		},
 	"\/page-templates\/sections\/slider.php": {
