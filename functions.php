@@ -50,6 +50,7 @@ if ( ! function_exists( 'yan_base_setup' ) ) :
             'menu-4' => esc_html__( 'Footer 2', 'yan-base' ),
             'menu-5' => esc_html__( 'Footer 3', 'yan-base' ),
             'menu-6' => esc_html__( 'Footer 4', 'yan-base' ),
+            'mobile-menu' => esc_html__( 'Mobile', 'yan-base' ),
 		) );
 
 		/*
@@ -133,7 +134,7 @@ function yan_base_scripts() {
 
 	wp_enqueue_script( 'yan-base-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	
-	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.1', true );
+	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins-min.js', array('jquery'), '1.1', true );
 	
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom-min.js', array('plugins'), '1.2', true );
 

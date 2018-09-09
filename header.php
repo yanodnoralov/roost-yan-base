@@ -66,7 +66,7 @@
 			<div class="d-flex header-inner">
 				
 				<div id="nav-toggle">
-					<svg xmlns="http://www.w3.org/2000/svg" width="53" height="24.05" viewBox="0 0 43 24.05"><rect id="bar2" x="5.63" y="11" width="32.25" height="2.05"/><rect id="bar3" x="5.63" y="18" width="32.25" height="2.05"/><rect id="dot2" x="40.95" y="18" width="2.05" height="2.05"/><rect id="bar1" x="5.63" y="4" width="32.25" height="2.05"/><rect id="dot1" y="4" width="2.05" height="2.05"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="44" height="24.05" viewBox="0 0 43 24.05"><rect id="bar2" x="5.63" y="11" width="32.25" height="2.05"/><rect id="bar3" x="5.63" y="18" width="32.25" height="2.05"/><rect id="bar1" x="5.63" y="4" width="32.25" height="2.05"/></svg>
 				</div>
 				
 				<div class="site-branding align-items-center d-flex">
@@ -88,7 +88,7 @@
 				<nav id="site-navigation" class="main-nav mobile-navigation">
 					<?php
 					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
+						'theme_location' => 'mobile-menu',
 						'menu_id'        => 'primary-menu'					) );
 					?>
 				</nav><!-- #site-navigation -->
