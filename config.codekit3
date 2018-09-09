@@ -47,6 +47,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5b9196409b9ab.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b9196409b9ab-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -82,6 +90,17 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
+	"\/home-mobile-nav.jpg": {
+		"ft": 16384,
+		"iS": 573715,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/home-mobile-nav.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/arrow_menu.png": {
 		"ft": 32768,
 		"iS": 180,
@@ -101,6 +120,28 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/bgmore.png": {
+		"ft": 32768,
+		"iS": 5968,
+		"oA": 0,
+		"oAP": "\/img\/bgmore.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/brand.png": {
+		"ft": 32768,
+		"iS": 124858,
+		"oA": 0,
+		"oAP": "\/img\/brand.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -156,6 +197,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/customer-engagment-hero.png": {
+		"ft": 32768,
+		"iS": 2698413,
+		"oA": 0,
+		"oAP": "\/img\/customer-engagment-hero.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/data-security.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -209,6 +261,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/garage-door-sensor.jpg": {
+		"ft": 16384,
+		"iS": 18909,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/garage-door-sensor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/globe.png": {
 		"ft": 32768,
 		"iS": 32212,
@@ -228,6 +291,17 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ha.png": {
+		"ft": 32768,
+		"iS": 4815,
+		"oA": 0,
+		"oAP": "\/img\/ha.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -327,12 +401,12 @@
 		},
 	"\/img\/no_face.png": {
 		"ft": 32768,
-		"iS": 34336,
+		"iS": 6005,
 		"oA": 0,
 		"oAP": "\/img\/no_face.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -571,6 +645,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/slides.png": {
+		"ft": 32768,
+		"iS": 98446,
+		"oA": 0,
+		"oAP": "\/img\/slides.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/smart-battery.jpg": {
+		"ft": 16384,
+		"iS": 13429,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/smart-battery.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/theft.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -580,6 +676,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/tvc.png": {
+		"ft": 32768,
+		"iS": 8189,
+		"oA": 0,
+		"oAP": "\/img\/tvc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/usaa.png": {
 		"ft": 32768,
@@ -613,6 +720,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/water-leak-detector.jpg": {
+		"ft": 16384,
+		"iS": 22220,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/water-leak-detector.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/water-leaks.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -640,6 +758,13 @@
 		"oAP": "\/inc\/acf.php",
 		"oF": 0
 		},
+	"\/inc\/cpt.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/cpt.php",
+		"oF": 0
+		},
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -659,6 +784,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/jetpack.php",
+		"oF": 0
+		},
+	"\/inc\/layout_functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/layout_functions.php",
 		"oF": 0
 		},
 	"\/inc\/template-functions.php": {
@@ -841,7 +973,6 @@
 		"oAP": "\/page-templates\/home-page.php",
 		"oF": 0
 		},
-<<<<<<< HEAD
 	"\/page-templates\/sections\/learn_more.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -864,13 +995,10 @@
 		"oF": 0
 		},
 	"\/page-templates\/template-loss-mitigation.php": {
-=======
-	"\/page-templates\/Template1.php": {
->>>>>>> 4589917c9c7d8ea14ee67474a67a90dbc934e7c4
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/page-templates\/Template1.php",
+		"oAP": "\/page-templates\/template-loss-mitigation.php",
 		"oF": 0
 		},
 	"\/page.php": {
@@ -1504,24 +1632,14 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/sass\/style-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/sass\/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/sass\/style-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"\/sass\/style.scss": {
@@ -1732,7 +1850,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -3123,7 +3241,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/getroost.loc\/",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
