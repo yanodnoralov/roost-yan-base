@@ -62,7 +62,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container-wide pb-5">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 pr-xl-5">
                     <div class="footer-logo">
                         <img width="115" height="29" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg">
                     </div>
@@ -79,11 +79,11 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4 fot-pad-top">
+                <div class="col-md-3 fot-pad-top">
                     <div class="signup-text">Sign up for Roost news, solutions and advice.</div>
                     <input type="text" style="width: 100%">
                 </div>
-                <div class="col-md-4 fot-pad-top">
+                <div class="col-md-5 fot-pad-top">
                     <div class="row footer-menus">
                         <!-- footer menus -->
                         <div class="col-md-4">

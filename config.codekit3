@@ -101,6 +101,26 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/arrow-left.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/arrow-left.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/arrow-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/arrow-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/arrow_menu.png": {
 		"ft": 32768,
 		"iS": 180,
@@ -990,6 +1010,13 @@
 		"oAP": "\/page-templates\/sections\/learn_more.php",
 		"oF": 0
 		},
+	"\/page-templates\/sections\/slider-alt.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/sections\/slider-alt.php",
+		"oF": 0
+		},
 	"\/page-templates\/sections\/slider.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1860,7 +1887,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -3251,7 +3278,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/getroost.loc\/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

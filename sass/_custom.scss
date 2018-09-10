@@ -6,7 +6,7 @@ $color-primary: #378fdb;
 $color-headings: #2a4878;
 $color-body-text: #231f20;
 $color-primary-lighter: #3b99eb;
-$color-primary-darker: #3283c8;
+$color-primary-darker: #4698dd;
 $color-grey-blue: #f4f7fc;
 $transition-links-in: all 0.3s ease-in-out;
 $transition-links-out: all 0.45s ease-out;
@@ -25,6 +25,9 @@ $nav-breakpoint: 1100px;
 	-webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
 }
+html {
+	font-size: 17px;
+}
 body {
 	font-family: $font-body;
 	font-size: 17px;
@@ -40,50 +43,57 @@ body {
   }
 }
 h1, h2 {
-	font-family: $font-headings;
 	font-weight: 700;
 }
 h3, h5 {
-	font-family: $font-headings;
 	font-weight: 900;
 }
-h2 {
-	font-size: 2.7em;
+h2, .h2 {
+	font-size: 1.8rem;
 	line-height: 1.1em;
 	margin: 15px 0;
+	font-weight: 700;
 }
 h3 {
-	font-size: 2em;
+	font-size: 2rem;
 	margin-bottom: 15px;
 }
 h4, .h4 {
-	font-weight: 600;
-	font-family: $font-headings;
-	font-size: 1.9em;
+	font-weight: 900;
+	font-size: 1.18rem;
 	letter-spacing: -0.3px;
 	margin: 15px 0;
 	line-height: 1.2em;
 }
 h5, .h5 {
-	font-size: 1.75em;
+	font-size: 1.75rem;
 	margin-bottom: 15px;
 	line-height: 1.17em;
 }
 h6, .h6 {
-	font-family: $font-body;
 	font-weight: 500;
-	margin: 0.7em 0;
+	margin: 0.7rem 0;
 	font-size: .8em;
 }
 a {
 	text-decoration: none;
 	outline: 0 !important;
+	color: $color-primary-darker;
 	&:hover {
 		text-decoration: none;
 		outline: 0;
 	}
 	&:visited {
-		color: $color-primary;
+		color: $color-primary-darker;
+	}
+}
+.caret {
+	&:after {
+		display: inline-block;
+		content: "\f105";
+		font-family: $font-awesome;
+		display: inline-block;
+		padding-left: 5px;
 	}
 }
 b, strong {
@@ -532,16 +542,14 @@ nav {
 //buttons
 .btn {
 	background: none;
-	border-radius: 0;
+	border-radius: 4px;
 	padding: 11px 30px;
-	min-width: 200px;
 	display: inline-block;
 	text-align: center;
-	font-size: 0.8em;
-	letter-spacing: 1px;
+	font-size: 16px;
 	font-family: $font-headings;
-	font-weight: 500;
-	text-transform: uppercase;
+	font-weight: 900;
+	text-transform: capitalize;
 	transition: $transition-links-out;
 	position: relative;
 	&:visited {
@@ -575,9 +583,13 @@ nav {
 	}
 }
 .btn-primary {
-	color: $color-primary;
+	color: #fff;
+	background: $color-primary;
 	&:visited {
-		color: $color-primary;
+		color: #fff;
+	}
+	&:hover {
+		background: $color-primary-darker;
 	}
 }
 .btn-white {
@@ -606,7 +618,6 @@ nav {
 
 // inside pages
 .hero {
-	padding-top: 55px;
 	/*
 	background: #0892c9;
 	background: -moz-linear-gradient(top, #0892c9 30%, #1839c6 100%);
@@ -663,12 +674,6 @@ nav {
 		width: 150px;
 		max-height: 132px;
 	}
-	.card {
-		padding: 50px;
-	}
-	.card-body {
-		padding: 0px;
-	}
 	.card-title {
 		margin-top: .75rem;
 	}
@@ -681,6 +686,12 @@ nav {
 }
 
 // testemonials
+.testimonials-wrapper {
+	overflow: hidden;
+}
+.testimonial-slider {
+	box-shadow: 0 4px 60px 0 rgba(0,0,0,0.12);
+}
 .slider-cont {
 	padding-bottom: 50px;
 	.section-title {
@@ -700,38 +711,74 @@ nav {
 	}
 	.carousel {
 		width: 100%;
+		.custom-nav {
+			cursor: pointer;
+			position: absolute;
+			z-index: 10;
+			height: 46px;
+			top: 50%;
+			margin-top: -23px;
+			&:hover {
+				opacity: 0.8;
+			}
+			&.prev {
+				content: url(img/arrow-left.svg);
+				left: -60px;
+			}
+			&.next {
+				content: url(img/arrow-right.svg);
+				right: -60px;
+			}
+		}
 		.caro-item {
 			text-align: center;
 		}
+		.slick-slide {
+			&>div {
+				display: flex;
+			}
+			&>div:nth-child(2) .card {
+				.hover-content {
+					top: -100%;
+				}
+			}
+		}
 		.card {
-			position: static;
-			display: flex;
+			position: relative;
+			display: flex !important;
+			@include gradient(#ffffff, #f8f8f8, '45');
+			border: 0;
+			border-radius: 0;
+			margin: 0;
+			height: 250px;
 			.hover-content {
-				display: none;
+				visibility: hidden;
+				position: absolute;
+				background-color: white;
+				top: 0px;
+				left: 0;
+				overflow: visible;
+				z-index: 9;
+				width: 100%;
+				height: 200%;
+				padding: 20px;
+				box-shadow: 0 4px 60px 0 rgba(0,0,0,0.12);
+				opacity: 0;
+				transition:  all 500ms ease-in-out;
+				img {
+					padding: 10px 0px;
+				}
 			}
 			&:hover {
 				.hover-content {
-					display: block;
-					position: absolute;
-					background-color: white;
-					height: 100%;
-					min-height: 490px;
-					top: 0px;
-					overflow: visible;
-					z-index: 99999;
-					width: 405px;
-					//left: 0px;
-					padding: 20px;
-					img {
-						padding: 10px 0px;
-					}
-					border: 1px solid rgba(0,0,0,.125);
-					border-radius: 4px;
-					margin-left: -21px;
-					max-height: 512px;
-					max-width: 23.8%;
-
-				}
+					visibility: visible;
+					opacity: 1;
+					transition:  all 250ms ease-in-out;				}
+			}
+			img {
+				max-height: 110px;
+				width: auto;
+				align-self: center
 			}
 			.card-author {
 				margin-top: 10px;
@@ -739,18 +786,6 @@ nav {
 			.card-author-position {
 				margin-bottom: 10px;
 			}
-		}
-		.card-body {
-			img {
-				max-height: 160px;
-				width: auto;
-			}
-			min-height: 250px;
-
-		}
-		.card-columns {
-			column-count: 4;
-
 		}
 	}
 	.carousel-control-prev-icon {
@@ -809,6 +844,9 @@ nav {
 		padding-bottom: 30px;
 	}
 	.footer-menus {
+		& > div {
+			padding-left: 35px;
+		}
 		.menu {
 			margin: 0px;
 			padding: 0px;
@@ -1243,7 +1281,6 @@ nav {
 	.card {
 		text-align: center;
 		border: 0px;
-		-webkit-box-shadow: 0px 0px 15px 0px #d6d5d5;
 		box-shadow: 0px 0px 15px 0px #d6d5d5;
 		padding-bottom: 30px;
 		min-height: 324px;

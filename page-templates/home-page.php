@@ -24,13 +24,11 @@ get_header();
         <div class="card-deck">
 
             <?php if( have_rows('homepage_cta','option') ): while ( have_rows('homepage_cta','option') ) : the_row(); ?>
-            <div class="card">
-
-
+            <div class="card p-md-5">
 
                 <img class="card-img-top" <?php ar_responsive_image( get_sub_field('image') ,'full','152px' ); ?>>
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo get_sub_field('title'); ?></h5>
+                <div class="card-body p-0">
+                    <h4><?php echo get_sub_field('title'); ?></h4>
                     <p class="card-text"><?php echo get_sub_field('text'); ?></p>
 
                 </div>
@@ -45,7 +43,7 @@ get_header();
 </div>
 <!-- end first cta -->
 
-<?php include ('sections/slider.php'); ?>
+<?php include ('sections/slider-alt.php'); ?>
 
 <!-- winwin area -->
 <div class="jumbotron h-100 d-flex globe-area" style="background-image:url(<?php echo get_field('cta_2_background_image','option');?>);">
