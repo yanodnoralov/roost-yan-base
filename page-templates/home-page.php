@@ -44,7 +44,7 @@ get_header();
 <?php include ('sections/slider-alt.php'); ?>
 
 <!-- winwin area -->
-<div class="py-6 d-flex globe-area text-white text-center text-md-center bottom-cta" style="background-image:url(<?php echo get_field('cta_2_background_image','option');?>);">
+<div class="py-6 d-flex globe-area text-white text-center text-md-left bottom-cta" style="background-image:url(<?php echo get_field('cta_2_background_image','option');?>);">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 offset-lg-4">

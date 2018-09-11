@@ -34,10 +34,6 @@ get_header();
         }
     ?>
 
-
-
-    <?php include ('sections/team-talk.php'); ?>
-
 <?php endwhile; endif; ?>
 <?php
 get_footer();

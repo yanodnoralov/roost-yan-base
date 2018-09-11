@@ -4082,7 +4082,7 @@ nav.mobile-navigation {
     right: -150px; }
 
 .bottom-cta .display-3 {
-  font-size: 2rem; }
+  font-size: 2.6rem; }
 
 .globe-area {
   background: #4698dd;
@@ -4195,10 +4195,21 @@ nav.mobile-navigation {
       padding: 3.5rem 0 3.5rem 0; } }
   .section .title {
     text-align: center;
-    padding-bottom: 100px; }
+    padding-bottom: 4rem; }
+    .section .title h2 {
+      margin-top: 0; }
+      @media (min-width: 992px) {
+        .section .title h2 {
+          padding-left: 5%;
+          padding-right: 5%; } }
     .section .title p {
       text-align: center;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      font-size: 1.25rem; }
+    @media (min-width: 992px) {
+      .section .title {
+        padding-left: 12%;
+        padding-right: 12%; } }
   .section .green_border:after {
     text-align: center;
     display: block;
@@ -4447,11 +4458,6 @@ nav.mobile-navigation {
     font-size: 21px;
     font-weight: 300;
     padding: 0px 200px; }
-  .team-talk .btn {
-    font-size: 19px;
-    background-color: #fff;
-    color: #4698dd;
-    text-transform: none; }
 
 .roost-connects {
   padding-bottom: 0px; }

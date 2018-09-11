@@ -866,7 +866,7 @@ nav {
 }
 .bottom-cta {
 	.display-3 {
-		font-size: 2rem;
+		font-size: 2.6rem;
 	}
 }
 .globe-area {
@@ -1013,12 +1013,23 @@ $spacerx: 3.5rem;
 	}
 	.title {
 		text-align: center;
-		padding-bottom: 100px;
+		padding-bottom: 4rem;
+		h2 {
+			margin-top: 0;
+			@include media-breakpoint-up(lg) {
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
 		p {
 			text-align: center;
 			margin-bottom: 10px;
+			font-size: 1.25rem;
 		}
-
+		@include media-breakpoint-up(lg) {
+			padding-left: 12%;
+			padding-right: 12%;
+		}
 	}
 	.green_border {
 		&:after {
@@ -1332,12 +1343,6 @@ $spacerx: 3.5rem;
 		font-size: 21px;
 		font-weight: 300;
 		padding: 0px 200px;
-	}
-	.btn{
-		font-size: 19px;
-		background-color: #fff;
-		color: #4698dd;
-		text-transform: none;
 	}
 }
 .roost-connects {

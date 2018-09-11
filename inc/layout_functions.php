@@ -205,7 +205,7 @@ function get_template_by_layout($layout){
         // More details
         case 'layout_5':
             ?>
-            <div class="jumotron section more-details">
+            <div class="section more-details">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec title green_border">
@@ -265,7 +265,7 @@ function get_template_by_layout($layout){
         // Intelegent app services
         case 'layout_6':
             ?>
-            <div class="jumotron section app-services border-left-sec">
+            <div class="section app-services border-left-sec">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6">
@@ -400,7 +400,7 @@ function get_template_by_layout($layout){
         case 'layout_9':
             ?>
 
-            <div class="jumotron section whats-new jumbotron-fluid" style="background: url('<?php the_sub_field('background');?>') no-repeat center center; background-size: cover;">
+            <div class="section whats-new jumbotron-fluid" style="background: url('<?php the_sub_field('background');?>') no-repeat center center; background-size: cover;">
                 <div class="container">
                     <div class="row align-items-center atop">
                         <div class="col">
@@ -488,6 +488,30 @@ function get_template_by_layout($layout){
                     </div>
                 </div>
             </div>
+            <?php
+            break;
+            
+        // Lets talk main call to action
+        case 'layout_15':
+            ?>
+            <div class="section team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
+			    <div class="container">
+			        <div class="row">
+			            <div class="col-md-12 text-center">
+				            <?php if (get_sub_field('title')):?>
+			                	<h2 class="display-3 mt-0 mb-4"><?php the_sub_field('title');?></h2>
+			                <?php endif;?>
+			                <?php if (get_sub_field('html_content')):?>
+				                <?php the_sub_field('html_content');?>
+			                <?php endif;?>
+			                <?php if (get_sub_field('button_link') ):?>
+			                	<?php $link = get_sub_field('button_link');?>
+				                <a class="btn btn-white btn-lg" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+			                <?php endif;?>
+			            </div>
+			        </div>
+			    </div>
+			</div>
             <?php
             break;
 

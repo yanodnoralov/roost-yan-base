@@ -1,4 +1,4 @@
-<div class="jumotron section team-talk">
+<div class="section team-talk py-6">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

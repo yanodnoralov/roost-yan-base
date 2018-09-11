@@ -1,6 +1,6 @@
 {
     "key": "group_5b9196409b9ab",
-    "title": "Page layout",
+    "title": "Page layouts",
     "fields": [
         {
             "key": "field_5b91968c6c810",
@@ -2011,9 +2011,87 @@
                 "layout_5b9509806c578": {
                     "key": "layout_5b9509806c578",
                     "name": "layout_15",
-                    "label": "Let's talk",
+                    "label": "Let's talk - Main Call to Action",
                     "display": "block",
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_5b974f1c1a9c7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b974f241a9c8",
+                            "label": "Content",
+                            "name": "html_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5b974f451a9ca",
+                            "label": "Link",
+                            "name": "button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "48",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5b974f611a9cb",
+                            "label": "Background image",
+                            "name": "bg_img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "48",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
                     "min": "",
                     "max": ""
                 },
@@ -2065,5 +2143,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536498831
+    "modified": 1536644020
 }
