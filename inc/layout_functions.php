@@ -492,16 +492,202 @@ function get_template_by_layout($layout){
             break;
 
 
-        case 'layout_16' :
-            include (get_template_directory().'/page-templates/sections/learn_more.php');
+
+
+        // horizontal boxes
+        case 'layout_16':
+            ?>
+                <div class="jumbotron horizontal-boxes" style="background: #f7f7f7 url(<?php the_sub_field('background_image');?>) right top no-repeat;">
+                    <div class="container section horizontal-boxes" >
+                        <div class="row">
+                            <div class="col-md-5 dotted-gradient ff">
+                                <h2 class=""></h2>
+
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                            <?php
+                            if ( have_rows('boxes') ) :
+                                while ( have_rows('boxes') ) : the_row();
+                                    ?>
+                                        <div class="col-md-5 dotted-gradient">
+                                            <h2 class="green_border"><?php the_sub_field('title');?></h2>
+                                            <?php the_sub_field('sub_text');?>
+                                        </div>
+                                        <div class="col-md-6 offset-md-1 img-cont">
+                                            <img <?php ar_responsive_image(get_sub_field('image'),'full','450px'); ?>>
+                                        </div>
+                                    <?php
+                                endwhile;
+                            endif;
+                            ?>
+                            <div class="col-md-5 dotted-gradient ff">
+                                <h2 class=""></h2>
+
+                            </div>
+                            <div class="col-md-6">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            <?php
             break;
+        // additional application options
+        case 'layout_17':
+            ?>
+            <div class="jumotron section additonal-app">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 first-sec title green_border">
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
 
-        case 'layout_17' :
-            include (get_template_directory().'/page-templates/sections/slider.php');
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                                <?php
+                                $cnt=0;
+                                $slide_cnt=1;
+                                if ( have_rows('slides') ) :
+                                    while ( have_rows('slides') ) : the_row();
+                                        if ($cnt==0) {
+                                            $te='active-box';
+                                            $te1='';
+                                        }
+                                        else {
+                                            $te='';
+                                            $te1='display: none';
+                                        }
+                                        ?>
+                                        <div class="col-md-12">
+                                            <div class="img-text-cont <?php echo $te;?>" data-slide="<?php echo $slide_cnt;?>">
+                                                <div class="img-more float-left">
+                                                    <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                                </div>
+                                                <div class="text float-left">
+                                                    <h5><?php the_sub_field('title');?></h5>
+                                                    <p><?php the_sub_field('text');?></p>
+                                                    <a href="<?php the_sub_field('read_more_link');?>">Read more</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php
+                                        $cnt++;
+                                        $slide_cnt++;
+                                    endwhile;
+                                    endif;
+
+                                    ?>
+                        </div>
+                        <div class="col-md-6 carou-items">
+                            <?php
+                            $cnt=0;
+                            $slide_cnt=1;
+                                if ( have_rows('slides') ) :
+                                    while ( have_rows('slides') ) : the_row();
+                                        if ($cnt==0) {
+                                            $te='active-box';
+                                            $te1='';
+                                        }
+                                        else {
+                                            $te='';
+                                            $te1='display: none';
+                                        }
+                                        ?>
+                                        <div class="col-md-12">
+                                            <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" style="<?php echo $te1;?>" data-ride="carousel">
+
+                                                <div class="carousel-inner">
+                                                        <?php
+                                                        $cl=0;
+                                                        if ( have_rows('inner_slides') ) :
+                                                        while ( have_rows('inner_slides') ) : the_row();
+                                                            if ($cl==0) {
+                                                                $te2='active';
+                                                            }
+                                                            else {
+                                                                $te2='';
+                                                            }
+                                                            ?>
+                                                            <div class="carousel-item <?php echo $te2;?>">
+                                                                <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                                            </div>
+                                                            <?php
+                                                            $cl++;
+                                                        endwhile;
+                                                        endif;
+                                                        ?>
+                                                </div>
+                                                <ol class="carousel-indicators">
+                                                    <?php for ($i=0;$i<$cl;$i++){
+                                                        if ($i==0) {
+                                                            $acl='active';
+                                                        }
+                                                        else {
+                                                            $acl='';
+                                                        }
+                                                        ?>
+                                                    <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
+                                                    <?php
+                                                    }
+                                                    ?>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <?php
+                                        $cnt++;
+                                        $slide_cnt++;
+                                    endwhile;
+                                endif;
+                                ?>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                jQuery( document ).ready(function() {
+                    jQuery('.img-text-cont').click(function() {
+                        var slide_cont= $(this).data("slide");
+                        $(".slco").hide("fast");
+                        $('.image-cont-'+slide_cont).show("fast");
+                        $(".img-text-cont").removeClass("active-box");
+                        $(this).addClass("active-box");
+                    });
+                });
+            </script>
+
+            <?php
             break;
+        // Full custom integration
+        case 'layout_18':
+            ?>
+            <div class="jumbotron full-custom-integration">
+                <div class="container section ">
+                    <div class="row">
+                        <div class="col-md-12 first-sec title green_border">
+                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
+                        </div>
+                        <div class="col-md-12 pp">
+                            <div class="float-left img-h"><img class="float-left" <?php ar_responsive_image(get_sub_field('icon'),'full','240px');?>></div>
 
+                            <div class="sub-title-section">
+                                <?php the_sub_field('text');?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            
+            <?php
+            break;
         /*
                 // empty
                 case 'layout_8':
@@ -512,6 +698,17 @@ function get_template_by_layout($layout){
                     <?php
                     break;
         */
+        case 'layout_101' :
+            include (get_template_directory().'/page-templates/sections/learn_more.php');
+            break;
+
+        case 'layout_102' :
+            include (get_template_directory().'/page-templates/sections/slider.php');
+            break;
+
+        case 'layout_103' :
+            include (get_template_directory().'/page-templates/sections/team-talk.php');
+            break;
     }
     $template = ob_get_clean();
 
