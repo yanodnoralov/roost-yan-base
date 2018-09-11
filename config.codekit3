@@ -90,6 +90,37 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
+	"\/home-mobile-nav.jpg": {
+		"ft": 16384,
+		"iS": 573715,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/home-mobile-nav.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/arrow-left.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/arrow-left.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/arrow-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/arrow-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/arrow_menu.png": {
 		"ft": 32768,
 		"iS": 180,
@@ -294,6 +325,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/green-seperator.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/green-seperator.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/green_round.png": {
 		"ft": 32768,
 		"iS": 1553,
@@ -374,6 +415,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/launch.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/logo-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/logo-white.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1013,6 +1064,13 @@
 		"oAP": "\/page-templates\/sections\/learn_more.php",
 		"oF": 0
 		},
+	"\/page-templates\/sections\/slider-alt.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/sections\/slider-alt.php",
+		"oF": 0
+		},
 	"\/page-templates\/sections\/slider.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1145,6 +1203,19 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/sass\/bootstrap-grid-scss\/_customizebs.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/bootstrap-grid-scss\/_customizebs.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/bootstrap-grid-scss\/breakpoints\/mixins\/_breakpoints.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1157,6 +1228,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/sass\/bootstrap-grid-scss\/grid.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/bootstrap-grid-scss\/grid-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/sass\/bootstrap-grid-scss\/grid.scss": {
 		"aP": 0,
@@ -1665,16 +1746,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/sass\/style-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/sass\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1893,7 +1964,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -3284,7 +3355,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/getroost.loc\/",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

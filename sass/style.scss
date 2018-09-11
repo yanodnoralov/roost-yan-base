@@ -105,6 +105,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-@import "bootstrap-grid-scss/grid";
+@import "bootstrap-grid-scss/_customizebs.scss";
+
+@import "bootstrap-grid-scss/grid.scss";
 
 @import "custom.scss";

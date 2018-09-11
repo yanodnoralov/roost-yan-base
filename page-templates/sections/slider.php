@@ -4,9 +4,7 @@
     <div class="row">
         <div class="col-md-12 first-sec title green_border">
             <h2><?php echo get_field('section2_title','option');?></h2>
-
         </div>
-
     </div>
     <div class="row">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -65,12 +63,6 @@
                 endwhile;
                 endif;
                 ?>
-
-
-
-
-
-
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -96,5 +88,7 @@
             <a href="<?php echo get_field('carousel_cta_url','option'); ?>" class="btn btn-primary cta-carousel"><?php echo get_field('carousel_cta','option'); ?></a>
         </div>
     </div>
+</div>
+</div>
 </div>
 <!-- end testimonials -->

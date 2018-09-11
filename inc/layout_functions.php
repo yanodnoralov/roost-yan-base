@@ -688,27 +688,315 @@ function get_template_by_layout($layout){
 
             <?php
             break;
-        /*
-                // empty
-                case 'layout_8':
-                    ?>
+        // Horizontal boxes with slider
+        case 'layout_19':
+            ?>
+            <div class="jumbotron horizontal-boxes boxes-with-carousel" style="background: #f7f7f7 url(<?php the_sub_field('background_image');?>) right top no-repeat;">
+                <div class="container section horizontal-boxes" >
+                    <div class="row">
+                        <div class="col-md-5 dotted-gradient ff">
+                            <h2 class=""></h2>
+
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                        <?php
+                        $cnt=0;
+                        $slide_cnt=1;
+                        if ( have_rows('boxes') ) :
+                            while ( have_rows('boxes') ) : the_row();
+
+                                ?>
+                                <div class="col-md-5 dotted-gradient">
+                                    <h2 class="green_border"><?php the_sub_field('title');?></h2>
+                                    <?php the_sub_field('subtext');?>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-box-<?php echo $cnt;?>">
+                                        Learn More
+                                    </button>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-action-<?php echo $cnt;?>">
+                                        <?php the_sub_field('cta_text');?>
+                                    </button>
+                                </div>
+
+                                <!-- Modal1 -->
+                                <div class="modal fade" id="modal-action-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <?php the_sub_field('cta_link');?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal2 -->
+                                <div class="modal fade bd-example-modal-lg" id="modal-box-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <nav>
+                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                    <a class="nav-item nav-link active" id="nav-<?php echo $cnt;?>a-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true">Key Benefits</a>
+                                                    <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>b-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>b" role="tab" aria-controls="nav-<?php echo $cnt;?>b" aria-selected="false"><i class="fas fa-check-square"></i> Included</a>
+                                                    <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>c-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>c" role="tab" aria-controls="nav-<?php echo $cnt;?>c" aria-selected="false"><i class="far fa-list-alt"></i> Requirements & Specs</a>
+                                                </div>
+                                            </nav>
+                                            <div class="tab-content" id="nav-tabContent">
+                                                <?php
+                                                $cnt_tabs=0;
+                                                if ( have_rows('learn_more_modal') ) :
+                                                while ( have_rows('learn_more_modal') ) : the_row();
+                                                ?>
+                                                    <div class="tab-pane fade show active" id="nav-<?php echo $cnt;?>a" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>a"><?php the_sub_field('key_benefits_tab')?></div>
+                                                    <div class="tab-pane fade" id="nav-<?php echo $cnt;?>b" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>b"><?php the_sub_field('included')?></div>
+                                                    <div class="tab-pane fade" id="nav-<?php echo $cnt;?>c" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>c"><?php the_sub_field('requirements_&_specs')?></div>
+                                                <?php
+                                                endwhile;
+                                                endif;
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 offset-md-1 img-cont">
+
+                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel">
+
+                                        <div class="carousel-inner">
+                                            <?php
+                                            $cl=0;
+
+
+                                            if ( have_rows('images') ) :
+                                                while ( have_rows('images') ) : the_row();
+                                                    if ($cl==0) {
+                                                        $te2='active';
+                                                    }
+                                                    else {
+                                                        $te2='';
+                                                    }
+                                                    ?>
+                                                    <div class="carousel-item <?php echo $te2;?>">
+                                                        <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                                    </div>
+                                                    <?php
+                                                    $cl++;
+
+                                                endwhile;
+                                            endif;
+
+                                            ?>
+                                        </div>
+                                        <ol class="carousel-indicators">
+                                            <?php for ($i=0;$i<$cl;$i++){
+                                                if ($i==0) {
+                                                    $acl='active';
+                                                }
+                                                else {
+                                                    $acl='';
+                                                }
+                                                ?>
+                                                <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
+                                                <?php
+                                            }
+                                            $cnt++;
+                                            $slide_cnt++;
+                                            ?>
+                                        </ol>
+                                    </div>
+                                </div>
+                            <?php
+                            endwhile;
+                        endif;
+                        ?>
+                        <div class="col-md-5 dotted-gradient ff">
+                            <h2 class=""></h2>
+
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <?php
+            break;
+        // The policyholder experience
+        case 'layout_20':
+            ?>
+            <div class="jumotron d-flex page-hero" style="
+                    background-image:url(<?php echo get_sub_field('background_image');?>);
+                    background-position: center center;
+                    background-size: cover;">
+                <div class="container align-b">
+                    <div class="row">
+                        <div class="col-md-7 pull-left border-green-left">
+                            <h1><?php echo get_sub_field('title');?></h1>
+                            <p><?php echo get_sub_field('subtext');?></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <?php
+            break;
+        // How it works
+        case 'layout_21':
+            ?>
 
 
 
-                    <?php
-                    break;
-        */
+            <?php
+            break;
+        // Roost policyholder stories
+        case 'layout_22':
+            ?>
+
+
+            <!-- testemonials -->
+            <div class="container section slider-cont policy-stories">
+                <div class="row">
+                    <div class="col-md-12 first-sec title green_border">
+                        <h2><?php echo the_sub_field('title');?></h2>
+                        <?php echo the_sub_field('subtitle');?>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide policyholder-stories-carousel" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <?php
+                            $cnt=0;
+                            $cnt_slider=0;
+
+                            $args=array(
+                                'post_type' => 'policyholder_stories',
+                                'posts_per_page' => -1,
+                                'post_status' => 'publish'
+                            );
+                            $query = new WP_Query( $args );
+
+                            if( $query->have_posts() ): while ( $query->have_posts() ) : $query->the_post();
+
+                                if ($cnt==0){
+                                    $class='active';
+                                    $cnt++;
+                                }
+                                else {
+                                    $class='';
+                                }
+                                if ($cnt_slider==0){
+                                    ?>
+                                    <div class="carousel-item <?php echo $class;?>">
+                                    <div class="card-columns" style="column-count: 3;">
+                                    <?php
+                                }
+                                ?>
+
+
+                                <div class="card card-body h-100 justify-content-center">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                                            <?php the_post_thumbnail('full'); ?>
+                                        </a>
+                                        <?php the_title(); ?>
+                                        <?php the_excerpt(); ?>
+                                    <?php endif; ?>
+
+                                </div>
+
+                                <?php
+                                $cnt_slider++;
+                                if ($cnt_slider==3){
+
+                                    ?>
+                                    </div>
+                                    </div>
+                                    <?php
+                                    $cnt_slider=0;
+                                }
+                            endwhile;
+                            endif;
+                            ?>
+
+
+
+
+
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <script>
+                    jQuery( document ).ready(function() {
+                        jQuery('.policyholder-stories-carousel').carousel({
+                            interval: false,
+                            pause: 'hover',
+
+                        })
+                    });
+                </script>
+
+            </div>
+            <!-- end testimonials -->
+
+            <?php
+            wp_reset_query();
+            break;
+
         case 'layout_101' :
+            ?>
+            <!-- learn more -->
+            <?php
             include (get_template_directory().'/page-templates/sections/learn_more.php');
             break;
 
         case 'layout_102' :
+            ?>
+            <!-- slider -->
+            <?php
             include (get_template_directory().'/page-templates/sections/slider.php');
             break;
 
         case 'layout_103' :
-            include (get_template_directory().'/page-templates/sections/team-talk.php');
+
+            ?>
+            <!-- team talk -->
+                <div class="jumotron section team-talk ins-sol">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Interested in learning more about
+                                    Roost’s insurance solutions?</h2>
+                                <a href="#" class="btn" data-toggle="modal" data-target="#myModal">Lets talk!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
             break;
+        /*
+            // empty
+            case 'layout_8':
+                ?>
+
+
+
+                <?php
+                break;
+    */
     }
     $template = ob_get_clean();
 

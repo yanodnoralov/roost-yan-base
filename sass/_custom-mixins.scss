@@ -6,6 +6,9 @@
   } @else if $orientation == 'horizontal' {
     background: -webkit-linear-gradient(left, $start-color, $end-color);
     background: linear-gradient(to right, $start-color, $end-color);
+  } @else if $orientation == '45' {
+    background: -webkit-linear-gradient(-45deg, $start-color, $end-color);
+    background: linear-gradient(135deg, $start-color, $end-color);
   } @else {
     background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
     background: radial-gradient(ellipse at center, $start-color, $end-color);
@@ -18,4 +21,77 @@
     display: table;
     clear: both;
   }
+}
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 5),
+  10: ($spacer * 6)
+), $spacers);
+
+@include media-breakpoint-down(md) {
+	$spacerx: 3.5rem !important;
+	.mt-10, .my-10 {
+    	margin-top: $spacerx;
+	}
+	.mb-10, .my-10 {
+    	margin-top: $spacerx;
+	}
+	.mr-10, .mx-10 {
+    	margin-top: $spacerx;
+	}
+	.ml-10, .mx-10 {
+    	margin-top: $spacerx;
+	}
+	
+	.pt-10, .py-10 {
+    	margin-top: $spacerx;
+	}
+	.mb-10, .py-10 {
+    	margin-top: $spacerx;
+	}
+	.pr-10, .px-10 {
+    	margin-top: $spacerx;
+	}
+	.pl-10, .px-10 {
+    	margin-top: $spacerx;
+	}	
+}
+
+@include media-breakpoint-up(xl) {
+	.px-xl-50 {
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+	.px-xl-75 {
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.px-lg-50 {
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+	.px-lg-75 {
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+	}
+}
+@include media-breakpoint-up(md) {
+	.px-md-50 {
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+	.px-md-75 {
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+	}
 }
