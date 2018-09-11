@@ -116,3 +116,40 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		
+	<?php
+    if (get_field('page_hero_title')){
+        $position = get_field('background_position') ? get_field('background_position') : 'center center';
+    ?>
+        <div class="d-flex page-hero" style="
+                background-image:url(<?php echo get_field('page_hero_background_image');?>);
+                background-position: <?php echo $position;?>;
+                background-size: cover;">
+	        <div class="hero-mobile-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-lg-7 pull-left border-green-left">
+                        <h1><?php echo get_the_title();?></h1>
+                        <p><?php echo get_field('page_subtitle');?></p>
+
+                    </div>
+                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+                        <?php
+
+                        if (get_field('enable_button')) {
+	                        $heroLink = get_field('hero_cta');
+                        ?>
+                        <div class="header-action">
+                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<?php
+	}
+	?>
+

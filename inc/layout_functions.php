@@ -7,7 +7,7 @@ function get_template_by_layout($layout){
         // save millions
         case 'layout_1':
             ?>
-            <div class="jumbotron section-claims">
+            <div class="section-claims">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec">
@@ -27,7 +27,7 @@ function get_template_by_layout($layout){
                             while ( have_rows('columns') ) : the_row();
                             ?>
                             <div class="card">
-                                <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
+                                <img <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
                                 <div class="card-body">
                                     <h2 class="card-title"><?php the_sub_field('title');?></h2>
                                     <p class="card-text">S<?php the_sub_field('text');?>
@@ -56,7 +56,7 @@ function get_template_by_layout($layout){
         // Roost ecosystem
         case 'layout_2':
             ?>
-            <div class="container section brand">
+            <div class="container section ecosystem pt-0">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
                         <h2 class="section-title"><?php the_sub_field('title');?></h2>
@@ -66,13 +66,15 @@ function get_template_by_layout($layout){
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-12 col-lg-6 pr-xl-10">
                         <?php
                         if ( have_rows('subitems_left') ) :
                         while ( have_rows('subitems_left') ) : the_row();
                         ?>
-                        <h4><?php the_sub_field('title');?></h4>
-                        <p><?php the_sub_field('text');?></p>
+                        <div class="subitem mb-4 mb-lg-5">
+	                        <h4 class="mt-0"><?php the_sub_field('title');?></h4>
+	                        <?php the_sub_field('text');?>
+                        </div>
                         <?php
                         endwhile;
                         endif;
@@ -83,8 +85,8 @@ function get_template_by_layout($layout){
                             <p><?php the_sub_field('subitem_last_text');?></p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <img <?php ar_responsive_image(get_sub_field('ride_side_image'),'full','555px');?>>
+                    <div class="col-12 mt-4 mt-lg-0 col-lg-6 text-center">
+                        <img class="w-auto mx-auto" <?php ar_responsive_image(get_sub_field('ride_side_image'),'full','555px');?>>
                         <div class="brand-small">
                             <?php the_sub_field('text_below_image');?>
                         </div>
@@ -97,7 +99,10 @@ function get_template_by_layout($layout){
         // Turn key development
         case 'layout_3':
             ?>
-            <div class="jumbotron section key-dev" style="background: url(<?php echo get_sub_field('background_image'); ?>) no-repeat bottom left; background-size: 200px;">
+            <div class="jumbotron section key-dev seperator-y" style="background: url(<?php echo get_sub_field('background_image'); ?>) no-repeat #f9f9f9; background-size: 262px;">
+             	<div class="seperator-top">
+             	<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2694 123"><path d="M0,91S553,35,894,35s817,88,1144,88,656-88,656-88V0H0Z" style="fill:#fff"/></svg>
+	            </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 first-sec title">
@@ -107,7 +112,7 @@ function get_template_by_layout($layout){
                             </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row turn-key-list">
                         <?php
                         // how many ites do we have here?
                         $count=0;
@@ -126,7 +131,7 @@ function get_template_by_layout($layout){
                                 }
                                 ?>
                                 <div class="checkboxes">
-                                    <h4><i class="fas fa-check"></i><?php the_sub_field('title');?></h4>
+                                    <h4 class="text-444"><?php the_sub_field('title');?></h4>
                                     <p><?php the_sub_field('text');?></p>
                                 </div>
 
@@ -147,8 +152,9 @@ function get_template_by_layout($layout){
 
                     </div>
 
-
-
+				<div class="seperator-bottom">
+             	<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2694 123"><path d="M2694,32s-553,56-894,56S983,0,656,0,0,88,0,88v35H2694Z" style="fill:#fff"/></svg>
+	            </div>
 
                 </div>
             </div>
@@ -177,7 +183,7 @@ function get_template_by_layout($layout){
 
                     <div class="col-md-4">
                         <div class="card c<?php echo $cnt;?>">
-                            <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
+                            <img <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
                             <div class="card-footer">
                                 <h5 class="card-title"><?php the_sub_field('title');?></h5>
                                 <div class="card-text"><?php echo get_sub_field('text');?></div>
@@ -317,7 +323,7 @@ function get_template_by_layout($layout){
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row row-of-cards text-center">
                     <?php
                     $cnt=0;
 
@@ -326,13 +332,13 @@ function get_template_by_layout($layout){
                             $cnt++;
                             ?>
 
-                            <div class="col-md-4">
+                            <div class="col-12 col-md-4">
                                 <div class="card c<?php echo $cnt;?>">
                                     <div class="c-img">
-                                    <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','260px');?>>
+                                    <img <?php ar_responsive_image(get_sub_field('image'),'full','260px');?>>
                                     </div>
                                     <div class="card-footer">
-                                        <h5 class="card-title"><?php the_sub_field('title');?></h5>
+                                        <h4 class="card-title"><?php the_sub_field('title');?></h4>
                                         <div class="card-text"><?php echo get_sub_field('subtitle');?></div>
                                     </div>
                                 </div>
@@ -492,9 +498,9 @@ function get_template_by_layout($layout){
             break;
             
         // Lets talk main call to action
-        case 'layout_15':
+        case 'large_call_to_action':
             ?>
-            <div class="section team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
+            <div class="team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
 			    <div class="container">
 			        <div class="row">
 			            <div class="col-md-12 text-center">
@@ -850,7 +856,7 @@ function get_template_by_layout($layout){
         // The policyholder experience
         case 'layout_20':
             ?>
-            <div class="jumotron d-flex page-hero" style="
+            <div class="jumotron d-flex page-hero yany" style="
                     background-image:url(<?php echo get_sub_field('background_image');?>);
                     background-position: center center;
                     background-size: cover;">
@@ -991,7 +997,7 @@ function get_template_by_layout($layout){
             ?>
             <!-- slider -->
             <?php
-            include (get_template_directory().'/page-templates/sections/slider.php');
+            include (get_template_directory().'/page-templates/sections/slider-alt.php');
             break;
 
         case 'layout_103' :

@@ -47,6 +47,13 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5b8fc1434b17e.json.orig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/acf-json\/group_5b8fc1434b17e.json.orig",
+		"oF": 0
+		},
 	"\/acf-json\/group_5b9196409b9ab.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -140,6 +147,28 @@
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/bg_boxes_dotted.png": {
+		"ft": 32768,
+		"iS": 14532,
+		"oA": 0,
+		"oAP": "\/img\/bg_boxes_dotted.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/bg_boxes_dotted2.png": {
+		"ft": 32768,
+		"iS": 36377,
+		"oA": 0,
+		"oAP": "\/img\/bg_boxes_dotted2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -249,6 +278,38 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/ecosystem-graphic.png": {
+		"ft": 32768,
+		"iS": 53156,
+		"oA": 0,
+		"oAP": "\/img\/ecosystem-graphic.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ecosystem-graphic.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/ecosystem-graphic.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/ecosystem-graphic@2x.png": {
+		"ft": 32768,
+		"iS": 112874,
+		"oA": 0,
+		"oAP": "\/img\/ecosystem-graphic@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/erie.png": {
 		"ft": 32768,
 		"iS": 6398,
@@ -313,6 +374,28 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/green_round.png": {
+		"ft": 32768,
+		"iS": 712,
+		"oA": 0,
+		"oAP": "\/img\/green_round.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/green_round2.png": {
+		"ft": 32768,
+		"iS": 2066,
+		"oA": 0,
+		"oAP": "\/img\/green_round2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/guide.png": {
 		"ft": 32768,
 		"iS": 33415,
@@ -334,6 +417,36 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/img\/icons\/customer-access.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/customer-access.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/improve-loyalty.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/improve-loyalty.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/self-service-access.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/self-service-access.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/img\/info-icon.svg": {
 		"ft": 2097152,
@@ -581,6 +694,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/rocket-bg.jpg": {
+		"ft": 16384,
+		"iS": 28110,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/rocket-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"\/img\/save-millions-wave-bg.png": {
 		"ft": 32768,
 		"iS": 1090833,
@@ -658,6 +782,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/seperators\/seperator-curve.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/seperators\/seperator-wave-reverse.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/seperators\/seperator-wave-reverse.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/seperators\/seperator-wave.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/seperators\/seperator-wave.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1013,6 +1157,13 @@
 		"oAP": "\/page-templates\/home-page.php",
 		"oF": 0
 		},
+	"\/page-templates\/layout-template.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/layout-template.php",
+		"oF": 0
+		},
 	"\/page-templates\/sections\/learn_more.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1039,13 +1190,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page-templates\/sections\/team-talk.php",
-		"oF": 0
-		},
-	"\/page-templates\/template-loss-mitigation.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/page-templates\/template-loss-mitigation.php",
 		"oF": 0
 		},
 	"\/page.php": {
@@ -1877,6 +2021,13 @@
 		"oAP": "\/style-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/style.css.orig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/style.css.orig",
+		"oF": 0
 		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,

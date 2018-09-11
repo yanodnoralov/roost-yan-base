@@ -426,7 +426,7 @@
                             "key": "field_5b9198d58e8fb",
                             "label": "Title",
                             "name": "title",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -437,9 +437,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": ""
                         },
                         {
                             "key": "field_5b9198dd8e8fc",
@@ -457,7 +457,7 @@
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
-                            "rows": "",
+                            "rows": 2,
                             "new_lines": ""
                         },
                         {
@@ -514,7 +514,7 @@
                                     "default_value": "",
                                     "placeholder": "",
                                     "maxlength": "",
-                                    "rows": "",
+                                    "rows": 1,
                                     "new_lines": ""
                                 }
                             ]
@@ -1789,6 +1789,93 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5b97ceab9e424": {
+                    "key": "layout_5b97ceab9e424",
+                    "name": "large_call_to_action",
+                    "label": "Large call to action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b97cec69e425",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "textarea",
+                            "instructions": "Title line breaks are ignored on tablet & mobile",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5b97cf119e426",
+                            "label": "Content",
+                            "name": "html_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5b97cf289e427",
+                            "label": "Button",
+                            "name": "button_link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5b97cf359e428",
+                            "label": "Background image",
+                            "name": "bg_img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "48",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5b952e7d75f91": {
                     "key": "layout_5b952e7d75f91",
                     "name": "layout_17",
@@ -2502,7 +2589,7 @@
                 "layout_5b951c5db1158": {
                     "key": "layout_5b951c5db1158",
                     "name": "layout_102",
-                    "label": "Slider - predefined",
+                    "label": "Testimonials Slider - predefined",
                     "display": "block",
                     "sub_fields": [],
                     "min": "",
@@ -2547,5 +2634,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536669867
+    "modified": 1536693968
 }

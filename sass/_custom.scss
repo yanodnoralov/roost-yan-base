@@ -123,6 +123,9 @@ b, strong {
 .text-center {
 	text-align: center;
 }
+.text-444 {
+	color: #444;
+}
 
 .jumbotron {
 	background-color: transparent;
@@ -564,7 +567,9 @@ nav {
 	z-index: 2;
 }
 .container {
-
+	@media (min-width:1280px) {
+		max-width: 1230px;
+	}
 }
 //buttons
 .btn {
@@ -872,6 +877,12 @@ nav {
 	.display-3 {
 		font-size: 2.6rem;
 	}
+	.title {
+		padding-bottom: 0;
+		br {
+			display: none;
+		}
+	}
 }
 .globe-area {
 	background: #4698dd;
@@ -990,27 +1001,65 @@ nav {
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
+	align-items: flex-end;
+    padding-bottom: 45px;
+    min-height: 300px;
+    @include media-breakpoint-up(sm) {
+		min-height: 400px;
+	}
+    @include media-breakpoint-up(lg) {
+		padding-bottom: 90px;
+		min-height: 500px;
+	}
+	@include media-breakpoint-down(md) {
+		border-bottom: 1px solid #eaeaea;
+		background-position: right center !important;
+		text-shadow: 0 0 15px rgba(255,255,255,1);
+		padding-top: 80px;
+		.btn {
+			text-shadow: none !important;
+		}
+	}
 	h1 {
 		font-size: 35px;
 		font-weight: 900;
+		margin-top: 0;
+		color: $color-hero-title;
 	}
 	p {
 		font-size: 21px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
-	height: 500px;
 	.border-green-left {
-		border-left: 3px solid $color-secondary;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-left: 4px solid $color-secondary;
+		@include media-breakpoint-down(sm) {
+			border: 0;
+		}
 	}
 	.header-action {
 		.btn {
-			margin-top: 20px;
-		color: white;
-		background: #378fdb;
-			text-transform: none;
-			padding: 11px 20px;
+			color: white;
 			min-width: auto;
-			border-radius: 2px;
 		}
+	}
+	.hero-mobile-overlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,255,255,0.8);
+		top: 0;
+		left: 0;
+		z-index: 1;
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	.container {
+		z-index: 3;
 	}
 }
 .align-b {
@@ -1020,18 +1069,32 @@ nav {
 }
 $spacerx: 3.5rem;
 .section {
-	padding: 6rem 0px 4rem 0;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 	@include media-breakpoint-down(md) {
-		padding: $spacerx 0 $spacerx 0;
+		padding-top: $spacerx;
+		padding-bottom: $spacerx;
+	}
+	&.seperator-y {
+		padding-top: 7.5rem;
+		padding-bottom: 7.5rem;
 	}
 	.title {
 		text-align: center;
-		padding-bottom: 4rem;
+		padding-bottom: 2.5rem;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 4rem;
+		}
 		h2 {
 			margin-top: 0;
 			@include media-breakpoint-up(lg) {
 				padding-left: 5%;
 				padding-right: 5%;
+			}
+			@include media-breakpoint-down(md) {
+				br {
+					display: none;
+				}
 			}
 		}
 		p {
@@ -1169,29 +1232,20 @@ $spacerx: 3.5rem;
 	}
 
 }
-.brand {
-	h4 {
-		font-size: 20px;
-		font-weight: 900;
-	}
-
-	p {
-		font-size: 17px;
-		color: rgb(35, 31, 32);
-		line-height: 1.529;
-		text-align: left;
-	}
-	.sub-title-section {
-		font-size: 21px;
-	}
+.ecosystem {
 	.brand-small {
 		text-align: center;
 		font-size: 15px;
 		color: rgb(118, 118, 118);
 		line-height: 1.4;
+		margin-top: 30px;
+		@include media-breakpoint-up(sm) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	.brand-extra {
-		border-width: 2px;
+		border-width: 1px;
 		border-color: rgb(238, 238, 238);
 		border-style: solid;
 		border-radius: 10px;
@@ -1202,22 +1256,82 @@ $spacerx: 3.5rem;
 		}
 		margin-left: 20px;
 	}
+	.subitem p:last-child {
+		margin-bottom: 0;
+	}
 }
 .key-dev {
+	position: relative;
+	background-position: 0 70% !important;
+	@include media-breakpoint-down(md) {
+		background: #f9f9f9 !important;
+	}
+	&.seperator-y {
+		padding-bottom: 9rem;
+	}
 	h4 {
-		font-size:20px;
-		.fas {
-			color: green;
-			padding-right: 10px;
+		margin-bottom: 10px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 5px;
 		}
 	}
-	p {
-		font-size: 17px;
-		padding-left: 30px;
+	.first-sec {
+		padding-bottom: 2rem;
 	}
-
+	.turn-key-list {
+		@include media-breakpoint-up(lg) {
+			max-width: 66%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.checkboxes {
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 15px;
+		&:before {
+			content: "\f00c";
+			font-family: $font-awesome;
+			color: #81d135;
+			position: absolute;
+			left: 0;
+		}
+		@include media-breakpoint-up(md) {
+			&:last-child p {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		& > div:last-child p:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
-
+.seperator-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 0;
+    svg {
+	    position: absolute;
+		bottom: -1px;
+		left: 0;
+    }
+}
+.seperator-top {
+	@extend .seperator-bottom;
+	top: -1px;
+	bottom: auto;
+	svg {
+	    position: absolute;
+		top: -1px;
+		bottom: auto;
+		left: 0;
+    }
+}
 .sensors {
 	.col-md-4 {
 		padding: 0px;
@@ -1358,20 +1472,42 @@ $spacerx: 3.5rem;
 		padding: 0px 200px;
 	}
 }
-.roost-connects {
-	padding-bottom: 0px;
-	img {
-		max-width: 130px;
-		height: auto;
-		margin: 0 auto;
-		padding-top: 50px;
+.row-of-cards {
+	&>div {
+		display: flex;
 	}
 	.card {
-		text-align: center;
+		display: flex;
+		padding: 35px 25px 30px;
+		.c-img {
+			height: 80px;
+			margin-bottom: 15px;
+			display: flex;
+			align-content: center;
+		}
+		.card-title {
+			margin-top: 0;
+		}
+		.card-footer {
+			padding: 0;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.card {
+			margin-bottom: 15px;
+		}
+		&>div:last-child .card {
+			margin-bottom: 0;
+		}
+	}
+}
+.roost-connects {
+	img {
+		margin: 0 auto;
+	}
+	.card {
 		border: 0px;
-		box-shadow: 0px 0px 15px 0px #d6d5d5;
-		padding-bottom: 30px;
-		min-height: 324px;
+		box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.07);
 	}
 	.card-footer {
 		border: 0px;
@@ -1381,9 +1517,6 @@ $spacerx: 3.5rem;
 		font-size: 19px;
 		font-weight: 500;
 		color: #231f20;
-	}
-	.c-img {
-		min-height: 135px;
 	}
 }
 .meet-roost {
