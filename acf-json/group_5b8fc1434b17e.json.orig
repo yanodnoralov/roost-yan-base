@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -49,12 +49,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "48",
                 "class": "",
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "medium_large",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -146,5 +146,9 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
+<<<<<<< HEAD
+    "modified": 1536645222
+=======
     "modified": 1536504449
+>>>>>>> ca1662ffd5d455603a2b3f8839db742b50838df8
 }
