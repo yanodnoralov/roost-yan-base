@@ -303,6 +303,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/green-seperator.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/green-seperator.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/guide.png": {
 		"ft": 32768,
 		"iS": 33415,
@@ -1149,6 +1159,19 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/sass\/bootstrap-grid-scss\/_customizebs.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/bootstrap-grid-scss\/_customizebs.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/bootstrap-grid-scss\/breakpoints\/mixins\/_breakpoints.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1161,6 +1184,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/sass\/bootstrap-grid-scss\/grid.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/sass\/bootstrap-grid-scss\/grid-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/sass\/bootstrap-grid-scss\/grid.scss": {
 		"aP": 0,

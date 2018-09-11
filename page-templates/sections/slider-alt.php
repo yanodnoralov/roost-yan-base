@@ -3,11 +3,12 @@
 <div class="testimonials-wrapper">
 <div class="container section slider-cont">
     <div class="row">
-        <div class="col-md-12 first-sec title green_border">
+        <div class="col-12 px-lg-50 first-sec title green_border">
             <h2><?php echo get_field('section2_title','option');?></h2>
         </div>
     </div>
-    <div class="row">
+    <div class="row testimonial-outer">
+	    <div class="col-12">
         <div id="testimonial-slider" class="testimonial-slider carousel slide">
             <div class="testimonial-slider-inner">
 	            
@@ -45,6 +46,7 @@
                 ?>
             </div>
         </div>
+	    </div>
     </div>
     <script>
         jQuery(document).ready(function() {
@@ -67,7 +69,7 @@
 			    {
 			      breakpoint: 767,
 			      settings: {
-			        slidesToShow: 3,
+			        slidesToShow: 2,
 			      }
 			    }
 			    ]
@@ -76,7 +78,7 @@
     </script>
     <div class="row">
         <div class="col-md-12 text-center">
-            <a href="<?php echo get_field('carousel_cta_url','option'); ?>" class="btn btn-primary cta-carousel"><?php echo get_field('carousel_cta','option'); ?></a>
+            <a href="<?php echo get_field('carousel_cta_url','option'); ?>" class="btn btn-primary cta-carousel mt-md-5 mt-4"><?php echo get_field('carousel_cta','option'); ?></a>
         </div>
     </div>
 </div>
