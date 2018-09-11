@@ -3847,7 +3847,8 @@ nav.mobile-navigation {
   font-weight: 900;
   text-transform: capitalize;
   transition: all 0.35s ease-out;
-  position: relative; }
+  position: relative;
+  white-space: normal; }
   .btn:visited {
     color: inherit; }
   .btn:hover {
@@ -4040,7 +4041,10 @@ nav.mobile-navigation {
       border: 0;
       border-radius: 0;
       margin: 0;
-      height: 250px; }
+      height: 200px; }
+      @media (min-width: 576px) {
+        .slider-cont .carousel .card {
+          height: 250px; } }
       .slider-cont .carousel .card .hover-content {
         visibility: hidden;
         position: absolute;
@@ -4119,9 +4123,6 @@ nav.mobile-navigation {
   .site-footer .footer-menus .menu {
     margin: 0px;
     padding: 0px; }
-    .site-footer .footer-menus .menu ul {
-      padding: 0;
-      margin: 0; }
   .site-footer .footer-menus ul li {
     position: relative;
     padding: 5px 0px;
@@ -4182,6 +4183,14 @@ nav.mobile-navigation {
     font-size: 21px; }
   .page-hero .border-green-left {
     border-left: 3px solid #81d134; }
+  .page-hero .header-action .btn {
+    margin-top: 20px;
+    color: white;
+    background: #378fdb;
+    text-transform: none;
+    padding: 11px 20px;
+    min-width: auto;
+    border-radius: 2px; }
 
 .align-b {
   bottom: 50px;
@@ -4545,3 +4554,88 @@ nav.mobile-navigation {
     margin-top: 40px; }
   .roost-careers .title {
     padding-bottom: 50px; }
+
+.horizontal-boxes {
+  padding: 0px; }
+  .horizontal-boxes .dotted-gradient {
+    background-image: linear-gradient(to bottom, #81d135 30%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-size: 3px 10px;
+    background-repeat: repeat-y;
+    padding-top: 15%; }
+  .horizontal-boxes img {
+    max-height: 450px; }
+  .horizontal-boxes h2 {
+    font-size: 30px;
+    font-weight: 700; }
+  .horizontal-boxes .green_border:after {
+    text-align: left; }
+  .horizontal-boxes .img-cont {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 50px;
+    margin-bottom: 50px;
+    min-height: 550px; }
+  .horizontal-boxes p {
+    position: relative; }
+    .horizontal-boxes p::after {
+      content: url(img/green_round2.png);
+      position: absolute;
+      right: -31px;
+      top: -25px; }
+  .horizontal-boxes .ff {
+    padding-top: 100px; }
+
+.additonal-app {
+  background-color: #f9f9f9; }
+  .additonal-app .img-text-cont {
+    border: 0px;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 20px 7px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 2px 20px 7px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 2px 20px 7px rgba(0, 0, 0, 0.07); }
+  .additonal-app .img-more img {
+    max-width: 130px; }
+  .additonal-app .active-box {
+    border-radius: 5px;
+    border-left: 3px solid #81d135; }
+  .additonal-app .carou-items {
+    max-height: 500px;
+    min-height: 500px; }
+  .additonal-app .carousel-item {
+    text-align: center; }
+  .additonal-app .sli {
+    max-height: 500px; }
+  .additonal-app .carousel-indicators li {
+    background-color: #a3a3a3; }
+  .additonal-app .carousel-indicators .active {
+    background-color: #81d135; }
+
+.full-custom-integration {
+  padding: 100px 0px;
+  background-color: #edf0f2; }
+  .full-custom-integration .container {
+    background-color: #fff; }
+  .full-custom-integration .section {
+    padding: 50px 0px; }
+  .full-custom-integration .title {
+    padding-bottom: 50px; }
+  .full-custom-integration p {
+    font-size: 20px; }
+  .full-custom-integration .pp {
+    padding: 0px 240px; }
+    .full-custom-integration .pp .img-h {
+      margin-right: 20px;
+      max-width: 80px; }
+  .full-custom-integration .sub-title-section {
+    margin-left: 20px; }
+
+.ins-sol {
+  text-align: center; }
+  .ins-sol h2 {
+    font-size: 45px;
+    font-weight: 100;
+    padding-bottom: 20px; }
