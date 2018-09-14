@@ -36,7 +36,9 @@
                             	<div class="card-author"><?php echo get_field('testimonial_author');?></div>
                             <?php endif;?>
                             <div class="card-author-position"><?php echo get_field('testimonial_author_position');?></div>
-                            <div class="read-more"><a class="caret" href="<?php echo get_the_permalink(get_the_ID());?>">Read more</a></div>
+                            <?php if(get_field('link')):?>
+                            	<div class="read-more"><a class="caret" href="<?php echo get_field('link');?>">Read more</a></div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     
@@ -81,5 +83,6 @@
             <a href="<?php echo get_field('carousel_cta_url','option'); ?>" class="btn btn-primary cta-carousel mt-md-5 mt-4"><?php echo get_field('carousel_cta','option'); ?></a>
         </div>
     </div>
+</div>
 </div>
 <!-- end testimonials -->

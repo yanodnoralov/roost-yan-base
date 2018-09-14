@@ -50,7 +50,7 @@ get_header();
             <div class="col-lg-7 offset-lg-4">
                 <h2 class="display-3 mt-0"><?php echo get_field('cta_2_title','option');?></h2>
                 <?php echo get_field('cta_2_text','option');?>
-                <a href="<?php echo get_field('cta_2_cta_link','option');?>" class="btn btn-white btn-lg"><?php echo get_field('cta_2_cta_text','option');?></a>
+                <a data-toggle="modal" data-target="#myModal" href="<?php echo get_field('cta_2_cta_link','option');?>" class="btn btn-white btn-lg"><?php echo get_field('cta_2_cta_text','option');?></a>
             </div>
         </div>
     </div>

@@ -104,3 +104,56 @@ $(document).on('click', '.site-main a[href^="#"], .home .btn-header', function (
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
+
+
+//contact modal
+jQuery(document).ready(function ($) {
+
+    $(function () {
+        var onClass = "on";
+        var showClass = "show";
+        var labelOn = "labelOn";
+
+        $(".js-floatInput").bind("checkval", function () {
+            var label = $(this).closest('.formGroup ').find(".js-floatLabel");
+            if (this.value !== "") {
+                label.addClass(showClass);
+                $(this).closest('.formGroup ').addClass(labelOn);
+            } else {
+                label.removeClass(showClass);
+                $(this).closest('.formGroup ').removeClass(labelOn);
+            }
+        }).on("keyup", function () {
+            $(this).trigger("checkval");
+        }).on("focus", function () {
+            $(this).closest('.formGroup ').find(".js-floatLabel").addClass(onClass);
+
+        }).on("blur", function () {
+            $(this).closest('.formGroup ').find(".js-floatLabel").removeClass(onClass);
+        }).trigger("checkval");
+    });
+
+
+});
+
+
+//slider stuff
+/*
+$(document).ready(function(){
+	logoheight = $(".logo").find("img").outerHeight();
+	console.log("l = " + logoheight);
+	$tp_caption = $(".tp-caption");
+	$tp_caption.addClass("yanz");
+	$tp_caption.each(function(){
+	var $childh2 = $(this).find("h2");
+	var $childp = $(this).find("p");
+		setTimeout(function(){
+			$childp.addClass("fonz");
+			var hh = $childh2.outerHeight();
+			var ph = $childp.outerHeight();
+			var combineHeight = hh + ph;
+			console.log("children_height = " + combineHeight);
+		}, 1000);
+	})
+});
+*/

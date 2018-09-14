@@ -62,6 +62,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5b9b77b152e2b.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b9b77b152e2b-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -216,6 +224,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/caret-down-bold.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/caret-down-bold.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/caret-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -277,6 +295,16 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/img\/dot.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/dot.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/img\/ecosystem-graphic.png": {
 		"ft": 32768,
@@ -418,6 +446,83 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/hero\/commercial-hero.jpg": {
+		"ft": 16384,
+		"iS": 220257,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/hero\/commercial-hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/img\/hero\/loss-mitigation-hero.jpg": {
+		"ft": 16384,
+		"iS": 158194,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/hero\/loss-mitigation-hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/hero\/mobile-customer-engagement-hero.jpg": {
+		"ft": 16384,
+		"iS": 51405,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/hero\/mobile-customer-engagement-hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/hero\/mobile-loss-mitigation-hero.jpg": {
+		"ft": 16384,
+		"iS": 38229,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/hero\/mobile-loss-mitigation-hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/hero\/mobile-policy-holder.jpg": {
+		"ft": 16384,
+		"iS": 48701,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/hero\/mobile-policy-holder.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/home-advisor.jpg": {
+		"ft": 16384,
+		"iS": 5071,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/home-advisor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/how-it-works.jpg": {
+		"ft": 16384,
+		"iS": 151145,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/how-it-works.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/icons\/customer-access.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -438,11 +543,191 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/icons\/more-details\/battery-powered.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/battery-powered.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/cusomter-engagement.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/cusomter-engagement.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/custom-co-branded-app.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/custom-co-branded-app.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/data-security.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/data-security.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/insights.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/insights.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/launch.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/launch.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/lower-cost.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/lower-cost.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/peace-of-mind_1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/peace-of-mind_1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/proactive-communication.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/proactive-communication.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/realt-time-notifications.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/realt-time-notifications.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/more-details\/user-friendly.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/more-details\/user-friendly.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/notification-bell.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/notification-bell.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/save-millions\/fire.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/save-millions\/fire.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/save-millions\/theft.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/save-millions\/theft.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/save-millions\/water-leaks.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/save-millions\/water-leaks.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/save-millions\/wind-rain.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/save-millions\/wind-rain.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/icons\/self-service-access.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/icons\/self-service-access.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/smart-sensors.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/smart-sensors.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/wireless.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/wireless.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -467,6 +752,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/integration-icon.png": {
+		"ft": 32768,
+		"iS": 1491,
+		"oA": 0,
+		"oAP": "\/img\/integration-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/kingstone.png": {
 		"ft": 32768,
@@ -705,6 +1001,28 @@
 		"opt": 1,
 		"q": 100
 		},
+	"\/img\/roost-integrations-app-screens.jpg": {
+		"ft": 16384,
+		"iS": 71192,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/roost-integrations-app-screens.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/img\/save-millions-bg.jpg": {
+		"ft": 16384,
+		"iS": 96631,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/save-millions-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/img\/save-millions-wave-bg.png": {
 		"ft": 32768,
 		"iS": 1090833,
@@ -851,6 +1169,94 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/smart-sensors-image.jpg": {
+		"ft": 16384,
+		"iS": 163020,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/smart-sensors-image.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/aviva-logo-primary.png": {
+		"ft": 32768,
+		"iS": 5684,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/aviva-logo-primary.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/bankers-insurance-group.png": {
+		"ft": 32768,
+		"iS": 14668,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/bankers-insurance-group.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/countryfinancial.png": {
+		"ft": 32768,
+		"iS": 32877,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/countryfinancial.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/encompass.jpg": {
+		"ft": 16384,
+		"iS": 15500,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/encompass.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/hippo.jpg": {
+		"ft": 16384,
+		"iS": 13204,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/hippo.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/testimonial-logos\/mm_logo_transparent.png": {
+		"ft": 32768,
+		"iS": 13727,
+		"oA": 0,
+		"oAP": "\/img\/testimonial-logos\/mm_logo_transparent.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/the-weather-company.jpg": {
+		"ft": 16384,
+		"iS": 3336,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/the-weather-company.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"\/img\/theft.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -892,6 +1298,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/vertical-wave-bg.png": {
+		"ft": 32768,
+		"iS": 23466,
+		"oA": 0,
+		"oAP": "\/img\/vertical-wave-bg.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/vertical_divider.png": {
 		"ft": 32768,

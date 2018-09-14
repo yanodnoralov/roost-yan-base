@@ -16,6 +16,27 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PHMN4C5');</script>
+	<!-- End Google Tag Manager -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55382605-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-55382605-1');
+	</script>
+
+	
 <!-- 	<link rel="stylesheet" href="https://use.typekit.net/xyx4pqv.css"> -->
 	<script>
 	  (function(d) {
@@ -48,10 +69,31 @@
 		opacity: 1;
 		transition: all .5s cubic-bezier(0.5, 1, 0.3, 1);
 	}
+	@media (max-width:767px){
+		.page-hero-mobile:not(.flexible-hero) .mobile-hero-row {
+			<?php if(get_field('page_hero_background_image_mobile')):?>
+				background-image:url(<?php echo get_field('page_hero_background_image_mobile');?>);
+        	<?php else:?>
+	        	background-image:url(<?php echo get_field('page_hero_background_image');?>);
+			<?php endif?>
+        }
+        .page-hero-mobile.flexible-hero .mobile-hero-row {
+	        <?php if(get_sub_field('page_hero_background_image_mobile_flexible')):?>
+				background-image:url(<?php echo get_sub_field('page_hero_background_image_mobile_flexible');?>);
+        	<?php else:?>
+	        	background-image:url(<?php echo get_sub_field('background_image');?>);
+			<?php endif?>
+        }
+	}
 	</style>
 </head>
 
 <body <?php body_class(); ?>>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMN4C5"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'yan-base' ); ?></a>
 	
@@ -125,27 +167,52 @@
                 background-image:url(<?php echo get_field('page_hero_background_image');?>);
                 background-position: <?php echo $position;?>;
                 background-size: cover;">
-	        <div class="hero-mobile-overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9 col-lg-7 pull-left border-green-left">
+                    <div class="col-md-7 col-lg-7 pull-left border-green-left">
                         <h1><?php echo get_the_title();?></h1>
                         <p><?php echo get_field('page_subtitle');?></p>
 
                     </div>
-                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
-                        <?php
+                    <?php
+					if (get_field('enable_button')) {?>
+	                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+	                        <?php
+		                        $heroLink = get_field('hero_cta');
+	                        ?>
+	                        <div class="header-action">
+	                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+	                        </div>
+	                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-hero page-hero-mobile">
+	        <div class="mobile-hero-row"></div>
+            <div class="container">
+                <div class="row mobile-hero-content-row">
+                    <div class="col-12">
+                        <h1><?php echo get_the_title();?></h1>
+                        <p><?php echo get_field('page_subtitle');?></p>
 
-                        if (get_field('enable_button')) {
-	                        $heroLink = get_field('hero_cta');
-                        ?>
-                        <div class="header-action">
-                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
-                        </div>
-                        <?php
-                        }
-                        ?>
                     </div>
+                    <?php
+					if (get_field('enable_button')) {?>
+	                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+	                        <?php
+		                        $heroLink = get_field('hero_cta');
+	                        ?>
+	                        <div class="header-action">
+	                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+	                        </div>
+	                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

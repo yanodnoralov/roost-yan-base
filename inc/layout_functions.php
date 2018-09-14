@@ -7,16 +7,50 @@ function get_template_by_layout($layout){
         // save millions
         case 'layout_1':
             ?>
-            <div class="section-claims">
+            <div class="section section-claims">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 first-sec">
+                        <div class="col-md-12 first-sec title green_border">
                             <h2 class="section-title"><?php the_sub_field('title');?></h2>
                             <p>
                                 <?php the_sub_field('subtitle');?>
                             </p>
                         </div>
                     </div>
+                    
+                    <div class="row white-sec-row mt-3">
+	                    <div class="col-12">
+		                    <div class="white-sec-inner">
+                        <div class="annual-claims-title h4">
+                            <?php the_sub_field('top_text');?>
+                        </div>
+                        <?php
+                        if ( have_rows('columns') ) :
+                        while ( have_rows('columns') ) : the_row();
+                        ?>
+	                        <div class="claim-item">
+		                        <div class="claim-img">
+	                            	<img <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
+		                        </div>
+	                            <div class="claim-body">
+	                                <h4 class="claim-title"><?php the_sub_field('title');?></h4>
+	                                <p class="claim-text x"><?php the_sub_field('text');?>
+	                                </p>
+	                            </div>
+                                <div class="circle-text">
+                                    <span class="price"><?php the_sub_field('circle_title');?></span>
+                                    <span class="tiny"><?php the_sub_field('circle_subtext');?></span>
+                                </div>
+	                        </div>
+                        <?php
+                        endwhile;
+                        endif;
+                        ?>
+		                    </div>
+	                    </div>
+                    </div>
+                    
+<!--
                     <div class="row white-sec-cont">
                         <div class="col-md-6 offset-md-3 top-cont-card">
                             <?php the_sub_field('top_text');?>
@@ -48,6 +82,7 @@ function get_template_by_layout($layout){
                             ?>
                         </div>
                     </div>
+-->
                 </div>
             </div>
             <?php
@@ -56,7 +91,7 @@ function get_template_by_layout($layout){
         // Roost ecosystem
         case 'layout_2':
             ?>
-            <div class="container section ecosystem pt-0">
+            <div class="container section ecosystem">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
                         <h2 class="section-title"><?php the_sub_field('title');?></h2>
@@ -172,7 +207,7 @@ function get_template_by_layout($layout){
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row sensor-items-row">
                     <?php
                     $cnt=0;
 
@@ -182,12 +217,14 @@ function get_template_by_layout($layout){
                     ?>
 
                     <div class="col-md-4">
-                        <div class="card c<?php echo $cnt;?>">
-                            <img <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
-                            <div class="card-footer">
-                                <h5 class="card-title"><?php the_sub_field('title');?></h5>
-                                <div class="card-text"><?php echo get_sub_field('text');?></div>
+                        <div class="item c<?php echo $cnt;?>" style='background-image:url("<?php echo get_sub_field("image");?>");'>
+                            <div class="item-copy">
+                                <h4 class="item-title"><?php the_sub_field('title');?></h4>
+                                <div class="item-text"><?php echo get_sub_field('text');?></div>
                             </div>
+                            <?php if(get_sub_field('link')):?>
+                            	<a title="<?php the_sub_field('title')?>" class="link" href="<?php the_sub_field('link')?>"></a>
+                            <?php endif;?>
                         </div>
                     </div>
 
@@ -199,8 +236,8 @@ function get_template_by_layout($layout){
 
                 </div>
                 <div class="row">
-                    <div class="col-md-12 cta-button">
-                        <a href="<?php the_sub_field('cta_url');?>" class="btn btn-primary"><?php the_sub_field('cta_text');?></a>
+                    <div class="col-md-12 text-center">
+                        <a href="<?php the_sub_field('cta_url');?>" class="btn btn-primary mt-5"><?php the_sub_field('cta_text');?></a>
                     </div>
                 </div>
             </div>
@@ -221,7 +258,7 @@ function get_template_by_layout($layout){
                             </p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row more-details-row">
                         <?php
                         // how many ites do we have here?
                         $count=0;
@@ -232,31 +269,21 @@ function get_template_by_layout($layout){
 
                         $column_count=0;
                         if ( have_rows('boxes') ) :
-                            while ( have_rows('boxes') ) : the_row();
-                                if ($column_count==0) {
-                                    ?>
-                                    <div class="col-md-6">
-                                    <?php
-                                }
-                                ?>
-
-                                <div class="img-text-cont">
-                                    <img class="img-more float-left" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
-                                    <div class="text float-left">
-                                        <h5><?php the_sub_field('title');?></h5>
-                                        <p><?php the_sub_field('text');?></p>
-                                    </div>
+                            while ( have_rows('boxes') ) : the_row();?>
+                            
+                              	<div class="img-text-cont-outer">
+	                              	<div class="img-text-cont">
+		                                <div class="img-more float-left">
+	                                    	<img <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+		                                </div>
+	                                    <div class="text float-left">
+	                                        <h5><?php the_sub_field('title');?></h5>
+	                                        <?php the_sub_field('text');?>
+	                                    </div>
+	                              	</div>
                                 </div>
-
-
+                                
                             <?php
-                                $column_count++;
-                                if ($column_count==$column_items) {
-                                    $column_count=0;
-                                    ?>
-                                    </div>
-                                    <?php
-                                }
                             endwhile;
                         endif;
 
@@ -266,29 +293,60 @@ function get_template_by_layout($layout){
             </div>
             <?php
             break;
+        
+                                
+//                                 more details into cols
+/*
+                                if ($column_count==0) {
+                                    ?>
+                                    <div class="col-md-6">
+                                    <?php
+                                }
+                                ?>
+
+                                <div class="img-text-cont">
+	                                <div class="img-more float-left">
+                                    	<img <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+	                                </div>
+                                    <div class="text float-left">
+                                        <h5><?php the_sub_field('title');?></h5>
+                                        <p><?php the_sub_field('text');?></p>
+                                    </div>
+                                </div>
+
+								<?php
+                                $column_count++;
+                                if ($column_count==$column_items) {
+                                    $column_count=0;
+                                    ?>
+                                    </div>
+                                    <?php
+                                }
+*/
 
 
-        // Intelegent app services
+
+        // Intelligent app services
         case 'layout_6':
             ?>
-            <div class="section app-services border-left-sec">
+            <div class="section title-left app-services border-left-sec">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="col-md-12 first-sec title green_border">
+                        <div class="col-12 col-lg-6">
+                            <div class="first-sec title green_border">
                                 <h2 class="section-title"><?php the_sub_field('title');?></h2>
                                 <p class="sub-title-section">
                                     <?php the_sub_field('subtitle');?>
                                 </p>
                             </div>
-                            <div class="col-md-12">
+                            <div class="d-block">
                                 <?php
                                 if ( have_rows('image_text') ) :
                                     while ( have_rows('image_text') ) : the_row();
                                         ?>
                                         <div class="img-text-cont">
                                             <div class="img-more float-left">
-                                                <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                                <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image')['id'],'full','218px');?>>
                                             </div>
                                             <div class="text float-left">
                                                 <h5><?php the_sub_field('title');?></h5>
@@ -299,12 +357,15 @@ function get_template_by_layout($layout){
                                     endwhile;
                                 endif;
                                 ?>
-
+                                <?php if (get_sub_field('cta_button')):
+	                            $cta_button = get_sub_field('cta_button');?>
+                                	<a class="btn btn-primary mt-3 mt-lg-4" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>" href="<?php echo $cta_button["url"]?>"><?php echo $cta_button["title"]?></a>
+                                <?php endif;?>
                             </div>
 
                         </div>
-                        <div class="col-md-6 pull-right">
-                            <img class="sli" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','540px');?>>
+                        <div class="col-12 col-lg-6 text-center text-lg-right">
+                            <img class="sli img-fluid mt-5 mt-lg-3" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','917px');?>>
                         </div>
                     </div>
                 </div>
@@ -314,7 +375,7 @@ function get_template_by_layout($layout){
         // Roost connects
         case 'layout_7':
             ?>
-            <div class="container section roost-connects">
+            <div class="container section roost-connects pb-0">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
                         <h2 class="section-title"><?php the_sub_field('title');?></h2>
@@ -498,21 +559,25 @@ function get_template_by_layout($layout){
             break;
             
         // Lets talk main call to action
-        case 'large_call_to_action':
+        case 'layout_33':
             ?>
             <div class="team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
 			    <div class="container">
 			        <div class="row">
 			            <div class="col-md-12 text-center">
 				            <?php if (get_sub_field('title')):?>
-			                	<h2 class="display-3 mt-0 mb-4"><?php the_sub_field('title');?></h2>
+			                	<h2 class="display-3 mt-0"><?php the_sub_field('title');?></h2>
 			                <?php endif;?>
 			                <?php if (get_sub_field('html_content')):?>
 				                <?php the_sub_field('html_content');?>
 			                <?php endif;?>
 			                <?php if (get_sub_field('button_link') ):?>
 			                	<?php $link = get_sub_field('button_link');?>
-				                <a class="btn btn-white btn-lg" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+			                	<?php if (get_sub_field('if_contact_modal') == true ):?>
+			                		<a class="modal-target-contact btn btn-white btn-lg" data-toggle="modal" data-target="#myModal" href="#" class="btn"><?php echo $link['title'];?></a>
+			                	<?php else:?>
+				                	<a class="modal-target-contact btn btn-white btn-lg" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+			                	<?php endif;?>
 			                <?php endif;?>
 			            </div>
 			        </div>
@@ -721,51 +786,47 @@ function get_template_by_layout($layout){
         // Horizontal boxes with slider
         case 'layout_19':
             ?>
-            <div class="jumbotron horizontal-boxes boxes-with-carousel" style="background: #f7f7f7 url(<?php the_sub_field('background_image');?>) right top no-repeat;">
-                <div class="container section horizontal-boxes" >
+            <div class="jumbotron horizontal-boxes boxes-with-carousel" style="background: #fff url(<?php the_sub_field('background_image');?>) right top no-repeat;">
+                <div class="container section horizontal-boxes title-left" >
                     <div class="row">
-                        <div class="col-md-5 dotted-gradient ff">
-                            <h2 class=""></h2>
-
-                        </div>
-                        <div class="col-md-6">
-
-                        </div>
                         <?php
                         $cnt=0;
                         $slide_cnt=1;
                         if ( have_rows('boxes') ) :
                             while ( have_rows('boxes') ) : the_row();
-
                                 ?>
-                                <div class="col-md-5 dotted-gradient">
+                                <div class="row boxs-row">
+                                <div class="col-md-6 dotted-gradient">
                                     <h2 class="green_border"><?php the_sub_field('title');?></h2>
                                     <?php the_sub_field('subtext');?>
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-box-<?php echo $cnt;?>">
+                                    <button type="button" class="btn btn-outline btn-light mr-3 learn-more-btn" data-toggle="modal" data-target="#modal-box-<?php echo $cnt;?>">
                                         Learn More
                                     </button>
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-action-<?php echo $cnt;?>">
-                                        <?php the_sub_field('cta_text');?>
-                                    </button>
+                                    <?php if (get_sub_field('cta_text')):?>
+	                                    <button type="button" class="btn btn-play" data-toggle="modal" data-target="#modal-action-<?php echo $cnt;?>">
+	                                        <i class="fas fa-play-circle mr-2"></i><?php the_sub_field('cta_text');?>
+	                                    </button>
+                                    <?php endif;?>
                                 </div>
 
                                 <!-- Modal1 -->
                                 <div class="modal fade" id="modal-action-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <?php the_sub_field('cta_link');?>
+                                            <?php the_sub_field('modal2_content');?>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Modal2 -->
-                                <div class="modal fade bd-example-modal-lg" id="modal-box-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade bd-example-modal-lg learn-more-modal" id="modal-box-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
+	                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <nav>
                                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                    <a class="nav-item nav-link active" id="nav-<?php echo $cnt;?>a-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true">Key Benefits</a>
+                                                    <a class="nav-item nav-link active" id="nav-<?php echo $cnt;?>a-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true"><i class="fas fa-thumbs-up"></i> Key Benefits</a>
                                                     <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>b-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>b" role="tab" aria-controls="nav-<?php echo $cnt;?>b" aria-selected="false"><i class="fas fa-check-square"></i> Included</a>
                                                     <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>c-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>c" role="tab" aria-controls="nav-<?php echo $cnt;?>c" aria-selected="false"><i class="far fa-list-alt"></i> Requirements & Specs</a>
                                                 </div>
@@ -787,64 +848,58 @@ function get_template_by_layout($layout){
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 offset-md-1 img-cont">
-
-                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel">
-
-                                        <div class="carousel-inner">
-                                            <?php
-                                            $cl=0;
-
-
-                                            if ( have_rows('images') ) :
-                                                while ( have_rows('images') ) : the_row();
-                                                    if ($cl==0) {
-                                                        $te2='active';
-                                                    }
-                                                    else {
-                                                        $te2='';
-                                                    }
-                                                    ?>
-                                                    <div class="carousel-item <?php echo $te2;?>">
-                                                        <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
-                                                    </div>
-                                                    <?php
-                                                    $cl++;
-
-                                                endwhile;
-                                            endif;
-
-                                            ?>
-                                        </div>
-                                        <ol class="carousel-indicators">
-                                            <?php for ($i=0;$i<$cl;$i++){
-                                                if ($i==0) {
-                                                    $acl='active';
-                                                }
-                                                else {
-                                                    $acl='';
-                                                }
-                                                ?>
-                                                <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
-                                                <?php
-                                            }
-                                            $cnt++;
-                                            $slide_cnt++;
-                                            ?>
-                                        </ol>
-                                    </div>
+                                <div class="col-md-5 offset-md-1 pt-5 img-col">
+	                                <div class="img-cont">
+	                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel">
+	                                        <div class="carousel-inner">
+	                                            <?php
+	                                            $cl=0;
+	
+	
+	                                            if ( have_rows('images') ) :
+	                                                while ( have_rows('images') ) : the_row();
+	                                                    if ($cl==0) {
+	                                                        $te2='active';
+	                                                    }
+	                                                    else {
+	                                                        $te2='';
+	                                                    }
+	                                                    ?>
+	                                                    <div class="carousel-item <?php echo $te2;?>">
+	                                                        <img class="img-fluid sli d-block" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+	                                                    </div>
+	                                                    <?php
+	                                                    $cl++;
+	
+	                                                endwhile;
+	                                            endif;
+	
+	                                            ?>
+	                                        </div>
+	                                        <ol class="carousel-indicators">
+	                                            <?php for ($i=0;$i<$cl;$i++){
+	                                                if ($i==0) {
+	                                                    $acl='active';
+	                                                }
+	                                                else {
+	                                                    $acl='';
+	                                                }
+	                                                ?>
+	                                                <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
+	                                                <?php
+	                                            }
+	                                            $cnt++;
+	                                            $slide_cnt++;
+	                                            ?>
+	                                        </ol>
+	                                    </div>
+	                                </div><!-- /img-cont -->
                                 </div>
+                                </div><!-- /row -->
                             <?php
                             endwhile;
                         endif;
                         ?>
-                        <div class="col-md-5 dotted-gradient ff">
-                            <h2 class=""></h2>
-
-                        </div>
-                        <div class="col-md-6">
-
-                        </div>
                     </div>
                 </div>
 
@@ -853,42 +908,111 @@ function get_template_by_layout($layout){
 
             <?php
             break;
-        // The policyholder experience
+        // Full width hero flexible
         case 'layout_20':
             ?>
-            <div class="jumotron d-flex page-hero yany" style="
+            <div class="page-hero flexible-hero" style="
                     background-image:url(<?php echo get_sub_field('background_image');?>);
-                    background-position: center center;
+                    background-position: <?php if (get_sub_field('subtext')) { the_sub_field('background_position'); } else { echo 'center center'; }?>;
                     background-size: cover;">
-                <div class="container align-b">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-7 pull-left border-green-left">
+                        <div class="col-md-7 align-b border-green-left">
                             <h1><?php echo get_sub_field('title');?></h1>
                             <p><?php echo get_sub_field('subtext');?></p>
-
                         </div>
-
                     </div>
                 </div>
             </div>
+            
+            <div class="page-hero flexible-hero page-hero-mobile">
+		        <div class="mobile-hero-row"></div>
+	            <div class="container">
+	                <div class="row mobile-hero-content-row">
+	                    <div class="col-12">
+	                        <h1><?php echo get_sub_field('title');?></h1>
+                            <p><?php echo get_sub_field('subtext');?></p>
+	                    </div>
+	                    <?php
+						if (get_sub_field('enable_button')) {?>
+		                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+		                        <?php
+			                        $heroLink = get_sub_field('hero_cta');
+		                        ?>
+		                        <div class="header-action">
+		                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+		                        </div>
+		                    </div>
+	                    <?php
+	                    }
+	                    ?>
+	                </div>
+	            </div>
+	        </div>
+	        <style>
+		        @media (max-width:767px){
+			        .page-hero-mobile.flexible-hero .mobile-hero-row {
+				        <?php if(get_sub_field('page_hero_background_image_mobile_flexible')):?>
+							background-image:url(<?php echo get_sub_field('page_hero_background_image_mobile_flexible');?>);
+			        	<?php else:?>
+				        	background-image:url(<?php echo get_sub_field('background_image');?>);
+						<?php endif?>
+			        }
+				}
+		    </style>
 
             <?php
             break;
         // How it works
         case 'layout_21':
             ?>
-
-
-
+            <div class="how-it-works" style="background-color: #f6f9fb;">
+	            <div class="container section">
+	                <div class="row">
+	                    <div class="col-md-12 first-sec title green_border">
+	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                        <p class="sub-title-section">
+	                            <?php the_sub_field('subtitle');?>
+	                        </p>
+	                    </div>
+	                </div>
+	                <div class="row">
+	                    <div class="col-12 col-lg-4">
+	                        <?php
+	                        if ( have_rows('left_boxes') ) :
+	                        while ( have_rows('left_boxes') ) : the_row();
+	                        ?>
+		                        <div class="img-text-cont-outer">
+		                          	<div class="img-text-cont">
+		                                <div class="img-more">
+		                                	<img <?php ar_responsive_image(get_sub_field('icon'),'full','220px');?>>
+		                                </div>
+		                                <div class="text">
+		                                    <?php the_sub_field('text');?>
+		                                </div>
+		                          	</div>
+		                        </div>                       
+	                        <?php
+	                        endwhile;
+	                        endif;
+	                        ?>
+	                    </div>
+	                    <div class="col-12 col-lg-8 text-center">
+	                        <img class="w-auto mx-auto sli mt-5 mt-lg-0" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','1540px');?>>
+	                    </div>
+	                </div>
+	            </div>
+            </div>
             <?php
             break;
+
         // Roost policyholder stories
         case 'layout_22':
             ?>
 
 
             <!-- testemonials -->
-            <div class="container section slider-cont policy-stories">
+            <div class="container section policy-stories slider-cont">
                 <div class="row">
                     <div class="col-md-12 first-sec title green_border">
                         <h2><?php echo the_sub_field('title');?></h2>
@@ -897,8 +1021,8 @@ function get_template_by_layout($layout){
 
                 </div>
                 <div class="row">
-                    <div id="carouselExampleControls" class="carousel slide policyholder-stories-carousel" data-ride="carousel">
-                        <div class="carousel-inner">
+                    <div class="col-12">
+                        <div class="stories-slider-inner carousel">
                             <?php
                             $cnt=0;
                             $cnt_slider=0;
@@ -919,65 +1043,66 @@ function get_template_by_layout($layout){
                                 else {
                                     $class='';
                                 }
-                                if ($cnt_slider==0){
-                                    ?>
-                                    <div class="carousel-item <?php echo $class;?>">
-                                    <div class="card-columns" style="column-count: 3;">
-                                    <?php
-                                }
                                 ?>
 
-
-                                <div class="card card-body h-100 justify-content-center">
-                                    <?php if ( has_post_thumbnail() ) : ?>
-                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                            <?php the_post_thumbnail('full'); ?>
-                                        </a>
-                                        <?php the_title(); ?>
-                                        <?php the_excerpt(); ?>
-                                    <?php endif; ?>
-
-                                </div>
+								<div class="stories-item-wrapper <?php echo $class;?>">
+									<div class="stories-item">
+										<?php if ( has_post_thumbnail() ) : ?>
+		                                    <div class="story-img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+		                                    </div>
+		                                <?php endif; ?>
+		                                <div class="story-body justify-content-center">
+	                                        <h5 class="story-title"><?php the_field('slider_title');?></h5>
+	                                        <p><?php the_field('slider_excerpt');?>...</p>
+	                                        <a href="<?php the_permalink()?>">Read More</a>
+		                                </div>
+									</div>
+								</div>
 
                                 <?php
                                 $cnt_slider++;
-                                if ($cnt_slider==3){
-
-                                    ?>
-                                    </div>
-                                    </div>
-                                    <?php
-                                    $cnt_slider=0;
-                                }
                             endwhile;
                             endif;
                             ?>
 
-
-
-
-
-
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
+                <?php if (get_sub_field('link')):
+                $cta_button = get_sub_field('link');?>
+                <div class="row"><div class="col-12 text-center">
+                	<a class="btn btn-primary mt-4 mt-lg-5" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>" href="<?php echo $cta_button["url"]?>"><?php echo $cta_button["title"]?></a>
+                <?php endif;?>
+                </div></div>
+                
                 <script>
-                    jQuery( document ).ready(function() {
-                        jQuery('.policyholder-stories-carousel').carousel({
-                            interval: false,
-                            pause: 'hover',
-
-                        })
-                    });
-                </script>
+			        jQuery(document).ready(function() {
+			            jQuery('.stories-slider-inner').slick({
+							infinite: true,
+							slidesToShow: 2,
+							rows: 1,
+							slidesToScroll: 1,
+							infinite: true,
+							arrows: true,
+							prevArrow: '<div class="custom-nav prev"></div>',
+							nextArrow: '<div class="custom-nav next"></div>',
+							responsive: [
+						    {
+						      breakpoint: 992,
+						      settings: {
+						        slidesToShow: 3,
+						      }
+						    },
+						    {
+						      breakpoint: 767,
+						      settings: {
+						        slidesToShow: 2,
+						      }
+						    }
+						    ]
+						});
+			        });
+			    </script>
 
             </div>
             <!-- end testimonials -->
@@ -998,6 +1123,8 @@ function get_template_by_layout($layout){
             <!-- slider -->
             <?php
             include (get_template_directory().'/page-templates/sections/slider-alt.php');
+            
+            wp_reset_query();
             break;
 
         case 'layout_103' :

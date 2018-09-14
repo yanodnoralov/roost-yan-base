@@ -62,7 +62,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container-wide pb-5">
             <div class="row">
-                <div class="col-md-4 pr-xl-5">
+                <div class="col-md-6 col-lg-4 pr-xl-5">
                     <div class="footer-logo">
                         <img width="115" height="29" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg">
                     </div>
@@ -79,14 +79,14 @@
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3 fot-pad-top">
+                <div class="col-md-6 col-lg-3 fot-pad-top">
                     <div class="signup-text">Sign up for Roost news, solutions and advice.</div>
                     <input type="text" style="width: 100%">
                 </div>
-                <div class="col-md-5 fot-pad-top">
+                <div class="col-12 col-lg-5 fot-pad-top">
                     <div class="row footer-menus">
                         <!-- footer menus -->
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-5 mb-md-0">
                             <div class="footer-menu-title">Company</div>
                             <?php
                             wp_nav_menu( array(
@@ -95,7 +95,7 @@
                             ) );
                             ?>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-5 mb-md-0">
                             <div class="footer-menu-title">Solutions</div>
                             <?php
                             wp_nav_menu( array(
@@ -164,26 +164,29 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <!-- The Modal -->
-<div class="modal fade" id="myModal">
+<div class="modal fade global-contact-modal" id="myModal">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
+                <h2 class="modal-title">Let's Get in Touch</h2>
+                <p class="lead">Talk with our team to learn more about Roost insurance solutions!</p>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                Modal body..
+                <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?>
+                <p class="lead text-center">Are you looking for product help or support? <a href="#">Contact us here</a></p>
             </div>
 
             <!-- Modal footer -->
+<!--
             <div class="modal-footer">
-                <button type="button" class="btn" data-dismiss="modal">Close</button>
             </div>
-
+-->
+            
         </div>
     </div>
 </div>

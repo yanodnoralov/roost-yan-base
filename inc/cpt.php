@@ -15,7 +15,7 @@ function cptui_register_my_cpts() {
         "labels" => $labels,
         "description" => "",
         "public" => true,
-        "publicly_queryable" => true,
+        "publicly_queryable" => false,
         "show_ui" => true,
         "show_in_rest" => false,
         "rest_base" => "",
@@ -28,7 +28,7 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array( "slug" => "testimonials", "with_front" => true ),
         "query_var" => true,
-        "supports" => array( "title", "editor", "thumbnail" ),
+        "supports" => array( "title" ),
     );
 
     register_post_type( "testimonials", $args );
@@ -51,14 +51,14 @@ function cptui_register_my_cpts() {
         "show_ui" => true,
         "show_in_rest" => false,
         "rest_base" => "",
-        "has_archive" => false,
+        "has_archive" => true,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "exclude_from_search" => false,
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array( "slug" => "policyholder_stories", "with_front" => true ),
+        "rewrite" => array( "slug" => "policyholder-stories", "with_front" => true ),
         "query_var" => true,
         "supports" => array( "title", "editor", "thumbnail" ),
     );
