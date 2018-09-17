@@ -160,18 +160,41 @@
 	<div id="content" class="site-content">
 		
 	<?php
+	if ( 'post' == get_post_type() && !get_field('page_hero_background_image')) {
+		$defaultHero = 'default-hero';
+	}
+	if ( get_field('page_hero_background_image')) {
+		$titleWidth = 'col-md-7 col-lg-7';
+	} else {
+		$titleWidth = 'col-12';
+	}
+	$headerHasNotClass = "";
+	if (!get_field('page_subtitle')) {
+		$headerHasNotClass = $headerHasNotClass . " no-sub-title";
+	}
+	if (!get_field('enable_button')) {
+		$headerHasNotClass = $headerHasNotClass . " no-button";
+	}
+	if (!get_field('page_hero_background_image')) {
+		$headerHasNotClass = $headerHasNotClass . " no-hero-img";
+	}
+	
     if (get_field('page_hero_title')){
         $position = get_field('background_position') ? get_field('background_position') : 'center center';
     ?>
-        <div class="d-flex page-hero" style="
-                background-image:url(<?php echo get_field('page_hero_background_image');?>);
+        <div class="d-flex page-hero <?php echo $defaultHero; echo $headerHasNotClass;?>" style="
+	        <?php if ( 'post' == get_post_type() && !get_field('page_hero_background_image')) {} else {?>
+                background-image:url( <?php echo get_field('page_hero_background_image');?>);
                 background-position: <?php echo $position;?>;
-                background-size: cover;">
+                background-size: cover;>
+	        <?php } ?>">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 col-lg-7 pull-left border-green-left">
+                    <div class="<?php echo $titleWidth;?> border-green-left">
                         <h1><?php echo get_the_title();?></h1>
-                        <p><?php echo get_field('page_subtitle');?></p>
+                        <?php if(get_field('page_subtitle')):?>
+                        	<p><?php echo get_field('page_subtitle');?></p>
+                        <?php endif;?>
 
                     </div>
                     <?php
@@ -191,6 +214,7 @@
             </div>
         </div>
         
+        <?php if ( get_field('page_hero_background_image')):?>
         <div class="page-hero page-hero-mobile">
 	        <div class="mobile-hero-row"></div>
             <div class="container">
@@ -216,6 +240,7 @@
                 </div>
             </div>
         </div>
+        <?php endif;?>
 	<?php
 	}
 	?>

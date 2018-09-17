@@ -2794,15 +2794,6 @@
                     "sub_fields": [],
                     "min": "",
                     "max": ""
-                },
-                "layout_5b9509806c578": {
-                    "key": "layout_5b9509806c578",
-                    "name": "layout_103",
-                    "label": "Interested in learning more about  Roost’s insurance solutions - predefined",
-                    "display": "block",
-                    "sub_fields": [],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -2813,16 +2804,9 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
                 "param": "page_template",
-                "operator": "!=",
-                "value": "page-templates\/home-page.php"
+                "operator": "==",
+                "value": "page-templates\/layout-template.php"
             }
         ]
     ],
@@ -2836,5 +2820,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1536927231
+    "modified": 1537138805
 }

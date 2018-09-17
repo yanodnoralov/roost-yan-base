@@ -12,21 +12,19 @@
 ?>
 	<?php if(!is_front_page() && !is_home()): ?>
 	
-	<?php if( get_field('footer_call_to_action', 'option') ): ?>
-	<div class="footer-cta">
-		<div class="separator-top">
-			<svg class="seperator seperator-white" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2800 109">
-				<path class="st0" d="M0,109V0h2800v109c0-59.5-626.8-107.7-1400-107.7S0,49.5,0,109z" style="fill:#fff"//>
-			</svg>
-		</div>
+	<?php if( get_field('footer_call_to_action', 'option') && 'post' === get_post_type() ): ?>
+	<div class="footer-cta py-6 text-white text-center text-lg-left bottom-cta" style="background:url(<?php echo get_template_directory_uri();?>/img/bgmore.png);">
 		<div class="container">
 			<div class="row d-flex align-items-center">
-				<div class="col-md-6 text-right pr-sm-4 hide">
-					<?php the_field('footer_call_to_action', 'option'); ?>
+				<div class="col-lg-9 text-left pr-sm-4 hide">
+					<h2 class="display-3 mt-0"><?php the_field('footer_call_to_action', 'option'); ?></h2>
 				</div>
-				<div class="col-md-6 pl-sm-4 hide">
-					<a href="<?php echo get_home_url(); ?>/#contact" class="btn btn-outline btn-white"><span class="filler"></span>Contact Us Now</a>
-				</div>
+				<?php if (get_field('button', 'option')):
+					$link = get_field('button', 'option');?>
+					<div class="col-lg-3 pl-lg-4 hide">
+						<a href="<?php echo $link['url']?>" class="btn btn-outline btn-white btn-lg"><?php echo $link['title']?></a>
+					</div>
+				<?php endif;?>
 			</div>
 		</div>
 	</div>
@@ -180,12 +178,6 @@
                 <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?>
                 <p class="lead text-center">Are you looking for product help or support? <a href="#">Contact us here</a></p>
             </div>
-
-            <!-- Modal footer -->
-<!--
-            <div class="modal-footer">
-            </div>
--->
             
         </div>
     </div>

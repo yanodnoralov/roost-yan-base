@@ -439,7 +439,7 @@ function get_template_by_layout($layout){
                             $cnt++;
                             ?>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-5 mb-md-0">
                                 <div class="card c<?php echo $cnt;?>">
                                     <div class="c-img">
                                         <img class="card-img-top" <?php ar_responsive_image(get_sub_field('image'),'full','260px');?>>
@@ -467,17 +467,27 @@ function get_template_by_layout($layout){
         case 'layout_9':
             ?>
 
-            <div class="section whats-new jumbotron-fluid" style="background: url('<?php the_sub_field('background');?>') no-repeat center center; background-size: cover;">
+            <div class="section whats-new seperator-y text-white text-center" style="background: url('<?php the_sub_field('background');?>') no-repeat center center; background-size: cover;">
+                <div class="seperator-top">
+             	<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2694 123"><path d="M0,91S553,35,894,35s817,88,1144,88,656-88,656-88V0H0Z" style="fill:#fff"/></svg>
+	            </div>
                 <div class="container">
-                    <div class="row align-items-center atop">
-                        <div class="col">
+                    <div class="row">
+                        <div class="col-12 title green_border">
                             <h2><?php the_sub_field('title');?></h2>
-                            <p><?php the_sub_field('subtitle');?></p>
-                            <a href="<?php the_sub_field('cta_1_url');?>" class="btn"><?php the_sub_field('cta_1_text');?></a>
-                            <a href="<?php the_sub_field('cta_2_url');?>" class="btn"><?php the_sub_field('cta_2_text');?></a>
                         </div>
                     </div>
+                    <div class="row">
+	                    <div class="col-12">
+                            <p class="lead px-xl-75"><?php the_sub_field('subtitle');?></p>
+                            <a href="<?php the_sub_field('cta_1_url');?>" class="btn btn-white mr-md-1 mb-3"><?php the_sub_field('cta_1_text');?></a>
+                            <a href="<?php the_sub_field('cta_2_url');?>" class="btn btn-white ml-md-1 mb-3"><?php the_sub_field('cta_2_text');?></a>
+	                    </div>
+                    </div>
                 </div>
+                <div class="seperator-bottom">
+             	<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2694 123"><path d="M2694,32s-553,56-894,56S983,0,656,0,0,88,0,88v35H2694Z" style="fill:#fff"/></svg>
+	            </div>
             </div>
 
             <?php
@@ -496,18 +506,18 @@ function get_template_by_layout($layout){
                         <div class="row">
                             <?php
                             $cnt=0;
-                            $size='offset-2';
+                            $size='offset-md-2';
                             if ( have_rows('team_members') ) :
                             while ( have_rows('team_members') ) : the_row();
                             $cnt++;
                             if ($cnt>1) { $size='';}
                             ?>
-                            <div class="col-4 <?php echo $size;?>">
-                                <div class="image">
+                            <div class="mb-5 col-md-4 <?php echo $size;?>">
+                                <div class="image mb-3">
                                     <?php
                                     if (get_sub_field('image')){
                                         ?>
-                                        <img <?php ar_responsive_image(get_sub_field('image'),'full','260px');?> >
+                                        <img <?php ar_responsive_image(get_sub_field('image'),'full','400px');?> >
                                         <?php
                                     }
                                     else {
@@ -540,7 +550,7 @@ function get_template_by_layout($layout){
         // roost careers
         case 'layout_11':
             ?>
-            <div class="jumbotron roost-careers" style="background: url(<?php the_sub_field('background_image');?>);">
+            <div class="roost-careers" style="background: url(<?php the_sub_field('background_image');?>);">
                 <div class="container section " >
                     <div class="row">
                         <div class="col-md-12 first-sec title green_border">
@@ -592,41 +602,29 @@ function get_template_by_layout($layout){
         // horizontal boxes
         case 'layout_16':
             ?>
-                <div class="jumbotron horizontal-boxes" style="background: #f7f7f7 url(<?php the_sub_field('background_image');?>) right top no-repeat;">
-                    <div class="container section horizontal-boxes" >
-                        <div class="row">
-                            <div class="col-md-5 dotted-gradient ff">
-                                <h2 class=""></h2>
-
-                            </div>
-                            <div class="col-md-6">
-
-                            </div>
-                            <?php
-                            if ( have_rows('boxes') ) :
-                                while ( have_rows('boxes') ) : the_row();
-                                    ?>
-                                        <div class="col-md-5 dotted-gradient">
-                                            <h2 class="green_border"><?php the_sub_field('title');?></h2>
-                                            <?php the_sub_field('sub_text');?>
-                                        </div>
-                                        <div class="col-md-6 offset-md-1 img-cont">
-                                            <img <?php ar_responsive_image(get_sub_field('image'),'full','450px'); ?>>
-                                        </div>
-                                    <?php
-                                endwhile;
-                            endif;
-                            ?>
-                            <div class="col-md-5 dotted-gradient ff">
-                                <h2 class=""></h2>
-
-                            </div>
-                            <div class="col-md-6">
-
-                            </div>
-                        </div>
+                <div class="horizontal-boxes" style="background: #ffffff url(<?php the_sub_field('background_image');?>) right top no-repeat;">
+                    <div class="container section horizontal-boxes title-left" >
+	                    <div class="boxes-all-wrap">
+	                        <?php if ( have_rows('boxes') ) :
+	                            while ( have_rows('boxes') ) : the_row();
+	                                ?>
+	                                <div class="row boxs-row">
+	                                <div class="col-md-6 dotted-gradient">
+	                                    <h2 class="green_border"><?php the_sub_field('title');?></h2>
+	                                    <?php the_sub_field('sub_text');?>
+	                                </div>
+	                                
+	                                <div class="col-md-5 offset-md-1 pt-5 img-col px-md-0">
+		                                <div class="img-cont">
+                                            <img class="img-fluid sli d-block" <?php ar_responsive_image(get_sub_field('image'),'full','956px');?>>
+		                                </div><!-- /img-cont -->
+	                                </div>
+	                                </div><!-- /row -->
+	                            <?php
+	                            endwhile;
+	                        endif; ?>
+                    	</div>
                     </div>
-
                 </div>
 
 
@@ -638,9 +636,8 @@ function get_template_by_layout($layout){
             <div class="jumotron section additonal-app">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-12 first-sec title green_border">
+                        <div class="col-md-12 title green_border">
                             <h2 class="section-title"><?php the_sub_field('title');?></h2>
-
                         </div>
                     </div>
                     <div class="row">
@@ -667,8 +664,8 @@ function get_template_by_layout($layout){
                                                 </div>
                                                 <div class="text float-left">
                                                     <h5><?php the_sub_field('title');?></h5>
-                                                    <p><?php the_sub_field('text');?></p>
-                                                    <a href="<?php the_sub_field('read_more_link');?>">Read more</a>
+                                                    <?php the_sub_field('text');?>
+                                                    <a class="mt-3 d-inline-block caret" href="<?php the_sub_field('read_more_link');?>">Read more</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -711,7 +708,7 @@ function get_template_by_layout($layout){
                                                             }
                                                             ?>
                                                             <div class="carousel-item <?php echo $te2;?>">
-                                                                <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+                                                                <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','640px');?>>
                                                             </div>
                                                             <?php
                                                             $cl++;
@@ -719,20 +716,6 @@ function get_template_by_layout($layout){
                                                         endif;
                                                         ?>
                                                 </div>
-                                                <ol class="carousel-indicators">
-                                                    <?php for ($i=0;$i<$cl;$i++){
-                                                        if ($i==0) {
-                                                            $acl='active';
-                                                        }
-                                                        else {
-                                                            $acl='';
-                                                        }
-                                                        ?>
-                                                    <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
-                                                    <?php
-                                                    }
-                                                    ?>
-                                                </ol>
                                             </div>
                                         </div>
                                         <?php
@@ -749,12 +732,15 @@ function get_template_by_layout($layout){
             </div>
             <script>
                 jQuery( document ).ready(function() {
-                    jQuery('.img-text-cont').click(function() {
-                        var slide_cont= $(this).data("slide");
-                        $(".slco").hide("fast");
-                        $('.image-cont-'+slide_cont).show("fast");
-                        $(".img-text-cont").removeClass("active-box");
-                        $(this).addClass("active-box");
+	                
+                    jQuery('.img-text-cont').hover(function() {
+	                    if (!$(this).hasClass("active-box")) {
+	                        var slide_cont= $(this).data("slide");
+	                        $(".slco").fadeOut("fast");
+	                        $('.image-cont-'+slide_cont).fadeIn("fast");
+	                        $(".img-text-cont").removeClass("active-box");
+	                        $(this).addClass("active-box");
+                        }
                     });
                 });
             </script>
@@ -764,20 +750,25 @@ function get_template_by_layout($layout){
         // Full custom integration
         case 'layout_18':
             ?>
-            <div class="jumbotron full-custom-integration">
-                <div class="container section ">
-                    <div class="row">
-                        <div class="col-md-12 first-sec title green_border">
-                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
-                        </div>
-                        <div class="col-md-12 pp">
-                            <div class="float-left img-h"><img class="float-left" <?php ar_responsive_image(get_sub_field('icon'),'full','240px');?>></div>
-
-                            <div class="sub-title-section">
-                                <?php the_sub_field('text');?>
-                            </div>
-                        </div>
-                    </div>
+            <div class="jumbotron full-custom-integration section">
+                <div class="container text-center text-md-left section">
+	                <div class="full-custom-integration-inner bg-white">
+	                    <div class="row">
+	                        <div class="col-md-12 first-sec title green_border pp">
+	                            <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                        </div>
+	                    </div>
+	                    <div class="row">
+	                        <div class="col-md-12 pp">
+	                            <div class="float-md-left text-center text-md-left">
+		                            <img class="img-h mb-4 float-md-left" <?php ar_responsive_image(get_sub_field('icon'),'full','240px');?>></div>
+	
+	                            <div class="sub-title-section">
+	                                <?php the_sub_field('text');?>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
                 </div>
             </div>
 
@@ -788,7 +779,7 @@ function get_template_by_layout($layout){
             ?>
             <div class="jumbotron horizontal-boxes boxes-with-carousel" style="background: #fff url(<?php the_sub_field('background_image');?>) right top no-repeat;">
                 <div class="container section horizontal-boxes title-left" >
-                    <div class="row">
+                    <div class="boxes-all-wrap">
                         <?php
                         $cnt=0;
                         $slide_cnt=1;
@@ -1088,15 +1079,9 @@ function get_template_by_layout($layout){
 							nextArrow: '<div class="custom-nav next"></div>',
 							responsive: [
 						    {
-						      breakpoint: 992,
+						      breakpoint: 768,
 						      settings: {
-						        slidesToShow: 3,
-						      }
-						    },
-						    {
-						      breakpoint: 767,
-						      settings: {
-						        slidesToShow: 2,
+						        slidesToShow: 1,
 						      }
 						    }
 						    ]
@@ -1126,24 +1111,7 @@ function get_template_by_layout($layout){
             
             wp_reset_query();
             break;
-
-        case 'layout_103' :
-
-            ?>
-            <!-- team talk -->
-                <div class="jumotron section team-talk ins-sol">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2>Interested in learning more about
-                                    Roost’s insurance solutions?</h2>
-                                <a href="#" class="btn" data-toggle="modal" data-target="#myModal">Lets talk!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
-            break;
+            
         /*
             // empty
             case 'layout_8':

@@ -70,6 +70,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5b9ec6f69aa14.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b9ec6f69aa14-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b9eea3a6c6ea.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b9eea3a6c6ea-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -111,6 +127,61 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "\/home-mobile-nav.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/alt-blue-wave-bg.jpg": {
+		"ft": 16384,
+		"iS": 33853,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/alt-blue-wave-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/app-hero.jpg": {
+		"ft": 16384,
+		"iS": 166822,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/app-hero.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/app1.jpg": {
+		"ft": 16384,
+		"iS": 56060,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/app1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/app2.jpg": {
+		"ft": 16384,
+		"iS": 39307,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/app2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/img\/app3.jpg": {
+		"ft": 16384,
+		"iS": 54270,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/app3.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -967,6 +1038,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/post-bg-default.jpg": {
+		"ft": 16384,
+		"iS": 21416,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/img\/post-bg-default.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/prev.png": {
