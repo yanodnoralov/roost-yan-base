@@ -822,6 +822,9 @@ nav {
 		display: none;
 	}
 	
+	section{
+		padding-bottom:6rem;
+	}
 }
 .testimonial-outer {
 	@include media-breakpoint-down(sm) {
