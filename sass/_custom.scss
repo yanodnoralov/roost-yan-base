@@ -536,6 +536,12 @@ nav {
 			h2 {
 				font-size: 30px !important;
 			}
+			
+			.tp-bullets{
+				visibility: visible !important;
+				opacity: 1 !important;
+				display: block !important;
+			}
 		}
 		@include media-breakpoint-down(sm) {
 			border: 0;
@@ -551,6 +557,8 @@ nav {
 				letter-spacing: -.5px !important;
 				line-height: 25px !important;
 			}
+			
+
 		}
 	}
 }
