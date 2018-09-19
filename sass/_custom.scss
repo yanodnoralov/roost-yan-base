@@ -2352,6 +2352,10 @@ $spacerx: 3.5rem;
 }
 .how-it-works {
 	border-bottom: 1px solid #e2e2e2;
+	
+	.row {
+		align-items: center;
+	}
 	.img-text-cont {
 		
 	}
