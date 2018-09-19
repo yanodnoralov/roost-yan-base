@@ -1126,7 +1126,7 @@ nav {
 	}
 	@media (max-width:767px) {
 		z-index: 999999;
-		min-height: 1500px;
+		max-height: 100%;
 		top: 5px;
 		padding-top: 0;
 		padding-left: 15px;
