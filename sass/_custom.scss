@@ -537,11 +537,7 @@ nav {
 				font-size: 30px !important;
 			}
 			
-			.tp-bullets{
-				visibility: visible !important;
-				opacity: 1 !important;
-				display: block !important;
-			}
+
 		}
 		@include media-breakpoint-down(sm) {
 			border: 0;
@@ -1159,6 +1155,8 @@ nav {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	
+
 }
 
 .site-footer {
