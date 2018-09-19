@@ -818,6 +818,10 @@ nav {
 // testimonials
 .testimonials-wrapper {
 	overflow: hidden;
+	.btn{
+		display: none;
+	}
+	
 }
 .testimonial-outer {
 	@include media-breakpoint-down(sm) {
