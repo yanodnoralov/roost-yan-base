@@ -2437,7 +2437,9 @@ $spacerx: 3.5rem;
 
 //hide not ready content
 .policy-stories {
-	.btn a {
+	.btn {
+		a {
 		display: none !important;
+	}
 	}
 }
