@@ -71,10 +71,10 @@
                         fermentum sem, ac viverra ante luctus vel. Donec vel
                     </div>
                     <div class="footer-social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/SmartRoost"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/smartroost"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCS8er25tSFr1n-HH8zMGZaw"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/roost-inc-/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 fot-pad-top">
