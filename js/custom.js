@@ -24,6 +24,15 @@ inView('.hide').on('enter', function(t) {
 });
 
 
+//gravity forms confirmation
+jQuery(document).ready(function(){
+	hidethese = $(".modal-header");
+    jQuery(document).bind('gform_confirmation_loaded', function(){
+        hidethese.hide();
+    });
+})
+
+
 
 //navigation stuff
 var menuBtn = $("#nav-toggle"),
