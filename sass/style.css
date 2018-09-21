@@ -4055,6 +4055,10 @@ nav.mobile-navigation {
 
 .testimonials-wrapper {
   overflow: hidden; }
+  .testimonials-wrapper .btn {
+    display: none; }
+  .testimonials-wrapper .section {
+    padding-bottom: 6rem; }
 
 @media (max-width: 767.98px) {
   .testimonial-outer {
@@ -4313,9 +4317,8 @@ nav.mobile-navigation {
 
 @media (max-width: 767px) {
   .global-contact-modal {
-    position: absolute;
     z-index: 999999;
-    min-height: 1500px;
+    max-height: 100%;
     top: 5px;
     padding-top: 0;
     padding-left: 15px;
@@ -5263,6 +5266,8 @@ nav.mobile-navigation {
 
 .how-it-works {
   border-bottom: 1px solid #e2e2e2; }
+  .how-it-works .row {
+    align-items: center; }
   .how-it-works .img-text-cont-outer {
     position: relative; }
     .how-it-works .img-text-cont-outer .img-more {
@@ -5320,5 +5325,5 @@ nav.mobile-navigation {
   background: #f5f5f5;
   border-bottom: 1px solid #e4e4e4; }
 
-.policy-stories .btn.btn-primary, .policy-stories .story-body a {
+.policy-stories .btn.btn-primary {
   display: none !important; }

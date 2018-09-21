@@ -65,16 +65,13 @@
                         <img width="115" height="29" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg">
                     </div>
                     <div class="footer-text-logo">
-                        Short blurb about roost would be helpful for seo
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        Nulla convallis egestas rhoncus. Donec facilisis
-                        fermentum sem, ac viverra ante luctus vel. Donec vel
+						Roosts Home Telematics is transforming homeowners and commercial insurance with smart, in-home solutions. Roost is 								partnering with some of the most innovative insurance companies in the world to deliver telematics for the home.
                     </div>
                     <div class="footer-social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/SmartRoost"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/smartroost"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCS8er25tSFr1n-HH8zMGZaw"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/roost-inc-/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 fot-pad-top">
