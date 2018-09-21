@@ -172,7 +172,8 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?>
+	            <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=49]');?>
+<!--                 <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?> -->
             </div>
             
         </div>
