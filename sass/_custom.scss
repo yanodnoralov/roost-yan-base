@@ -1168,12 +1168,10 @@ nav {
 	}
 	.ginput_container {
 		width: 100%;
-		input {
-			width: 100% !important;
-		}
 		input, select {
 			height: 45px;
 			padding-left: 10px !important;
+			width: 100% !important;
 		}
 	}
 	.gfield .gfield_label {

@@ -4343,11 +4343,10 @@ nav.mobile-navigation {
 
 .gform_wrapper .ginput_container {
   width: 100%; }
-  .gform_wrapper .ginput_container input {
-    width: 100% !important; }
   .gform_wrapper .ginput_container input, .gform_wrapper .ginput_container select {
     height: 45px;
-    padding-left: 10px !important; }
+    padding-left: 10px !important;
+    width: 100% !important; }
 
 .gform_wrapper .gfield .gfield_label {
   display: none !important; }
