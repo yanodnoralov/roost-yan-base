@@ -75,8 +75,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 fot-pad-top">
-                    <div class="signup-text">Sign up for Roost news, solutions and advice.</div>
-                    <input type="text" style="width: 100%">
+                    <div class="signup-text">Sign Up for Roost news</div>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#">Sign Up</a>
                 </div>
                 <div class="col-12 col-lg-5 fot-pad-top">
                     <div class="row footer-menus">
