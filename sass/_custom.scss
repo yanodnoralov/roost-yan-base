@@ -115,6 +115,7 @@ a {
 		font-family: $font-awesome;
 		display: inline-block;
 		padding-left: 5px;
+		font-weight: 900;
 	}
 }
 b, strong {
@@ -1237,6 +1238,7 @@ nav {
 			width: 15px;
 			height: 15px;
 			left: 0px;
+			font-weight: 900;
 		}
 	}
 	.footer-social-icons {
@@ -1689,6 +1691,7 @@ $spacerx: 3.5rem;
 			color: #81d135;
 			position: absolute;
 			left: 0;
+			font-weight: 900;
 			}
 			@include media-breakpoint-up(md) {
 				&:last-child p {
