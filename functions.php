@@ -128,7 +128,7 @@ add_action( 'widgets_init', 'yan_base_widgets_init' );
  * Enqueue scripts and styles.
  */
 function yan_base_scripts() {
-	wp_enqueue_style( 'yan-base-style', get_stylesheet_uri(), '1.23', true );
+	wp_enqueue_style( 'yan-base-style', get_stylesheet_uri(), '1.24', true );
 	
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '1', true );
 
