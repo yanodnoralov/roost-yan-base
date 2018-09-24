@@ -75,8 +75,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 fot-pad-top">
-                    <div class="signup-text">Sign up for Roost news, solutions and advice.</div>
-                    <input type="text" style="width: 100%">
+                    <div class="signup-text">Sign Up for Roost news</div>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#">Sign Up</a>
                 </div>
                 <div class="col-12 col-lg-5 fot-pad-top">
                     <div class="row footer-menus">
@@ -166,14 +166,14 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <h2 class="modal-title">Let's Get in Touch</h2>
-                <p class="lead">Talk with our team to learn more about Roost insurance solutions!</p>
+                <p class="lead">Talk with our team to learn more about Roost insurance solutions. Are you looking for product help or support? <a href="https://getroost.zendesk.com/hc/en-us">Contact us here</a></p>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <!-- Modal body -->
             <div class="modal-body">
-                <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?>
-                <p class="lead text-center">Are you looking for product help or support? <a href="#">Contact us here</a></p>
+	            <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=49]');?>
+<!--                 <?php echo do_shortcode('[contact-form-7 id="351" title="Modal contact"]');?> -->
             </div>
             
         </div>

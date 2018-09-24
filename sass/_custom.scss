@@ -22,7 +22,7 @@ $transition-header: all 0.2s ease-out;
 $font-body: "museo-sans", helvetica, sans-serif;
 //$font-condensed: "futura-pt-condensed", helvetica, sans-serif;
 $font-headings: $font-body;
-$font-awesome: "FontAwesome";
+$font-awesome: "Font Awesome 5 Free";
 
 //misc
 $nav-breakpoint: 1100px;
@@ -115,6 +115,7 @@ a {
 		font-family: $font-awesome;
 		display: inline-block;
 		padding-left: 5px;
+		font-weight: 900;
 	}
 }
 b, strong {
@@ -1155,8 +1156,35 @@ nav {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+}
 
+//Gravity forms custom styles
+.gform_wrapper {
+	.half-col {
+	    width: 50%;
+	    display: inline-block;
+	    vertical-align: top;
+	    padding-right: 16px;
+	    margin-right: -4px;
+	}
+	.ginput_container {
+		width: 100%;
+		input, select {
+			height: 45px;
+			padding-left: 10px !important;
+			width: 100% !important;
+		}
+	}
+	.gfield .gfield_label {
+		display: none !important;
+	}
+	.field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+		display: none !important;
+	}
+	.gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+		font-weight: 900;
+		font-family: $font-body;
+	}
 }
 
 .site-footer {
@@ -1210,6 +1238,7 @@ nav {
 			width: 15px;
 			height: 15px;
 			left: 0px;
+			font-weight: 900;
 		}
 	}
 	.footer-social-icons {
@@ -1662,6 +1691,7 @@ $spacerx: 3.5rem;
 			color: #81d135;
 			position: absolute;
 			left: 0;
+			font-weight: 900;
 			}
 			@include media-breakpoint-up(md) {
 				&:last-child p {
