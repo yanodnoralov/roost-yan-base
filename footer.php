@@ -65,7 +65,7 @@
                         <img width="115" height="29" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg">
                     </div>
                     <div class="footer-text-logo">
-						Roosts Home Telematics is transforming homeowners and commercial insurance with smart, in-home solutions. Roost is 								partnering with some of the most innovative insurance companies in the world to deliver telematics for the home.
+						Roost Home Telematics is transforming homeowners and commercial insurance with smart, in-home solutions. Roost is 								partnering with some of the most innovative insurance companies in the world to deliver telematics for the home.
                     </div>
                     <div class="footer-social-icons">
                         <a href="https://www.facebook.com/SmartRoost"><i class="fab fa-facebook"></i></a>
