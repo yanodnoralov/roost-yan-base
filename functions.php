@@ -202,3 +202,72 @@ require get_template_directory() . '/inc/cpt.php';
  * Include layout functions
  */
 require get_template_directory() . '/inc/layout_functions.php';
+
+
+//custom title length
+function short_get_the_title( $length = null, $id = 0 ) {
+    $post = &get_post($id);
+
+    $title = isset($post->post_title) ? $post->post_title : '';
+    $id = isset($post->ID) ? $post->ID : (int) $id;
+    
+    $titleCount = strlen($title);
+
+    if ( !is_admin() ) {
+        if ( !empty($post->post_password) ) {
+            $protected_title_format = apply_filters('protected_title_format', __('Protected: %s'));
+            $title = sprintf($protected_title_format, $title);
+        } else if ( isset($post->post_status) && 'private' == $post->post_status ) {
+            $private_title_format = apply_filters('private_title_format', __('Private: %s'));
+            $title = sprintf($private_title_format, $title);
+        }
+    }
+
+    // Shorten the title
+    if ( null != $length ) {
+        $length = (int) $length;
+
+        $title = substr( $title, 0, $length ); // Only take the first 20 characters
+		if ($titleCount > $length) {
+        	$title .= "...";
+        }
+    }
+
+    return apply_filters( 'the_title', $title, $id );
+}
+
+function short_the_title($before = '', $after = '', $echo = true, $length = null) {
+    $title = get_the_title($length);
+
+    if ( strlen($title) == 0 )
+        return;
+
+    $title = $before . $title . $after;
+
+    if ( $echo )
+        echo $title;
+    else
+        return $title;
+}
+
+function excerpt($limit) {
+    return wp_html_excerpt( get_the_excerpt(), $limit );
+}
+
+// Add External Links Filter
+function wpdev_permalink_links( $link, $post ) {
+    $meta = get_post_meta( $post->ID, 'external_url', TRUE );
+    $url = esc_url( filter_var( $meta, FILTER_VALIDATE_URL ) );
+    return $url ? $url : $link;
+}
+add_filter( 'post_link', 'wpdev_permalink_links', 10, 2 );
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+	$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );

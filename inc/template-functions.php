@@ -11,6 +11,15 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+
+function is_page_press() {
+	if ( is_page(964) ) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 function yan_base_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
@@ -20,6 +29,10 @@ function yan_base_body_classes( $classes ) {
 	// Adds a class of no-sidebar when there is no sidebar present.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
+	}
+	
+	if ( is_page_press() ) {
+		$classes[] = 'page-news_and_press';
 	}
 
 	return $classes;

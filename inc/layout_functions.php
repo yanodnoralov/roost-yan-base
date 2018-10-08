@@ -1112,6 +1112,175 @@ function get_template_by_layout($layout){
             wp_reset_query();
             break;
             
+            
+        // Press Releases
+        case 'press_releases_latest_8':
+        	global $wp_query;
+	        $args = array(
+	        'cat' => '10',
+	        'posts_per_page' => 8); //get all posts
+	
+			// The Query
+			query_posts( $args );?>
+			
+            <div class="press-releases" style="background-color: #f9f9f9;">
+	            <div class="container section">
+	                <div class="row">
+	                    <div class="col-md-12 first-sec title green_border">
+	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                    </div>
+	                </div>
+	                <div class="row">
+	                <?php
+		            $counter = 0;
+		            while ( have_posts() ) : the_post();?>
+	                    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                          	<div class="img-text-cont post-box">
+                                <div class="img-meta">
+	                                <div class="img float-left">
+		                                <?php if ( has_post_thumbnail() ) {
+											the_post_thumbnail("medium");
+										} ?>
+	                                </div>
+	                                <div class="meta float-right">
+		                                <?php echo get_the_date('m/d/y'); ?>
+	                                </div>
+	                                <div class="clearfix"></div>
+                                </div>
+                                <div class="text">
+                                    <h5><a href="<?php echo the_permalink();?>"><?php echo short_get_the_title(39, get_the_id());?></a></h5>
+                                    <p class="mb-2"><?php echo excerpt(65)?>...</p>
+                                    <a class="read-more" href="<?php echo the_permalink();?>">Read More <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                          	</div>
+	                    </div>
+	                <?php $counter++;?>
+	                <?php endwhile; wp_reset_query();?>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+	                		<a href="<?php echo get_category_link(12) ?>" class="mt-3 btn btn-primary">Show More</a>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php
+            break;
+            
+            
+        // Press Coverage
+        case 'press_coverage_latest_8':
+        	global $wp_query;
+	        $args = array(
+	        'cat' => '12',
+	        'posts_per_page' => 8); //get all posts
+	
+			// The Query
+			query_posts( $args );?>
+			
+            <div class="press-coverage" style="background-color: #ffffff;">
+	            <div class="container section">
+	                <div class="row">
+	                    <div class="col-md-12 first-sec title green_border">
+	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                    </div>
+	                </div>
+	                <div class="row">
+	                <?php
+		            $counter = 0;
+		            while ( have_posts() ) : the_post();?>
+	                    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+                          	<div class="img-text-cont post-box">
+                                <div class="img-meta">
+	                                <div class="img mb-3">
+		                                <?php if ( has_post_thumbnail() ) {?>
+											<a href="<?php echo the_permalink();?>"><?php the_post_thumbnail();?></a>
+										<?php } ?>
+	                                </div>
+	                                <div class="meta w-100 mb-2">
+		                                <?php echo get_the_date('m/d/y'); ?>
+	                                </div>
+                                </div>
+                                <div class="text">
+                                    <h5><a href="<?php echo the_permalink();?>"><?php echo short_get_the_title(39, get_the_id());?></a></h5>
+                                    <p class="mb-2"><?php echo excerpt(85)?>...</p>
+                                    <a class="read-more" href="<?php echo the_permalink();?>">Read More <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                          	</div>
+	                    </div>
+	                <?php $counter++;?>
+	                <?php endwhile; wp_reset_query();?>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+	                		<a href="<?php echo get_category_link(10) ?>" class="mt-3 btn btn-primary">Show More</a>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php
+            break;
+            
+        // Two Column Row
+        case 'two_cards_row':
+            ?>
+            <div class="section two-cards-row position-relative" style="background: #f7f7f7;">
+	            <?php if ( is_page_press() ):?>
+		            <div class="seperator-top">
+	             		<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2800 63.18"><path d="M2800,0V63.18C2604.1,39.25,2051.3,6,1400,6S195.9,39.25,0,63.18V0Z" style="fill:#fff"/></svg>
+		            </div>
+	            <?php endif;?>
+                <div class="container">
+	                <?php if ( get_sub_field('title') || get_sub_field('subtitle') ):?>
+                    <div class="row">
+                        <div class="col-md-12 first-sec title green_border">
+	                        <?php if ( get_sub_field('title') ):?>
+                            	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+                            <?php endif; ?>
+                            <?php if ( get_sub_field('subtitle') ):?>
+                            	<p class="sub-title-section">
+                                <?php the_sub_field('subtitle');?>
+                            	</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    
+                        <?php
+                        if ( have_rows('boxes') ) :?>
+	                        <div class="row two-cards-row">
+		                        <?php
+	                            while ( have_rows('boxes') ) : the_row();?>
+	                            	<div class="col-md-6">
+		                              	<div class="img-text-cont no-floats text-center">
+			                              	<?php if (get_sub_field('image')):?>
+				                                <div class="img-more w-100">
+			                                    	<img class="p-0 mb-3" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+				                                </div>
+			                                <?php endif;?>
+		                                    <div class="text w-100">
+			                                    <?php if (get_sub_field('title')):?>
+		                                        	<h2><?php the_sub_field('title');?></h2>
+		                                        <?php endif;?>
+		                                        <?php the_sub_field('text');?>
+		                                        <?php if (get_sub_field('button')):
+					                            	$cta_button = get_sub_field('button');?>
+				                                	<a class="btn btn-primary btn-outline mt-3" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>" href="<?php echo $cta_button["url"]?>"><?php echo $cta_button["title"]?></a>
+				                                <?php endif;?>
+		                                    </div>
+		                              	</div>
+	                            	</div>
+	                            <?php
+	                            endwhile;?>
+	                        </div>
+                        <?php endif;?>
+                    
+                </div>
+            </div>
+            <?php
+            break;
+
+            
         /*
             // empty
             case 'layout_8':

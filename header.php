@@ -178,11 +178,15 @@
 	if (!get_field('page_hero_background_image')) {
 		$headerHasNotClass = $headerHasNotClass . " no-hero-img";
 	}
+	$headerMobileHasNotClass = $headerHasNotClass;
+	if ( get_field('mobile_inside_text')) {
+		$headerMobileHasNotClass = $headerMobileHasNotClass . " fluid-height";
+	}
 	
     if (get_field('page_hero_title')){
         $position = get_field('background_position') ? get_field('background_position') : 'center center';
     ?>
-        <div class="d-flex page-hero <?php echo $defaultHero; echo $headerHasNotClass;?>" style="
+        <div class="title-hero d-flex page-hero <?php echo $defaultHero; echo $headerHasNotClass;?>" style="
 	        <?php if ( 'post' == get_post_type() && !get_field('page_hero_background_image')) {} else {?>
                 background-image:url( <?php echo get_field('page_hero_background_image');?>);
                 background-position: <?php echo $position;?>;
@@ -191,7 +195,7 @@
             <div class="container">
                 <div class="row">
                     <div class="<?php echo $titleWidth;?> border-green-left">
-                        <h1><?php echo get_the_title();?></h1>
+                        <h1><?php if ( get_field('page_hero_title') ) { echo get_field('page_hero_title');} else { echo get_the_title();}?></h1>
                         <?php if(get_field('page_subtitle')):?>
                         	<p><?php echo get_field('page_subtitle');?></p>
                         <?php endif;?>
@@ -215,30 +219,55 @@
         </div>
         
         <?php if ( get_field('page_hero_background_image')):?>
-        <div class="page-hero page-hero-mobile">
-	        <div class="mobile-hero-row"></div>
-            <div class="container">
-                <div class="row mobile-hero-content-row">
-                    <div class="col-12">
-                        <h1><?php echo get_the_title();?></h1>
-                        <p><?php echo get_field('page_subtitle');?></p>
-
-                    </div>
-                    <?php
-					if (get_field('enable_button')) {?>
-	                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
-	                        <?php
-		                        $heroLink = get_field('hero_cta');
-	                        ?>
-	                        <div class="header-action">
-	                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
-	                        </div>
+        <div class="title-hero page-hero page-hero-mobile <?php echo $headerMobileHasNotClass;?>">
+	        <?php if ( get_field('mobile_inside_text')):?>
+		        <div class="mobile-hero-row">
+		            <div class="container">
+		                <div class="row mobile-hero-content-row">
+		                    <div class="col-12">
+		                        <h1><?php if ( get_field('page_hero_title') ) { echo get_field('page_hero_title');} else { echo get_the_title();}?></h1>
+		                        <p><?php echo get_field('page_subtitle');?></p>
+		                    </div>
+		                    <?php
+							if (get_field('enable_button')) {?>
+			                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+			                        <?php
+				                        $heroLink = get_field('hero_cta');
+			                        ?>
+			                        <div class="header-action">
+			                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+			                        </div>
+			                    </div>
+		                    <?php
+		                    }
+		                    ?>
+		                </div>
+		            </div>
+	            </div>
+	        <?php else:?>
+		        <div class="mobile-hero-row"></div>
+	            <div class="container">
+	                <div class="row mobile-hero-content-row">
+	                    <div class="col-12">
+	                        <h1><?php if ( get_field('page_hero_title') ) { echo get_field('page_hero_title');} else { echo get_the_title();}?></h1>
+	                        <p><?php echo get_field('page_subtitle');?></p>
 	                    </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </div>
+	                    <?php
+						if (get_field('enable_button')) {?>
+		                    <div class="col-md-12 head-action mt-3 mt-lg-4" style="clear:both;">
+		                        <?php
+			                        $heroLink = get_field('hero_cta');
+		                        ?>
+		                        <div class="header-action">
+		                            <a class="btn btn-primary" title="<?php echo $heroLink["title"];?>" href="<?php echo $heroLink["url"];?>"><?php if (get_field('button_play_icon')) { echo '<i class="fas fa-play-circle mr-2"></i>';} echo $heroLink["title"];?></a>
+		                        </div>
+		                    </div>
+	                    <?php
+	                    }
+	                    ?>
+	                </div>
+	            </div>
+            <?php endif;?>
         </div>
         <?php endif;?>
 	<?php
