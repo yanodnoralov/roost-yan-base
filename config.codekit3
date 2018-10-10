@@ -543,6 +543,28 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/img/hero/light-generic-bg-mobile.jpg": {
+		"ft": 16384,
+		"iS": 7646,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/hero/light-generic-bg-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/hero/light-generic-bg.jpg": {
+		"ft": 16384,
+		"iS": 35583,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/hero/light-generic-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/img/hero/loss-mitigation-hero.jpg": {
 		"ft": 16384,
 		"iS": 158194,

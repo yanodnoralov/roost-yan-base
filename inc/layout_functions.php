@@ -1280,6 +1280,140 @@ function get_template_by_layout($layout){
             <?php
             break;
 
+
+		case 'layout_all_insurance_customers' :
+			?>
+			<!-- testemonials -->
+			<div class="all-insurance-wrapper">
+			<div class="container section slider-cont">
+				<?php if ( the_sub_field('title') ):?>
+				    <div class="row">
+				        <div class="col-12 px-lg-50 first-sec title green_border">
+				            <h2><?php echo the_sub_field('title'); ?></h2>
+				        </div>
+				    </div>
+			    <?php endif;?>
+			    <div class="row all-insurance-outer">
+				    <div class="col-12">
+			        <div id="all-insurance-slider" class="all-insurance-slider carousel slide">
+			            <div class="all-insurance-slider-inner">
+				            
+			                <?php
+			
+			                $args=array(
+			                    'post_type' => 'testimonials',
+			                    'posts_per_page' => -1,
+			                    'post_status' => 'publish'
+			                );
+			                $query = new WP_Query( $args );
+			
+			                if( $query->have_posts() ): while ( $query->have_posts() ) : $query->the_post();
+			                
+			                	$logo = get_field('testimonial_image');
+			                	?>
+			
+			                    <div class="card card-body justify-content-center">
+			                        <img class="" <?php ar_responsive_image( $logo ,'full','200px' ); ?> alt="Card image cap">
+			                        <div class="hover-content">
+			                            <img class="" <?php ar_responsive_image( $logo ,'full','200px' ); ?> alt="Card image cap">
+			                            <?php echo get_field('testemonial_slider_text');?>
+			                            <br>
+			                            <?php if ( get_field('testimonial_author') ):?>
+			                            	<div class="card-author"><?php echo get_field('testimonial_author');?></div>
+			                            <?php endif;?>
+			                            <div class="card-author-position"><?php echo get_field('testimonial_author_position');?></div>
+			                            <?php if(get_field('link')):?>
+			                            	<div class="read-more"><a class="caret" href="<?php echo get_field('link');?>">Read more</a></div>
+			                            <?php endif; ?>
+			                        </div>
+			                    </div>
+			                    
+			                <?php
+				            endwhile;
+			                endif;
+			                ?>
+			            </div>
+			        </div>
+				    </div>
+			    </div>
+			</div>
+			</div>
+			<!-- end testimonials -->
+            
+            <?php
+            wp_reset_query();
+            break;
+        
+        
+        // Two Column Row
+        case 'flexible_cards_row':
+            ?>
+            <div class="section flexible_cards_row position-relative" style="background: <?php if ( get_sub_field('background_color') ){ echo get_sub_field('background_color'); }?>;">
+                <div class="container">
+	                <?php if ( get_sub_field('title') || get_sub_field('subtitle') ):?>
+                    <div class="row">
+                        <div class="col-md-12 first-sec title green_border">
+	                        <?php if ( get_sub_field('title') ):?>
+                            	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+                            <?php endif; ?>
+                            <?php if ( get_sub_field('subtitle') ):?>
+                            	<p class="sub-title-section">
+                                <?php the_sub_field('subtitle');?>
+                            	</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    <?php 
+	                    $col_count=0;
+                        $column_items=0;
+                        $col_count = count( get_sub_field('boxes') );
+
+                        if ( $col_count == 1 ) {
+	                        $column_class = "12";
+	                    } else if ( $col_count == 2 ) {
+		                    $column_class = "6";
+	                    } else if ( $col_count == 3 ) {
+		                    $column_class = "4";
+	                    }
+	                    else if ( $col_count == 4 ) {
+		                    $column_class = "3";
+	                    }
+					?>
+                        <?php
+                        if ( have_rows('boxes') ) :?>
+	                        <div class="row flex-cards-row">
+		                        <?php
+	                            while ( have_rows('boxes') ) : the_row();?>
+	                            	<div class="col-md-<?php echo $column_class?>">
+		                              	<div class="img-text-cont no-floats">
+			                              	<?php if (get_sub_field('image')):?>
+				                                <div class="img-more w-100">
+			                                    	<img class="p-0 mb-3" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+				                                </div>
+			                                <?php endif;?>
+		                                    <div class="text w-100">
+			                                    <?php if (get_sub_field('title')):?>
+		                                        	<h4><?php the_sub_field('title');?></h4>
+		                                        <?php endif;?>
+		                                        <?php the_sub_field('text');?>
+		                                        <?php if (get_sub_field('button')):
+					                            	$cta_button = get_sub_field('button');?>
+				                                	<a class="btn btn-primary btn-outline mt-3" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>" href="<?php echo $cta_button["url"]?>"><?php echo $cta_button["title"]?></a>
+				                                <?php endif;?>
+		                                    </div>
+		                              	</div>
+	                            	</div>
+	                            <?php
+	                            endwhile;?>
+	                        </div>
+                        <?php endif;?>
+                    
+                </div>
+            </div>
+            <?php
+            break;
+
             
         /*
             // empty

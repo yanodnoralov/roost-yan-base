@@ -82,7 +82,7 @@ function closeMenuFunction() {
 	setTimeout(function(){
 		menuOpenFlag = false;
 	}, 1000)
-	menuIn.play().reverse().timeScale(2.5);
+	menuIn.play().reverse().timeScale(3);
 	//console.log("close success");
 }
 

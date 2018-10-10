@@ -3393,7 +3393,8 @@ body {
   color: #231f20;
   max-width: 1680px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 65px; }
 
 h1, .h1 {
   color: #2a4878; }
@@ -3498,8 +3499,10 @@ b, strong {
   margin-bottom: 0px; }
 
 .site-header {
-  position: relative;
+  position: fixed;
   width: 100%;
+  left: 0;
+  top: 0;
   padding: 0;
   z-index: 9;
   background: #ffffff;
@@ -3507,7 +3510,8 @@ b, strong {
   .site-header .header-inner {
     height: 64px; }
   .site-header .container-wide {
-    padding-right: 0; }
+    padding-right: 0;
+    margin: 0 auto; }
     @media (min-width: 1680px) {
       .site-header .container-wide {
         padding-left: 0; } }
@@ -4582,7 +4586,7 @@ nav.mobile-navigation {
       padding-left: 12%;
       padding-right: 12%; } }
   @media (min-width: 992px) {
-    .section:not(.title-left) h2 {
+    .section:not(.title-left) .title h2 {
       padding-left: 5%;
       padding-right: 5%; } }
   .section .green_border:after {
@@ -5433,6 +5437,25 @@ nav.mobile-navigation {
       content: "3"; }
   .how-it-works .sli {
     width: 720px; }
+
+.all-insurance-wrapper .all-insurance-slider-inner {
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.12);
+  flex-wrap: wrap;
+  display: flex; }
+  .all-insurance-wrapper .all-insurance-slider-inner .card {
+    width: 50%; }
+    @media (min-width: 992px) {
+      .all-insurance-wrapper .all-insurance-slider-inner .card {
+        width: 25%; } }
+
+.flexible_cards_row .flex-cards-row > div {
+  display: flex;
+  flex-wrap: wrap; }
+
+.flexible_cards_row .flex-cards-row .img-text-cont {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 20px; }
 
 #primary.content-area {
   padding: 80px 0; }
