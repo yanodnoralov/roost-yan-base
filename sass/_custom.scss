@@ -134,7 +134,9 @@ b, strong {
 .text-444 {
 	color: #444;
 }
-
+.invert-row {
+	flex-direction: row-reverse;
+}
 .jumbotron {
 	background-color: transparent;
 	margin-bottom: 0px;
@@ -737,57 +739,6 @@ nav {
 
 
 
-// inside pages
-.hero {
-	/*
-	background: #0892c9;
-	background: -moz-linear-gradient(top, #0892c9 30%, #1839c6 100%);
-	background: -webkit-linear-gradient(top, #0892c9 30%,#1839c6 100%);
-	background: linear-gradient(to bottom, #0892c9 30%,#1839c6 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0892c9', endColorstr='#1839c6',GradientType=0 );
-	padding: 10em 0 8em;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-	*/
-	.container {
-		z-index: 5;
-		position: relative;
-	}
-	h1.entry-title {
-		color: white;
-		font-size: 3em;
-		margin: 15px 0;
-		line-height: 1em;
-	}
-	.sub-title {
-		font-size: 1.5em;
-		color: white;
-		margin: 15px 0;
-	}
-	.img-overlay {
-		position: absolute;
-		width: 100%; height: 100%;
-		left: 0; top: 0;
-		z-index: 1;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-	.parallax-overlay {
-		position: absolute;
-		width: 100%; height: 100%;
-		left: 0; top: 0;
-		z-index: 2;
-		text-align: right;
-		.parallax-img {
-			right: 0;
-			position: absolute;
-			bottom: 0;
-		}
-	}
-}
-
 // homepage cta section
 .cta-cont {
 	img {
@@ -978,6 +929,18 @@ nav {
 			.card-author-position {
 				margin-bottom: 10px;
 			}
+			.wrapped-link {
+				align-self: center;
+				display: flex;
+				&:hover {
+					img {
+						opacity: 0.7;
+					}
+				}
+				.hover-content {
+					display: none !important;
+				}
+			}
 		}
 	}
 	.carousel-control-prev-icon {
@@ -1014,9 +977,17 @@ nav {
 			display: none;
 		}
 	}
+	.bottom-cta-col {
+		p:last-of-type {
+			margin-bottom: 0 !important;
+		}
+	}
 	p {
 		font-size: 1.25rem;
 		font-weight: 300;
+	}
+	a.btn {
+		margin-top: 1.5em;
 	}
 }
 .globe-area {
@@ -1324,6 +1295,40 @@ nav {
 			margin-bottom: 0;
 		}
 	}
+	&.light-text * {
+		color: #fff;
+		text-shadow: none;
+		.btn, .btn-primary {
+			background: transparent;
+			border-color: white;
+			i {
+				transition: $transition-links-out;
+			}
+			&:hover {
+				color: $color-primary !important;
+				background: white;
+				i {
+					color: $color-primary;
+					transition: $transition-links-in;
+				}
+			}
+		}
+	}
+	&.fluid-height {
+		padding-top: 45px;
+		padding-bottom: 45px;
+		min-height: 234px;
+		align-items: center;
+		&.page-hero-mobile {
+			min-height: 0;
+			.mobile-hero-row {
+				height: auto;
+				min-height: 215px;
+				align-items: center;
+				display: flex;
+			}
+		}
+	}
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1417,15 +1422,6 @@ nav {
 		.mobile-hero-content-row {
 			padding-top: 40px;
 			padding-bottom: 44px;
-		}
-	}
-	&.fluid-height {
-		min-height: 0;
-		.mobile-hero-row {
-			height: auto;
-			min-height: 215px;
-			align-items: center;
-			display: flex;
 		}
 	}
 }
@@ -2576,6 +2572,20 @@ $spacerx: 3.5rem;
 	}
 }
 
+//image_and_content_column
+.image_and_content_column {
+	background-size: cover;
+	background-repeat: no-repeat;
+	.image_content_row {
+		//align-items: center;
+		& > div:first-child {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
 //Insurance Customers
 .all-insurance-wrapper {
 	.all-insurance-slider-inner {
@@ -2620,6 +2630,18 @@ $spacerx: 3.5rem;
 	width: 100%;
 	background: #f5f5f5;
 	border-bottom: 1px solid #e4e4e4;
+}
+
+.search {
+	.entry-footer {
+		font-size: .9em;
+	}
+	article {
+		border: 1px solid rgba(0,0,0,0.1);
+		border-radius: 4px;
+		padding: 15px;
+		margin-bottom: 30px;
+	}
 }
 
 

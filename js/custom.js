@@ -14,7 +14,46 @@ $(function() {
 
 //appear effects
 $(document).ready(function(){
-	bod.addClass("hide-elements")
+	//appear effects
+	bod.addClass("hide-elements");
+	
+	//timers function
+	var waitForFinalEvent = (function () {
+	  var timers = {};
+	  return function (callback, ms, uniqueId) {
+	    if (!uniqueId) {
+	      uniqueId = "Don't call this twice without a uniqueId";
+	    }
+	    if (timers[uniqueId]) {
+	      clearTimeout (timers[uniqueId]);
+	    }
+	    timers[uniqueId] = setTimeout(callback, ms);
+	  };
+	})();
+	
+	//insurance testimonials slider
+	if ( $(".insurance-slider").length) {
+		function wrapCards() {
+			if ($(window).width() < 576) {
+				$(".insurance-slider").each(function(){
+					$card_body = $(this).find('.card.card-body');
+					$card_body.each(function(){
+						$(this).addClass("poop");
+						thisHref = $(this).find(".read-more a").attr('href');
+						console.log(thisHref);
+						$(this).wrapInner('<a href="'+thisHref+'" class="wrapped-link"></a>')
+					});
+				});
+			}
+		}
+		wrapCards();
+		$(window).resize(function () {
+		    waitForFinalEvent(function(){
+		    	console.log('Resize...');
+				wrapCards()
+		    }, 500, "unique_s");
+		});	
+	}
 })
 
 inView('.hide').on('enter', function(t) {
@@ -22,6 +61,8 @@ inView('.hide').on('enter', function(t) {
 			$(t).addClass("now-in-view");
 		}, 200);
 });
+
+
 
 
 //gravity forms confirmation

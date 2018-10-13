@@ -9,7 +9,7 @@
     </div>
     <div class="row testimonial-outer">
 	    <div class="col-12">
-        <div id="testimonial-slider" class="testimonial-slider carousel slide">
+        <div id="testimonial-slider" class="testimonial-slider carousel slide insurance-slider">
             <div class="testimonial-slider-inner">
 	            
                 <?php

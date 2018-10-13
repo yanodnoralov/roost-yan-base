@@ -73,12 +73,12 @@ if ( ! function_exists( 'yan_base_entry_footer' ) ) :
 			}
 		}
 
+/*
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-						/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'yan-base' ),
 						array(
 							'span' => array(
@@ -91,6 +91,7 @@ if ( ! function_exists( 'yan_base_entry_footer' ) ) :
 			);
 			echo '</span>';
 		}
+*/
 
 		edit_post_link(
 			sprintf(

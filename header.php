@@ -178,6 +178,12 @@
 	if (!get_field('page_hero_background_image')) {
 		$headerHasNotClass = $headerHasNotClass . " no-hero-img";
 	}
+	if (get_field('light_text')) {
+		$headerHasNotClass = $headerHasNotClass . " light-text";
+	}
+	if (get_field('fluid_height')) {
+		$headerHasNotClass = $headerHasNotClass . " fluid-height";
+	}
 	$headerMobileHasNotClass = $headerHasNotClass;
 	if ( get_field('mobile_inside_text')) {
 		$headerMobileHasNotClass = $headerMobileHasNotClass . " fluid-height";
@@ -190,7 +196,7 @@
 	        <?php if ( 'post' == get_post_type() && !get_field('page_hero_background_image')) {} else {?>
                 background-image:url( <?php echo get_field('page_hero_background_image');?>);
                 background-position: <?php echo $position;?>;
-                background-size: cover;>
+                background-size: cover;
 	        <?php } ?>">
             <div class="container">
                 <div class="row">

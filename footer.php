@@ -74,11 +74,11 @@
                         <a href="https://www.linkedin.com/company/roost-inc-/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 fot-pad-top">
+                <div class="col-md-6 col-lg-2 fot-pad-top">
                     <div class="signup-text">Sign Up for Roost news</div>
                     <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#">Sign Up</a>
                 </div>
-                <div class="col-12 col-lg-5 fot-pad-top">
+                <div class="col-12 col-lg-6 fot-pad-top">
                     <div class="row footer-menus">
                         <!-- footer menus -->
                         <div class="col-md-4 mb-5 mb-md-0">

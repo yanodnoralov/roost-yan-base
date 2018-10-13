@@ -2,7 +2,13 @@ function openMenuFunction(){preMenuContainer.css("display","block"),bod.addClass
 //nav dropdown plugin
 $(function(){$(".desktop-navigation #primary-menu").smartmenus({showTimeout:75,hideTimeout:100})}),
 //appear effects
-$(document).ready(function(){bod.addClass("hide-elements")}),inView(".hide").on("enter",function(e){setTimeout(function(){$(e).addClass("now-in-view")},200)}),
+$(document).ready(function(){function e(){$(window).width()<576&&$(".insurance-slider").each(function(){$card_body=$(this).find(".card.card-body"),$card_body.each(function(){$(this).addClass("poop"),thisHref=$(this).find(".read-more a").attr("href"),console.log(thisHref),$(this).wrapInner('<a href="'+thisHref+'" class="wrapped-link"></a>')})})}
+//appear effects
+bod.addClass("hide-elements");
+//timers function
+var n=(i={},function(e,n,o){o||(o="Don't call this twice without a uniqueId"),i[o]&&clearTimeout(i[o]),i[o]=setTimeout(e,n)}),i;
+//insurance testimonials slider
+$(".insurance-slider").length&&(e(),$(window).resize(function(){n(function(){console.log("Resize..."),e()},500,"unique_s")}))}),inView(".hide").on("enter",function(e){setTimeout(function(){$(e).addClass("now-in-view")},200)}),
 //gravity forms confirmation
 jQuery(document).ready(function(){hidethese=$(".modal-header"),jQuery(document).bind("gform_confirmation_loaded",function(){hidethese.hide()})});
 //navigation stuff
@@ -20,7 +26,7 @@ $hashnavlinks=$('.main-navigation li:not(.menu-item-has-children) a[href*="#"]')
 //all hash links smooth scroll
 $(document).on("click",'.site-main a[href^="#"], .home .btn-header',function(e){e.preventDefault(),$("html, body").animate({scrollTop:$($.attr(this,"href")).offset().top},500)}),
 //contact modal
-jQuery(document).ready(function(t){t(function(){var e="on",n="show",o="labelOn";t(".js-floatInput").bind("checkval",function(){var e=t(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),t(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),t(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){t(this).trigger("checkval")}).on("focus",function(){t(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){t(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")})});
+jQuery(document).ready(function(i){i(function(){var e="on",n="show",o="labelOn";i(".js-floatInput").bind("checkval",function(){var e=i(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),i(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),i(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){i(this).trigger("checkval")}).on("focus",function(){i(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){i(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")})});
 //slider stuff
 /*
 $(document).ready(function(){

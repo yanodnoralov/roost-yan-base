@@ -23,7 +23,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php yan_base_post_thumbnail(); ?>
+<!-- 	<?php yan_base_post_thumbnail("thumbnail"); ?> -->
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

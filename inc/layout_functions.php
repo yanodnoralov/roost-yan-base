@@ -574,7 +574,7 @@ function get_template_by_layout($layout){
             <div class="team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
 			    <div class="container">
 			        <div class="row">
-			            <div class="col-md-12 text-center">
+			            <div class="col-md-12 text-center bottom-cta-col">
 				            <?php if (get_sub_field('title')):?>
 			                	<h2 class="display-3 mt-0"><?php the_sub_field('title');?></h2>
 			                <?php endif;?>
@@ -1117,7 +1117,7 @@ function get_template_by_layout($layout){
         case 'press_releases_latest_8':
         	global $wp_query;
 	        $args = array(
-	        'cat' => '10',
+	        'cat' => '12',
 	        'posts_per_page' => 8); //get all posts
 	
 			// The Query
@@ -1170,15 +1170,17 @@ function get_template_by_layout($layout){
             
         // Press Coverage
         case 'press_coverage_latest_8':
+        	$catID = get_sub_field('category_id');
+        	$secbgcolor = get_sub_field('bg-color');
         	global $wp_query;
 	        $args = array(
-	        'cat' => '12',
+	        'cat' => $catID,
 	        'posts_per_page' => 8); //get all posts
 	
 			// The Query
 			query_posts( $args );?>
 			
-            <div class="press-coverage" style="background-color: #ffffff;">
+            <div class="press-coverage" style="background-color: <?php echo $secbgcolor;?>;">
 	            <div class="container section">
 	                <div class="row">
 	                    <div class="col-md-12 first-sec title green_border">
@@ -1213,7 +1215,7 @@ function get_template_by_layout($layout){
 	                </div>
 	                <div class="row">
 		                <div class="col-12 text-center">
-	                		<a href="<?php echo get_category_link(10) ?>" class="mt-3 btn btn-primary">Show More</a>
+	                		<a href="<?php echo get_category_link($catID) ?>" class="mt-3 btn btn-primary">Show More</a>
 		                </div>
 	                </div>
 	            </div>
@@ -1295,7 +1297,7 @@ function get_template_by_layout($layout){
 			    <?php endif;?>
 			    <div class="row all-insurance-outer">
 				    <div class="col-12">
-			        <div id="all-insurance-slider" class="all-insurance-slider carousel slide">
+			        <div id="all-insurance-slider" class="all-insurance-slider carousel slide insurance-slider">
 			            <div class="all-insurance-slider-inner">
 				            
 			                <?php
@@ -1370,14 +1372,15 @@ function get_template_by_layout($layout){
                         $col_count = count( get_sub_field('boxes') );
 
                         if ( $col_count == 1 ) {
-	                        $column_class = "12";
+	                        $column_class = " col-md-12";
 	                    } else if ( $col_count == 2 ) {
-		                    $column_class = "6";
+		                    $column_class = " col-md-6";
 	                    } else if ( $col_count == 3 ) {
-		                    $column_class = "4";
+		                    $column_class = " col-md-4";
 	                    }
 	                    else if ( $col_count == 4 ) {
-		                    $column_class = "3";
+		                    $column_class = " col-lg-3";
+		                    $column_class_md = " col-sm-6";
 	                    }
 					?>
                         <?php
@@ -1385,7 +1388,7 @@ function get_template_by_layout($layout){
 	                        <div class="row flex-cards-row">
 		                        <?php
 	                            while ( have_rows('boxes') ) : the_row();?>
-	                            	<div class="col-md-<?php echo $column_class?>">
+	                            	<div class="<?php echo $column_class; echo $column_class_md; ?>">
 		                              	<div class="img-text-cont no-floats">
 			                              	<?php if (get_sub_field('image')):?>
 				                                <div class="img-more w-100">
@@ -1411,6 +1414,54 @@ function get_template_by_layout($layout){
                     
                 </div>
             </div>
+            <?php
+            break;
+            
+            
+         // Lets talk main call to action
+        case 'image_and_content_column':
+        	$secbgcolor = get_sub_field('bg-color');
+            ?>
+            <div class="section image_and_content_column" style="background-color: <?php echo $secbgcolor;?>; background-image: url(<?php the_sub_field('bg_img');?>);">
+			    <div class="container">
+				    <?php if (get_sub_field('title') || get_sub_field('subtitle') ):?>
+				        <div class="row">
+					        <div class="col-md-12 first-sec title green_border">
+						        <?php if (get_sub_field('title') ):?>
+		                        	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+		                        <?php endif;?>
+		                        <?php if (get_sub_field('subtitle') ):?>
+			                        <p class="sub-title-section">
+			                            <?php the_sub_field('subtitle');?>
+			                        </p>
+			                    <?php endif;?>
+		                    </div>
+				        </div>
+			        <?php endif;?>
+			        <?php if (get_sub_field('html_content') || get_sub_field('image')):?>
+				        <div class="row <?php if (get_sub_field('invert_order')) { echo 'invert-row';}?> image_content_row <?php if (get_sub_field('vertical_center')) { echo 'align-items-center';}?>">
+					        <div class="col-md-6">
+						        <?php if (get_sub_field('image')):?>
+						        	<img class="img-fluid" <?php ar_responsive_image(get_sub_field('image'),'full','900px');?>>
+						        <?php endif;?>
+					        </div>
+				            <div class="col-md-6">
+				                <?php if (get_sub_field('html_content')):?>
+					                <?php the_sub_field('html_content');?>
+				                <?php endif;?>
+				                <?php if (get_sub_field('button_link') ):?>
+				                	<?php $link = get_sub_field('button_link');?>
+				                	<?php if (get_sub_field('if_contact_modal') == true ):?>
+				                		<a class="modal-target-contact btn btn-primary" data-toggle="modal" data-target="#myModal" href="#" class="btn"><?php echo $link['title'];?></a>
+				                	<?php else:?>
+					                	<a class="modal-target-contact btn btn-primary" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+				                	<?php endif;?>
+				                <?php endif;?>
+				            </div>
+				        </div>
+			        <?php endif;?>
+			    </div>
+			</div>
             <?php
             break;
 

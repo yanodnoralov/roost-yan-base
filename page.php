@@ -15,6 +15,7 @@
 get_header();
 ?>
 
+<!--
 <div class="hero">
 	<div class="container">
 		<header class="entry-header rellax" data-rellax-speed=".5" data-rellax-percentage="0.5">
@@ -22,7 +23,7 @@ get_header();
 			<?php if( get_field('sub_title') ): ?>
 				<p class="sub-title"><?php the_field('sub_title'); ?></p>
 			<?php endif; ?>
-		</header><!-- .entry-header -->
+		</header>
 	</div>
 	<?php if( get_field('header_image') ): ?>
 		<div class="img-overlay" style="background-image: url('<?php the_field('header_image'); ?>');"></div>
@@ -33,20 +34,25 @@ get_header();
 		</div>
 	<?php endif; ?>
 </div>
+-->
 	<div id="primary" class="content-area">
 		<div class="container">
-		<main id="main" class="site-main">
+			<div class="col-12">
+				<main id="main" class="site-main">
+				<?php if( !get_field('page_hero_title')): ?>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php endif;?>
+				<?php
+				while ( have_posts() ) :
+					the_post();
 		
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
+					get_template_part( 'template-parts/content', 'page' );
+		
+				endwhile; // End of the loop.
+				?>
+		
+				</main><!-- #main -->
+			</div>
 		</div>
 	</div><!-- #primary -->
 
