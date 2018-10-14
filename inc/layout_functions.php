@@ -1464,8 +1464,177 @@ function get_template_by_layout($layout){
 			</div>
             <?php
             break;
-
             
+            
+        // Policyholders Stories
+        case 'policyholder_stories' :
+        	$secbgcolor = get_sub_field('bg-color');
+        	global $wp_query;
+        	
+        	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			    $query = new WP_Query( array(
+			        'posts_per_page' => 6,
+			        'paged' => $paged,
+			        'post_type' => 'policyholder_stories',
+			    ) );
+			?> 
+	        
+			<?php if ( $query->have_posts() ) : ?>
+			
+            <div class="policyholder-stories-roll" style="background-color: <?php echo $secbgcolor;?>;">
+	            <div class="container section">
+		            <?php if (get_sub_field('title')):?>
+				        <div class="row">
+					        <div class="col-md-12 first-sec title green_border">
+						        <?php if (get_sub_field('title') ):?>
+		                        	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+		                        <?php endif;?>
+		                    </div>
+				        </div>
+			        <?php endif;?>
+	                <div class="row">
+		                <div class="col-12">
+			                <div class="post-roll-outer">
+				                <?php
+					            $counter = 0;
+					            while ( $query->have_posts() ) : $query->the_post(); ?>
+		                          	<article class="post-roll">
+			                          	<h2><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h2>
+			                          	<div class="post-roll-content">
+			                                <div class="post-img" style="background-image: url(<?php the_post_thumbnail_url("post-roll");?>);">
+					                                <a class="block-link d-block" href="<?php echo the_permalink();?>"></a>
+			                                </div>
+			                                <div class="post-text">
+				                                <div class="meta w-100">
+					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php echo the_author();?>
+				                                </div>
+			                                    <p class="mb-2"><?php echo excerpt(265)?>...</p>
+			                                    <div class="read-more-wrap">
+			                                    	<a class="read-more" href="<?php echo the_permalink();?>">Read More <i class="fas fa-chevron-right"></i></a>
+			                                    </div>
+			                                    <div class="clearfix"></div>
+			                                </div>
+			                          	</div>
+		                          	</article>
+				                <?php $counter++;?>
+				                <?php endwhile; wp_reset_query();?>
+			                </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+			                <div class="pagination">
+							    <?php 
+							        echo paginate_links( array(
+							            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+							            'total'        => $query->max_num_pages,
+							            'current'      => max( 1, get_query_var( 'paged' ) ),
+							            'format'       => '?paged=%#%',
+							            'show_all'     => false,
+							            'type'         => 'plain',
+							            'end_size'     => 2,
+							            'mid_size'     => 1,
+							            'prev_next'    => true,
+							            'add_args'     => false,
+							            'add_fragment' => '',
+							        ) );
+							    ?>
+							</div>
+							<?php wp_reset_postdata(); ?>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php endif; ?>
+            <?php
+            break;
+            
+        
+        
+        
+        // Blog Posts Roll
+        case 'blog_roll' :
+        	$secbgcolor = get_sub_field('bg-color');
+        	global $wp_query;
+        	
+        	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			    $query = new WP_Query( array(
+			        'posts_per_page' => 6,
+			        'paged' => $paged,
+			        //'post_type' => 'policyholder_stories',
+			        'post_type' => 'post',
+			    ) );
+			?> 
+	        
+			<?php if ( $query->have_posts() ) : ?>
+			
+            <div class="policyholder-stories-roll" style="background-color: <?php echo $secbgcolor;?>;">
+	            <div class="container section">
+	                <div class="row">
+	                    <div class="col-md-12 first-sec title green_border">
+	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                    </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-12">
+			                <div class="post-roll-outer">
+				                <?php
+					            $counter = 0;
+					            while ( $query->have_posts() ) : $query->the_post(); ?>
+		                          	<article class="post-roll">
+			                          	<h2><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h2>
+			                          	<div class="post-roll-content">
+			                                <div class="post-img" style="background-image: url(<?php the_post_thumbnail_url("post-roll");?>);">
+					                                <a class="block-link d-block" href="<?php echo the_permalink();?>"></a>
+			                                </div>
+			                                <div class="post-text">
+				                                <div class="meta w-100">
+					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php echo the_author();?>
+				                                </div>
+			                                    <p class="mb-2"><?php echo excerpt(265)?>...</p>
+			                                    <div class="read-more-wrap">
+			                                    	<a class="read-more" href="<?php echo the_permalink();?>">Read More <i class="fas fa-chevron-right"></i></a>
+			                                    </div>
+			                                    <div class="clearfix"></div>
+			                                </div>
+			                          	</div>
+		                          	</article>
+				                <?php $counter++;?>
+				                <?php endwhile; wp_reset_query();?>
+			                </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+			                <div class="pagination">
+							    <?php 
+							        echo paginate_links( array(
+							            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+							            'total'        => $query->max_num_pages,
+							            'current'      => max( 1, get_query_var( 'paged' ) ),
+							            'format'       => '?paged=%#%',
+							            'show_all'     => false,
+							            'type'         => 'plain',
+							            'end_size'     => 2,
+							            'mid_size'     => 1,
+							            'prev_next'    => true,
+							            'add_args'     => false,
+							            'add_fragment' => '',
+							        ) );
+							    ?>
+							</div>
+							<?php wp_reset_postdata(); ?>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php endif; ?>
+            <?php
+            break;
+            
+            
+            
+                        
         /*
             // empty
             case 'layout_8':

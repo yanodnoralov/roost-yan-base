@@ -3439,6 +3439,50 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5bc290305b8a6": {
+                    "key": "layout_5bc290305b8a6",
+                    "name": "policyholder_stories",
+                    "label": "Policyholder Stories",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc290305b8a7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bc290305b8a9",
+                            "label": "Background Color",
+                            "name": "bg-color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -3472,5 +3516,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539351755
+    "modified": 1539478424
 }

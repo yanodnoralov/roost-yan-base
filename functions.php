@@ -271,3 +271,6 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+//add image size
+add_image_size( 'post-roll', 700, 500, array( 'center', 'center' ) );

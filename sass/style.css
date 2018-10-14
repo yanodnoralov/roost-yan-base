@@ -3396,6 +3396,9 @@ body {
   margin-right: auto;
   padding-top: 65px; }
 
+.admin-bar .site-header {
+  top: 32px; }
+
 h1, .h1 {
   color: #2a4878; }
 
@@ -5426,12 +5429,113 @@ nav.mobile-navigation {
   .how-it-works .sli {
     width: 720px; }
 
+.page-roost-stories .title-hero .container .row {
+  text-align: center;
+  justify-content: center; }
+  .page-roost-stories .title-hero .container .row .border-green-left {
+    border: 0;
+    padding: 0; }
+
+.policyholder-stories-roll article.post-roll {
+  margin-bottom: 45px;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  padding: 25px 20px 30px;
+  border-radius: 4px; }
+  .policyholder-stories-roll article.post-roll h2 {
+    margin-top: 0; }
+  .policyholder-stories-roll article.post-roll:last-child {
+    margin-bottom: 0; }
+
+.policyholder-stories-roll .post-roll-content {
+  display: flex;
+  align-items: stretch; }
+  .policyholder-stories-roll .post-roll-content .post-img {
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (max-width: 1199.98px) {
+      .policyholder-stories-roll .post-roll-content .post-img {
+        max-height: 190px; } }
+    .policyholder-stories-roll .post-roll-content .post-img .block-link {
+      width: 100%;
+      height: 100%; }
+  .policyholder-stories-roll .post-roll-content .post-text {
+    width: 50%;
+    padding-left: 20px;
+    position: relative; }
+    .policyholder-stories-roll .post-roll-content .post-text .read-more-wrap {
+      position: relative;
+      width: 100%;
+      margin-top: 30px; }
+      .policyholder-stories-roll .post-roll-content .post-text .read-more-wrap a {
+        background: white;
+        position: absolute;
+        z-index: 1;
+        padding-left: 10px;
+        font-size: 14px;
+        right: 0;
+        top: -12px; }
+      .policyholder-stories-roll .post-roll-content .post-text .read-more-wrap:before {
+        height: 1px;
+        background: #e8e8e8;
+        width: 100%;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0; }
+    .policyholder-stories-roll .post-roll-content .post-text .read-more {
+      text-align: right; }
+
+.policyholder-stories-roll .meta {
+  font-size: .85em;
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #777; }
+
+.policyholder-stories-roll .pagination {
+  display: flex;
+  justify-content: center; }
+  .policyholder-stories-roll .pagination .page-numbers {
+    margin-top: 30px; }
+
+@media (min-width: 992px) {
+  .policyholder-stories-roll .post-roll-outer {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (max-width: 767.98px) {
+  .policyholder-stories-roll .post-roll-content {
+    flex-wrap: wrap; }
+    .policyholder-stories-roll .post-roll-content .post-img {
+      width: 100%;
+      height: 160px; }
+    .policyholder-stories-roll .post-roll-content .post-text {
+      width: 100%;
+      padding-left: 0; } }
+
+.page-numbers {
+  margin: 0 2px; }
+  .page-numbers.prev {
+    margin-right: 10px; }
+  .page-numbers.next {
+    margin-left: 10px; }
+
 .image_and_content_column {
   background-size: cover;
   background-repeat: no-repeat; }
-  @media (max-width: 767.98px) {
-    .image_and_content_column .image_content_row > div:first-child {
-      margin-bottom: 30px; } }
+  .image_and_content_column .image_content_row > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 767.98px) {
+      .image_and_content_column .image_content_row > div:first-child {
+        margin-bottom: 30px; } }
 
 .all-insurance-wrapper .all-insurance-slider-inner {
   box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.12);
