@@ -1130,7 +1130,7 @@ function get_template_by_layout($layout){
 	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
 	                    </div>
 	                </div>
-	                <div class="row">
+	                <div class="row justify-content-center">
 	                <?php
 		            $counter = 0;
 		            while ( have_posts() ) : the_post();?>
