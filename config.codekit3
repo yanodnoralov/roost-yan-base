@@ -638,6 +638,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/hero/news-bg-mobile.jpg": {
+		"ft": 16384,
+		"iS": 5920,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/hero/news-bg-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/img/hero/news-bg.jpg": {
 		"ft": 16384,
 		"iS": 25693,
