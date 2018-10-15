@@ -4963,18 +4963,23 @@ nav.mobile-navigation {
   flex-wrap: wrap;
   padding: 30px; }
 
-.page-news_and_press .title-hero {
-  align-items: center; }
-  .page-news_and_press .title-hero:not(.page-hero-mobile) {
-    padding: 45px 0;
-    min-height: 234px; }
-  .page-news_and_press .title-hero h1 {
-    color: white;
-    text-shadow: none !important; }
-
-.page-news_and_press .img-text-cont h2 {
-  margin-bottom: 0;
-  margin-top: 0; }
+.page-news_and_press {
+  /*
+	.title-hero {
+		align-items: center;
+		&:not(.page-hero-mobile) {
+			padding: 45px 0;
+			min-height: 234px;
+		}
+		h1 {
+			color: white;
+			text-shadow: none !important;
+		}
+	}
+*/ }
+  .page-news_and_press .img-text-cont h2 {
+    margin-bottom: 0;
+    margin-top: 0; }
 
 .policy-stories .stories-item-wrapper {
   display: flex;
