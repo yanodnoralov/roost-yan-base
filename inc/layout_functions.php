@@ -1157,11 +1157,13 @@ function get_template_by_layout($layout){
 	                <?php $counter++;?>
 	                <?php endwhile; wp_reset_query();?>
 	                </div>
+	                <?php if ($counter > 7):?>
 	                <div class="row">
 		                <div class="col-12 text-center">
 	                		<a href="<?php echo get_category_link(10) ?>" class="mt-3 btn btn-primary">Show More</a>
 		                </div>
 	                </div>
+	                <?php endif;?>
 	            </div>
             </div>
             <?php
@@ -1213,11 +1215,13 @@ function get_template_by_layout($layout){
 	                <?php $counter++;?>
 	                <?php endwhile; wp_reset_query();?>
 	                </div>
+	                <?php if ($counter > 7):?>
 	                <div class="row">
 		                <div class="col-12 text-center">
 	                		<a href="<?php echo get_category_link($catID) ?>" class="mt-3 btn btn-primary">Show More</a>
 		                </div>
 	                </div>
+	                <?php endif;?>
 	            </div>
             </div>
             <?php
