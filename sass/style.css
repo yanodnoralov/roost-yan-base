@@ -5587,6 +5587,9 @@ nav.mobile-navigation {
 #primary.content-area {
   padding: 20px 0 80px 0; }
 
+body:not(.page-template-page-templates) .title-hero.page-hero + #primary.content-area {
+  padding: 80px 0 80px 0; }
+
 .entry-meta {
   color: #909090; }
   .entry-meta a {
