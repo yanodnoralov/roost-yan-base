@@ -1,6 +1,6 @@
 function openMenuFunction(){preMenuContainer.css("display","block"),bod.addClass("open-menu"),setTimeout(function(){menuOpenFlag=!0},1e3),menuIn.play().timeScale(1)}function closeMenuFunction(){preMenuContainer.css("display","block"),bod.removeClass("open-menu"),setTimeout(function(){menuOpenFlag=!1},1e3),menuIn.play().reverse().timeScale(3)}function hidePreMenu(){preMenuContainer.css("display","none"),preMenuContainer.removeClass("open-menu")}var $=jQuery,bod=$("body"),menuItemWithSub=$(".menu-item.menu-item-has-children > a"),mastHead=$("#masthead");
 //nav dropdown plugin
-$(function(){$(".desktop-navigation #primary-menu").smartmenus({showTimeout:75,hideTimeout:100})}),
+$(function(){$(".desktop-navigation #primary-menu").smartmenus({showTimeout:75,hideTimeout:100,collapsibleBehavior:"toggle",hideOnClick:!1,showOnClick:!1})}),
 //appear effects
 $(document).ready(function(){function e(){$(window).width()<576&&$(".insurance-slider").each(function(){$card_body=$(this).find(".card.card-body"),$card_body.each(function(){$(this).addClass("poop"),thisHref=$(this).find(".read-more a").attr("href"),console.log(thisHref),$(this).wrapInner('<a href="'+thisHref+'" class="wrapped-link"></a>')})})}
 //appear effects

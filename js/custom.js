@@ -7,7 +7,10 @@ var mastHead = $("#masthead");
 $(function() {
 	$('.desktop-navigation #primary-menu').smartmenus({
 		showTimeout: 75,
-		hideTimeout: 100
+		hideTimeout: 100,
+		collapsibleBehavior: 'toggle',
+		hideOnClick: false,
+		showOnClick: false
 	});
 	
 });
