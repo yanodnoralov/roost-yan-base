@@ -1159,7 +1159,7 @@ function get_template_by_layout($layout){
 	                </div>
 	                <div class="row">
 		                <div class="col-12 text-center">
-	                		<a href="<?php echo get_category_link(12) ?>" class="mt-3 btn btn-primary">Show More</a>
+	                		<a href="<?php echo get_category_link(10) ?>" class="mt-3 btn btn-primary">Show More</a>
 		                </div>
 	                </div>
 	            </div>
