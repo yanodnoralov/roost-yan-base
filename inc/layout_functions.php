@@ -1736,7 +1736,7 @@ function get_template_by_layout($layout){
 	                                </div>
                                 </div>
                                 <div class="text">
-                                    <h5><a href="<?php echo the_permalink();?>"><?php echo short_get_the_title(99, get_the_id());?></a></h5>
+                                    <h5><a href="<?php echo $the_link;?>"><?php echo short_get_the_title(99, get_the_id());?></a></h5>
                                     <?php if ($start_date == $end_date):?>
 										<p class="mb-1"><strong>Date:</strong> <?php echo $start_date->format('M d');?></p>
 									<?php else:?>

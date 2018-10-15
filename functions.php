@@ -262,7 +262,9 @@ function excerpt($limit) {
 //timezone
 date_default_timezone_set('America/Los_Angeles'); 
 
-// Add External Links Filter
+
+
+//redirect external url field
 function wpdev_permalink_links( $link, $post ) {
     $meta = get_post_meta( $post->ID, 'external_url', TRUE );
     $url = esc_url( filter_var( $meta, FILTER_VALIDATE_URL ) );
