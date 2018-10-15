@@ -5,6 +5,9 @@
     <div class="row">
         <div class="col-12 px-lg-50 first-sec title green_border">
             <h2><?php echo get_field('section2_title','option');?></h2>
+            <?php if (get_field('section2_subtitle', 'option')):?>
+            	<p><?php echo get_field('section2_subtitle', 'option');?></p>
+            <?php endif;?>
         </div>
     </div>
     <div class="row testimonial-outer">

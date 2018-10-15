@@ -194,6 +194,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5bc5151a9d13a",
+            "label": "Subtitle",
+            "name": "section2_subtitle",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5b8eb0c518ac0",
             "label": "CTA",
             "name": "carousel_cta",
@@ -365,5 +384,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1536624368
+    "modified": 1539667875
 }
