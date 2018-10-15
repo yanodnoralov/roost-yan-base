@@ -1605,6 +1605,13 @@
 		"oAP": "/inc/layout_functions.php",
 		"oF": 0
 		},
+	"/inc/simple_layout_functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/inc/simple_layout_functions.php",
+		"oF": 0
+		},
 	"/inc/template-functions.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1778,11 +1785,25 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
+	"/page-past-events.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-past-events.php",
+		"oF": 0
+		},
 	"/page-templates/home-page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/page-templates/home-page.php",
+		"oF": 0
+		},
+	"/page-templates/layout-template-simple.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-templates/layout-template-simple.php",
 		"oF": 0
 		},
 	"/page-templates/layout-template.php": {

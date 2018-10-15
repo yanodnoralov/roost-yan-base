@@ -203,6 +203,11 @@ require get_template_directory() . '/inc/cpt.php';
  */
 require get_template_directory() . '/inc/layout_functions.php';
 
+/**
+ * Include layout functions
+ */
+require get_template_directory() . '/inc/simple_layout_functions.php';
+
 
 //custom title length
 function short_get_the_title( $length = null, $id = 0 ) {
@@ -253,6 +258,9 @@ function short_the_title($before = '', $after = '', $echo = true, $length = null
 function excerpt($limit) {
     return wp_html_excerpt( get_the_excerpt(), $limit );
 }
+
+//timezone
+date_default_timezone_set('America/Los_Angeles'); 
 
 // Add External Links Filter
 function wpdev_permalink_links( $link, $post ) {

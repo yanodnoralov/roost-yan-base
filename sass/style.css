@@ -5526,6 +5526,23 @@ nav.mobile-navigation {
   .page-numbers.next {
     margin-left: 10px; }
 
+.event-list.show-some .post-box-outer:nth-child(n+9) {
+  display: none !important; }
+
+.event-list:not(.show-some) .load-all-events-outer {
+  display: none !important; }
+
+.event-list .post-box {
+  display: flex;
+  align-content: stretch; }
+  .event-list .post-box .text {
+    align-self: flex-start; }
+  .event-list .post-box .read-more {
+    align-self: flex-end;
+    width: 100%; }
+  .event-list .post-box .img-meta {
+    align-self: flex-start; }
+
 .image_and_content_column {
   background-size: cover;
   background-repeat: no-repeat; }
@@ -5557,12 +5574,15 @@ nav.mobile-navigation {
   padding: 20px; }
 
 #primary.content-area {
-  padding: 80px 0; }
+  padding: 20px 0 80px 0; }
 
 .entry-meta {
   color: #909090; }
   .entry-meta a {
     color: #909090; }
+
+body.page .entry-title {
+  margin: 45px 0 0; }
 
 .page-header.archive {
   width: 100%;

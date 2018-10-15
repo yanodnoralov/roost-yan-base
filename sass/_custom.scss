@@ -2705,6 +2705,34 @@ $spacerx: 3.5rem;
 }
 
 
+//events list
+.event-list {
+	&.show-some {
+		.post-box-outer:nth-child(n+9) {
+			display: none !important;
+		}
+	}
+	&:not(.show-some) {
+		.load-all-events-outer {
+			display: none !important;
+		}
+	}
+	.post-box {
+		display: flex;
+		align-content: stretch;
+		.text {
+			align-self: flex-start;
+		}
+		.read-more {
+			align-self: flex-end;
+			width: 100%;
+		}
+		.img-meta {
+			align-self: flex-start;
+		}
+	}
+}
+
 //image_and_content_column
 .image_and_content_column {
 	background-size: cover;
@@ -2752,12 +2780,18 @@ $spacerx: 3.5rem;
 
 //blog
 #primary.content-area {
-	padding: 80px 0;
+	padding: 20px 0 80px 0;
 }
 .entry-meta {
 	color: #909090;
 	a {
 		color: #909090;
+	}
+}
+
+body.page {
+	.entry-title {
+		margin: 45px 0 0;
 	}
 }
 

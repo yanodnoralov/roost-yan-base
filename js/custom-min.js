@@ -6,7 +6,7 @@ $(document).ready(function(){function e(){$(window).width()<576&&$(".insurance-s
 //appear effects
 bod.addClass("hide-elements");
 //timers function
-var n=(i={},function(e,n,o){o||(o="Don't call this twice without a uniqueId"),i[o]&&clearTimeout(i[o]),i[o]=setTimeout(e,n)}),i;
+var n=(t={},function(e,n,o){o||(o="Don't call this twice without a uniqueId"),t[o]&&clearTimeout(t[o]),t[o]=setTimeout(e,n)}),t;
 //insurance testimonials slider
 $(".insurance-slider").length&&(e(),$(window).resize(function(){n(function(){console.log("Resize..."),e()},500,"unique_s")}))}),inView(".hide").on("enter",function(e){setTimeout(function(){$(e).addClass("now-in-view")},200)}),
 //gravity forms confirmation
@@ -26,7 +26,11 @@ $hashnavlinks=$('.main-navigation li:not(.menu-item-has-children) a[href*="#"]')
 //all hash links smooth scroll
 $(document).on("click",'.site-main a[href^="#"], .home .btn-header',function(e){e.preventDefault(),$("html, body").animate({scrollTop:$($.attr(this,"href")).offset().top},500)}),
 //contact modal
-jQuery(document).ready(function(i){i(function(){var e="on",n="show",o="labelOn";i(".js-floatInput").bind("checkval",function(){var e=i(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),i(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),i(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){i(this).trigger("checkval")}).on("focus",function(){i(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){i(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")})});
+jQuery(document).ready(function(t){t(function(){var e="on",n="show",o="labelOn";t(".js-floatInput").bind("checkval",function(){var e=t(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),t(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),t(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){t(this).trigger("checkval")}).on("focus",function(){t(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){t(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")}),
+//load all events
+t(".load-all-events").on("click touchstart",function(e){e.preventDefault(),console.log("load all events"),t(this).closest(".show-some").removeClass("show-some")}),
+//
+-1<window.location.href.indexOf("?contact-roost")&&t("#myModal").modal("show")});
 //slider stuff
 /*
 $(document).ready(function(){

@@ -182,7 +182,18 @@ jQuery(document).ready(function ($) {
             $(this).closest('.formGroup ').find(".js-floatLabel").removeClass(onClass);
         }).trigger("checkval");
     });
-
+    
+    //load all events
+	$(".load-all-events").on('click touchstart', function(e) {
+		e.preventDefault();
+		console.log("load all events");
+		$(this).closest(".show-some").removeClass("show-some");
+	});
+	
+	//
+	if(window.location.href.indexOf("?contact-roost") > -1) {
+       $('#myModal').modal('show');
+    }
 
 });
 

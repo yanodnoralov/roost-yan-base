@@ -988,7 +988,7 @@ function get_template_by_layout($layout){
 	                        endif;
 	                        ?>
 	                    </div>
-	                    <div class="col-12 col-lg-8 text-center">
+	                    <div class="col-12 col-lg-6 offset-lg-2 text-center">
 	                        <img class="w-auto mx-auto sli mt-5 mt-lg-0" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','1540px');?>>
 	                    </div>
 	                </div>
@@ -1506,7 +1506,7 @@ function get_template_by_layout($layout){
 			                                </div>
 			                                <div class="post-text">
 				                                <div class="meta w-100">
-					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php echo the_author();?>
+					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php the_author();?>
 				                                </div>
 			                                    <p class="mb-2"><?php echo excerpt(265)?>...</p>
 			                                    <div class="read-more-wrap">
@@ -1631,6 +1631,257 @@ function get_template_by_layout($layout){
             <?php endif; ?>
             <?php
             break;
+            
+            
+            
+            // Events List 
+        case 'events-post-roll':
+        	$secbgcolor = get_sub_field('bg-color');
+        	$list_type = get_sub_field('list_type');
+        	global $wp_query;
+        	
+        	$today = date('Ymd');
+        	
+        	$recent_args = array(
+	        'post_type' => 'events',
+	        'posts_per_page' => -1,
+	        'meta_query' => array(
+		        'relation' => 'OR',
+				array(
+			        'key'		=> 'start_date',
+			        'compare'	=> '>=',
+			        'value'		=> $today,
+			    ),
+			     array(
+			        'key'		=> 'end_date',
+			        'compare'	=> '>=',
+			        'value'		=> $today,
+			    )
+		    ));
+		    
+		    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		    $past_args = array(
+	        'post_type' => 'events',
+	        'posts_per_page' => 8,
+			'paged' => $paged,
+	        'meta_query' => array(
+		        'relation' => 'AND',
+				array(
+			        'key'		=> 'start_date',
+			        'compare'	=> '<',
+			        'value'		=> $today,
+			    ),
+			     array(
+			        'key'		=> 'end_date',
+			        'compare'	=> '<',
+			        'value'		=> $today,
+			    )
+		    ));
+		    
+		   
+		    
+		    if ($list_type == "upcoming") {
+				$events_query = $recent_query;
+				$events_query_args = $recent_args;
+			} else if ($list_type == "past") {
+				$events_query = $past_query = new WP_Query( $past_args );
+				$events_query_args = $past_args;
+			}
+			
+			$events_query = new WP_Query( $events_query_args );?>
+			
+			<?php if ( $events_query->have_posts() ) : ?>
+            <div class="press-coverage event-list show-some" style="background-color: <?php echo $secbgcolor;?>;">
+	            <div class="container section">
+		            <?php if (get_sub_field('title')):?>
+				        <div class="row">
+					        <div class="col-md-12 first-sec title green_border">
+						        <?php if (get_sub_field('title') ):?>
+		                        	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+		                        <?php endif;?>
+		                    </div>
+				        </div>
+			        <?php endif;?>
+	                <div class="row justify-content-center">
+	                <?php
+		            $counter = 0;
+		            while ( $events_query->have_posts() ) : $events_query->the_post(); ?>
+		            	<?php
+			            // get raw date
+						$start_date = get_field('start_date', false, false);
+						$end_date = get_field('end_date', false, false);
+						
+						// make date object
+						$start_date = new DateTime($start_date);
+						$end_date = new DateTime($end_date);
+						
+						if(get_field('url')) {
+							$the_link = get_field('url');
+						} else {
+							$the_link = the_permalink();
+						}
+						?>
+						
+	                    <div class="col-12 col-sm-6 col-lg-3 d-flex post-box-outer">
+                          	<div class="img-text-cont post-box">
+                                <div class="img-meta">
+	                                <div class="img mb-3">
+		                                <?php if ( has_post_thumbnail() ) {?>
+											<a href="<?php echo $the_link;?>"><?php the_post_thumbnail();?></a>
+										<?php } ?>
+	                                </div>
+                                </div>
+                                <div class="text">
+                                    <h5><a href="<?php echo the_permalink();?>"><?php echo short_get_the_title(99, get_the_id());?></a></h5>
+                                    <?php if ($start_date == $end_date):?>
+										<p class="mb-1"><strong>Date:</strong> <?php echo $start_date->format('M d');?></p>
+									<?php else:?>
+                                    	<p class="mb-1"><strong>Date:</strong> <?php echo $start_date->format('M d'); if(get_field('end_date')){ echo ' - '.$end_date->format('M d');}?></p>
+                                    <?php endif;?>
+                                    <p class="mb-2"><strong>Location:</strong> <?php echo get_field('location')?></p>
+                                </div>
+                                <div class="red-more">
+                                	<a class="read-more-link" href="<?php echo $the_link;?>">Event Website <i class="fas fa-chevron-right"></i></a>
+                                </div>
+                          	</div>
+	                    </div>
+	                <?php $counter++;?>
+	                <?php endwhile; wp_reset_query();?>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+			                <?php if ($list_type == "upcoming"):?>
+			                	<?php if ($counter > 8):?>
+				                	<div class="d-block load-all-events-outer">
+				                		<a class="load-all-events" href="#">Load More Events</a>
+				                	</div>
+			                	<?php endif;?>
+			                	<a href="<?php the_sub_field('button_link')?>" class="mt-3 btn btn-primary"><?php the_sub_field('button_text')?></a>
+			                <?php else:?>
+	                			<a href="/events/past-events" class="mt-3 btn btn-primary">Show More</a>
+	                			<div class="pagination">
+								    <?php 
+								        echo paginate_links( array(
+								            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+								            'total'        => $query->max_num_pages,
+								            'current'      => max( 1, get_query_var( 'paged' ) ),
+								            'format'       => '?paged=%#%',
+								            'show_all'     => false,
+								            'type'         => 'plain',
+								            'end_size'     => 2,
+								            'mid_size'     => 1,
+								            'prev_next'    => true,
+								            'add_args'     => false,
+								            'add_fragment' => '',
+								        ) );
+								    ?>
+								</div>
+								<?php wp_reset_postdata(); ?>
+	                		<?php endif;?>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php endif;?>
+            <?php wp_reset_postdata(); ?>
+            
+            <?php
+            break;
+            
+            
+            
+            //past events
+        case 'past_events' :
+        	$secbgcolor = get_sub_field('bg-color');
+        	global $wp_query;
+        	$today = date('Ymd');
+        	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			    $query = new WP_Query( array(
+			        'posts_per_page' => 6,
+			        'paged' => $paged,
+			        'post_type' => 'events',
+			        'meta_query' => array(
+				        'relation' => 'OR',
+						array(
+					        'key'		=> 'start_date',
+					        'compare'	=> '>=',
+					        'value'		=> $today,
+					    ),
+					     array(
+					        'key'		=> 'end_date',
+					        'compare'	=> '>=',
+					        'value'		=> $today,
+					    )
+				    )
+			    ) );
+			?> 
+	        
+			<?php if ( $query->have_posts() ) : ?>
+			
+            <div class="policyholder-stories-roll" style="background-color: <?php echo $secbgcolor;?>;">
+	            <div class="container section">
+	                <div class="row">
+	                    <div class="col-md-12 first-sec title green_border">
+	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
+	                    </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-12">
+			                <div class="post-roll-outer">
+				                <?php
+					            $counter = 0;
+					            while ( $query->have_posts() ) : $query->the_post(); ?>
+		                          	<article class="post-roll">
+			                          	<h2><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h2>
+			                          	<div class="post-roll-content">
+			                                <div class="post-img" style="background-image: url(<?php the_post_thumbnail_url("post-roll");?>);">
+					                                <a class="block-link d-block" href="<?php echo the_permalink();?>"></a>
+			                                </div>
+			                                <div class="post-text">
+				                                <div class="meta w-100">
+					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php echo the_author();?>
+				                                </div>
+			                                    <p class="mb-2"><?php echo excerpt(265)?>...</p>
+			                                    <div class="read-more-wrap">
+			                                    	<a class="read-more" href="<?php echo the_permalink();?>">Read More <i class="fas fa-chevron-right"></i></a>
+			                                    </div>
+			                                    <div class="clearfix"></div>
+			                                </div>
+			                          	</div>
+		                          	</article>
+				                <?php $counter++;?>
+				                <?php endwhile; wp_reset_query();?>
+			                </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-12 text-center">
+			                <div class="pagination">
+							    <?php 
+							        echo paginate_links( array(
+							            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+							            'total'        => $query->max_num_pages,
+							            'current'      => max( 1, get_query_var( 'paged' ) ),
+							            'format'       => '?paged=%#%',
+							            'show_all'     => false,
+							            'type'         => 'plain',
+							            'end_size'     => 2,
+							            'mid_size'     => 1,
+							            'prev_next'    => true,
+							            'add_args'     => false,
+							            'add_fragment' => '',
+							        ) );
+							    ?>
+							</div>
+							<?php wp_reset_postdata(); ?>
+		                </div>
+	                </div>
+	            </div>
+            </div>
+            <?php endif; ?>
+            <?php
+            break;
+
             
             
             

@@ -15,33 +15,21 @@
 get_header();
 ?>
 
-<!--
-<div class="hero">
-	<div class="container">
-		<header class="entry-header rellax" data-rellax-speed=".5" data-rellax-percentage="0.5">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php if( get_field('sub_title') ): ?>
-				<p class="sub-title"><?php the_field('sub_title'); ?></p>
-			<?php endif; ?>
-		</header>
-	</div>
-	<?php if( get_field('header_image') ): ?>
-		<div class="img-overlay" style="background-image: url('<?php the_field('header_image'); ?>');"></div>
-	<?php endif; ?>
-	<?php if( get_field('parallax_image') ): ?>
-		<div class="parallax-overlay rellax" data-rellax-speed="-1.5" data-rellax-percentage="0.5">
-			<img class="parallax-img" src="<?php the_field('parallax_image'); ?>" width="<?php if( get_field('parallax_image_width') ): the_field('parallax_image_width'); endif;?>"/>
+	<?php if( !get_field('page_hero_title')): ?>
+		<div class="container">
+	        <div class="row">
+	            <div class="col-12 col-lg-8">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	            </div>
+	        </div>
 		</div>
-	<?php endif; ?>
-</div>
--->
+	<?php endif;?>
+
 	<div id="primary" class="content-area">
 		<div class="container">
+			<div class="row">
 			<div class="col-12">
 				<main id="main" class="site-main">
-				<?php if( !get_field('page_hero_title')): ?>
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				<?php endif;?>
 				<?php
 				while ( have_posts() ) :
 					the_post();
@@ -52,6 +40,7 @@ get_header();
 				?>
 		
 				</main><!-- #main -->
+			</div>
 			</div>
 		</div>
 	</div><!-- #primary -->
