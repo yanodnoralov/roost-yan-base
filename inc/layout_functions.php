@@ -571,7 +571,7 @@ function get_template_by_layout($layout){
         // Lets talk main call to action
         case 'layout_33':
             ?>
-            <div class="team-talk py-6 bottom-cta" style="background: url(<?php the_sub_field('bg_img');?>);">
+            <div class="team-talk py-6 bottom-cta" style="background-image: url(<?php the_sub_field('bg_img');?>);">
 			    <div class="container">
 			        <div class="row">
 			            <div class="col-md-12 text-center bottom-cta-col">
