@@ -3936,9 +3936,13 @@ nav.mobile-navigation {
     border-color: #378fdb;
     background-color: transparent;
     color: #378fdb; }
+    .btn-outline.btn-primary:visited {
+      color: #378fdb; }
   .btn-outline.btn-light {
     border-color: #d2d2d2;
     color: #4e4e4e; }
+  .btn-outline:not([href]):not([tabindex]) {
+    color: #378fdb; }
 
 .btn-primary {
   color: #fff;
@@ -5572,6 +5576,9 @@ nav.mobile-navigation {
   flex-wrap: wrap;
   align-content: flex-start;
   padding: 20px; }
+
+.flexible_columns .flex-column-inner {
+  margin-bottom: 30px; }
 
 #primary.content-area {
   padding: 20px 0 80px 0; }

@@ -1883,7 +1883,70 @@ function get_template_by_layout($layout){
             break;
 
             
-            
+        // Flexible Columns
+        case 'flexible_columns':
+            ?>
+            <div class="section flexible_columns position-relative" style="background: <?php if ( get_sub_field('background_color') ){ echo get_sub_field('background_color'); }?>;">
+                <div class="container">
+	                <?php if ( get_sub_field('title') || get_sub_field('subtitle') ):?>
+                    <div class="row">
+                        <div class="col-md-12 first-sec title green_border">
+	                        <?php if ( get_sub_field('title') ):?>
+                            	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+                            <?php endif; ?>
+                            <?php if ( get_sub_field('subtitle') ):?>
+                            	<p class="sub-title-section">
+                                <?php the_sub_field('subtitle');?>
+                            	</p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                    <?php 
+	                    $col_count=0;
+                        $column_items=0;
+                        $col_count = count( get_sub_field('boxes') );
+
+                        if ( $col_count == 1 ) {
+	                        $column_class = " col-md-12";
+	                    } else if ( $col_count == 2 ) {
+		                    $column_class = " col-md-6";
+	                    } else if ( $col_count == 3 ) {
+		                    $column_class = " col-md-4";
+	                    }
+	                    else if ( $col_count == 4 ) {
+		                    $column_class = " col-lg-3";
+		                    $column_class_md = " col-sm-6";
+	                    }
+					?>
+                        <?php
+                        if ( have_rows('boxes') ) :?>
+	                        <div class="row">
+		                        <?php
+	                            while ( have_rows('boxes') ) : the_row();?>
+	                            	<div class="<?php echo $column_class; echo $column_class_md; ?>">
+		                              	<div class="flex-column-inner">
+	                                        <?php the_sub_field('text');?>
+	                                        <?php if (get_sub_field('button')):
+				                            	$cta_button = get_sub_field('button');?>
+			                                	<?php if (get_sub_field('if_contact_modal') == true ):?>
+			                                		<a class="btn btn-primary btn-outline mt-3 modal-target-contact" data-toggle="modal" data-target="#myModal" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>"><?php echo $cta_button["title"]?></a>
+							                	<?php else:?>
+			                                		<a class="btn btn-primary btn-outline mt-3" title="<?php echo $cta_button['title']; ?>" target="<?php echo $cta_button['target']; ?>" href="<?php echo $cta_button["url"]?>"><?php echo $cta_button["title"]?></a>
+							                	<?php endif;?>
+			                                <?php endif;?>
+		                              	</div>
+	                            	</div>
+	                            <?php
+	                            endwhile;?>
+	                        </div>
+                        <?php endif;?>
+                    
+                </div>
+            </div>
+            <?php
+            break;
+   
             
                         
         /*

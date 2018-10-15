@@ -683,10 +683,16 @@ nav {
 		border-color: $color-primary;
 		background-color: transparent;
 		color: $color-primary;
+		&:visited {
+		    color: $color-primary;
+		}
 	}
 	&.btn-light {
 		border-color: #d2d2d2;
 		color: #4e4e4e;
+	}
+	&:not([href]):not([tabindex]) {
+		color: $color-primary;
 	}
 }
 .btn-primary {
@@ -2775,6 +2781,13 @@ $spacerx: 3.5rem;
 			align-content: flex-start;
 			padding: 20px;
 		}
+	}
+}
+
+//flex columns
+.flexible_columns {
+	.flex-column-inner {
+		margin-bottom: 30px;
 	}
 }
 
