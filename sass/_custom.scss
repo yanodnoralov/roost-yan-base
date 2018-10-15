@@ -540,7 +540,7 @@ nav {
 		}
 		@include media-breakpoint-down(md) {
 			padding: 10px 0 10px 14px !important;
-			text-shadow: 0 0 10px rgba(255,255,255,1) !important;
+			text-shadow: 0 0 3px rgba(255,255,255,1) !important;
 			p, a {
 				font-size: 17px !important;
 				text-shadow: 0 0 10px rgba(255,255,255,1) !important;
@@ -565,8 +565,11 @@ nav {
 				letter-spacing: -.5px !important;
 				line-height: 25px !important;
 			}
-			
-
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.defaultimg  {
+			opacity: 0.4 !important;
 		}
 	}
 }

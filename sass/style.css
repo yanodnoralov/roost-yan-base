@@ -3812,7 +3812,7 @@ nav.mobile-navigation {
   @media (max-width: 991.98px) {
     .rev_slider .tp-caption {
       padding: 10px 0 10px 14px !important;
-      text-shadow: 0 0 10px white !important; }
+      text-shadow: 0 0 3px white !important; }
       .rev_slider .tp-caption p, .rev_slider .tp-caption a {
         font-size: 17px !important;
         text-shadow: 0 0 10px white !important; }
@@ -3831,6 +3831,10 @@ nav.mobile-navigation {
         font-size: 16px !important;
         letter-spacing: -.5px !important;
         line-height: 25px !important; } }
+
+@media (max-width: 767.98px) {
+  .rev_slider .defaultimg {
+    opacity: 0.4 !important; } }
 
 .site-footer {
   background: #6a6b6d;
