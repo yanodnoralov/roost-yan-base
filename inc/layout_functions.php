@@ -1117,7 +1117,7 @@ function get_template_by_layout($layout){
         case 'press_releases_latest_8':
         	global $wp_query;
 	        $args = array(
-	        'cat' => '12',
+	        'cat' => '10',
 	        'posts_per_page' => 8); //get all posts
 	
 			// The Query
