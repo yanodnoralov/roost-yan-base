@@ -3396,6 +3396,9 @@ body {
   margin-right: auto;
   padding-top: 65px; }
 
+.hide-nav-footer .mobile-navigation, .hide-nav-footer .menu-mobile-navigation-container, .hide-nav-footer .desktop-navigation, .hide-nav-footer #right-menu, .hide-nav-footer .site-footer a, .hide-nav-footer .site-footer .menu-item, .hide-nav-footer .site-footer .footer-widget-wrapper, .hide-nav-footer #nav-toggle {
+  display: none !important; }
+
 .admin-bar .site-header {
   top: 32px; }
 

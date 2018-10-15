@@ -44,6 +44,11 @@ body {
 	margin-right: auto;
 	padding-top: 65px;
 }
+.hide-nav-footer {
+	.mobile-navigation, .menu-mobile-navigation-container, .desktop-navigation, #right-menu, .site-footer a, .site-footer .menu-item, .site-footer .footer-widget-wrapper, #nav-toggle {
+		display: none !important;
+	}
+}
 .admin-bar {
 	.site-header {
 		top: 32px;
