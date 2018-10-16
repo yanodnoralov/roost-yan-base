@@ -694,13 +694,13 @@ nav {
 		&:visited {
 		    color: $color-primary;
 		}
+		&:not([href]):not([tabindex]) {
+			color: $color-primary;
+		}
 	}
 	&.btn-light {
 		border-color: #d2d2d2;
 		color: #4e4e4e;
-	}
-	&:not([href]):not([tabindex]) {
-		color: $color-primary;
 	}
 }
 .btn-primary {
@@ -2393,6 +2393,8 @@ $spacerx: 3.5rem;
 			color: $color-primary;
 			cursor: pointer;
 			display: inline-block;
+			border-width: 2px;
+			padding: 6px 10px;
 			.fas {
 				font-size: 21px;
 				vertical-align: middle;

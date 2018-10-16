@@ -3945,11 +3945,11 @@ nav.mobile-navigation {
     color: #378fdb; }
     .btn-outline.btn-primary:visited {
       color: #378fdb; }
+    .btn-outline.btn-primary:not([href]):not([tabindex]) {
+      color: #378fdb; }
   .btn-outline.btn-light {
     border-color: #d2d2d2;
     color: #4e4e4e; }
-  .btn-outline:not([href]):not([tabindex]) {
-    color: #378fdb; }
 
 .btn-primary {
   color: #fff;
@@ -5306,7 +5306,9 @@ nav.mobile-navigation {
     font-weight: 500;
     color: #378fdb;
     cursor: pointer;
-    display: inline-block; }
+    display: inline-block;
+    border-width: 2px;
+    padding: 6px 10px; }
     .horizontal-boxes .boxs-row .btn-play .fas {
       font-size: 21px;
       vertical-align: middle; }
