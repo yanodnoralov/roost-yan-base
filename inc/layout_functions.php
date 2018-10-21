@@ -830,7 +830,7 @@ function get_template_by_layout($layout){
 -->
                                 <div class="col-md-5 offset-md-1 pt-5 img-col">
 	                                <div class="img-cont">
-	                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel">
+	                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel" data-interval="false">
 	                                        <div class="carousel-inner">
 	                                            <?php
 	                                            $cl=0;
