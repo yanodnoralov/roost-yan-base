@@ -5386,6 +5386,11 @@ nav.mobile-navigation {
     @media (min-width: 992px) {
       .additonal-app .slide-nav-item:hover {
         opacity: 0.8; } }
+    .additonal-app .slide-nav-item .text {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center; }
   .additonal-app .slide-wrap {
     text-align: center; }
     .additonal-app .slide-wrap img {

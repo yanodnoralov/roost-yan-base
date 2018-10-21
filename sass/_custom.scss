@@ -2508,6 +2508,12 @@ $spacerx: 3.5rem;
 				opacity: 0.8;
 			}
 		}
+		.text {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			align-content: center;
+		}
 	}
 	.slide-wrap {
 		text-align: center;

@@ -621,9 +621,10 @@ function get_template_by_layout($layout){
 	                                            <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
 	                                        </div>
 	                                        <div class="text float-left">
-	                                            <h5><?php the_sub_field('title');?></h5>
 	                                            <?php the_sub_field('text');?>
-	                                            <a class="mt-3 d-inline-block caret" href="<?php the_sub_field('read_more_link');?>">Read more</a>
+	                                            <?php if (get_sub_field('read_more_link')):?>
+	                                            	<a class="mt-2 d-inline-block caret" href="<?php the_sub_field('read_more_link');?>">Read more</a>
+	                                            <?php endif;?>
 	                                        </div>
 	                                    </div>
 	                                <?php
