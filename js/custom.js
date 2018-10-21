@@ -197,6 +197,23 @@ jQuery(document).ready(function ($) {
 	if(window.location.href.indexOf("?contact-roost") > -1) {
        $('#myModal').modal('show');
     }
+    
+    //$('#popverexample-0').popover('show')
+    
+    
+    $("[data-toggle=popover]").each(function(i, obj) {
+		$(this).popover({
+		  html: true,
+		  positionFixed: true,
+		  content: function() {
+			popoverID = $(this).attr("data-popover-id");
+			popContent = $("[data-popcontent-id="+popoverID+"]");
+		    return popContent.html();
+		    //return $('#popover-content-' + id).html();
+		  }
+		});
+		console.log('hi');
+	});
 
 });
 

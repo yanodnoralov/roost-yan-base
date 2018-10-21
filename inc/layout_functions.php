@@ -49,40 +49,9 @@ function get_template_by_layout($layout){
 		                    </div>
 	                    </div>
                     </div>
-                    
-<!--
-                    <div class="row white-sec-cont">
-                        <div class="col-md-6 offset-md-3 top-cont-card">
-                            <?php the_sub_field('top_text');?>
-                        </div>
-                        <div class="col-md-12 card-deck">
-                            <?php
-                            if ( have_rows('columns') ) :
-                            while ( have_rows('columns') ) : the_row();
-                            ?>
-                            <div class="card">
-                                <img <?php ar_responsive_image(get_sub_field('image'),'full','350px');?>>
-                                <div class="card-body">
-                                    <h2 class="card-title"><?php the_sub_field('title');?></h2>
-                                    <p class="card-text">S<?php the_sub_field('text');?>
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="middle-vert">
-                                        <?php the_sub_field('circle_title');?>
-                                        <p>
-                                            <?php the_sub_field('circle_subtext');?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                            endwhile;
-                            endif;
-                            ?>
-                        </div>
-                    </div>
--->
+                    <?php if (get_sub_field('source_text')) {
+	                    echo '<small class="source text-white mt-3 d-block">'.get_sub_field('source_text').'</small>';
+                    }?>
                 </div>
             </div>
             <?php
@@ -641,107 +610,90 @@ function get_template_by_layout($layout){
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 slider-nav">
 
-                                <?php
-                                $cnt=0;
-                                $slide_cnt=1;
-                                if ( have_rows('slides') ) :
-                                    while ( have_rows('slides') ) : the_row();
-                                        if ($cnt==0) {
-                                            $te='active-box';
-                                            $te1='';
-                                        }
-                                        else {
-                                            $te='';
-                                            $te1='display: none';
-                                        }
-                                        ?>
-                                        <div class="col-md-12">
-                                            <div class="img-text-cont <?php echo $te;?>" data-slide="<?php echo $slide_cnt;?>">
-                                                <div class="img-more float-left">
-                                                    <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
-                                                </div>
-                                                <div class="text float-left">
-                                                    <h5><?php the_sub_field('title');?></h5>
-                                                    <?php the_sub_field('text');?>
-                                                    <a class="mt-3 d-inline-block caret" href="<?php the_sub_field('read_more_link');?>">Read more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php
-                                        $cnt++;
-                                        $slide_cnt++;
-                                    endwhile;
-                                    endif;
-
-                                    ?>
+	                        <?php
+	                        $slide_cnt=0;
+	                        if ( have_rows('slides') ) :
+	                            while ( have_rows('slides') ) : the_row();?>
+	                                    <div class="img-text-cont <?php if ($slide_cnt==0) { echo ' slick-current slick-active';}?> slide-nav-item" data-slide="<?php echo $slide_cnt;?>">
+	                                        <div class="img-more float-left">
+	                                            <img class="img-fluid " <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
+	                                        </div>
+	                                        <div class="text float-left">
+	                                            <h5><?php the_sub_field('title');?></h5>
+	                                            <?php the_sub_field('text');?>
+	                                            <a class="mt-3 d-inline-block caret" href="<?php the_sub_field('read_more_link');?>">Read more</a>
+	                                        </div>
+	                                    </div>
+	                                <?php
+	                                $slide_cnt++;
+	                            endwhile;
+	                            endif;
+	
+	                            ?>
                         </div>
-                        <div class="col-md-6 carou-items">
+                        <div class="col-md-6 carou-items slick-items">
                             <?php
                             $cnt=0;
-                            $slide_cnt=1;
-                                if ( have_rows('slides') ) :
-                                    while ( have_rows('slides') ) : the_row();
-                                        if ($cnt==0) {
-                                            $te='active-box';
-                                            $te1='';
-                                        }
-                                        else {
-                                            $te='';
-                                            $te1='display: none';
-                                        }
-                                        ?>
-                                        <div class="col-md-12">
-                                            <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" style="<?php echo $te1;?>" data-ride="carousel">
-
-                                                <div class="carousel-inner">
-                                                        <?php
-                                                        $cl=0;
-                                                        if ( have_rows('inner_slides') ) :
-                                                        while ( have_rows('inner_slides') ) : the_row();
-                                                            if ($cl==0) {
-                                                                $te2='active';
-                                                            }
-                                                            else {
-                                                                $te2='';
-                                                            }
-                                                            ?>
-                                                            <div class="carousel-item <?php echo $te2;?>">
-                                                                <img class="img-fluid sli" <?php ar_responsive_image(get_sub_field('image'),'full','640px');?>>
-                                                            </div>
-                                                            <?php
-                                                            $cl++;
-                                                        endwhile;
-                                                        endif;
-                                                        ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php
-                                        $cnt++;
-                                        $slide_cnt++;
-                                    endwhile;
-                                endif;
-                                ?>
-
+                            if ( have_rows('slides') ) :
+                                while ( have_rows('slides') ) : the_row();?>
+                                    <div class="slide-wrap">
+                                    	<img class="img-fluid sli slide-<?php echo $cnt;?>" <?php ar_responsive_image(get_sub_field('right_image'),'full','640px');?>>
+                                    </div>
+                                    <?php
+                                    $cnt++;
+                                endwhile;
+                            endif;
+                            ?>
                         </div>
-
                     </div>
                 </div>
             </div>
             <script>
                 jQuery( document ).ready(function() {
 	                
-                    jQuery('.img-text-cont').hover(function() {
-	                    if (!$(this).hasClass("active-box")) {
-	                        var slide_cont= $(this).data("slide");
-	                        $(".slco").fadeOut("fast");
-	                        $('.image-cont-'+slide_cont).fadeIn("fast");
-	                        $(".img-text-cont").removeClass("active-box");
-	                        $(this).addClass("active-box");
-                        }
-                    });
+	                slickItems = jQuery('.slick-items');
+	                slickItems.slick({
+					  infinite: false,
+					  slidesToShow: 1,
+					  arrows: false,
+					  slidesToScroll: 1,
+					  dots: true,
+					  fade: true,
+					  speed: 300,
+					  autoplaySpeed: 6000,
+					  autoplay: true,
+					  cssEase: 'linear'
+					});
+					slideNavItem = jQuery(".slide-nav-item");
+					slider_nav = jQuery(".slider-nav");
+					slideNavItem.click(function(e){
+				        slideIndex = $(this).data("slide");
+				        jQuery('.slide-nav-item').removeClass("slick-current").removeClass("slick-active");
+				        $(this).addClass("slick-current slick-active");
+				        jQuery('.slick-items').slick('slickGoTo', slideIndex);
+				    });
+				    $dotIndex = 0;
+				    $(".slick-dots li").each(function(){
+					    $(this).find("button").attr("data-slide", $dotIndex);
+					    $dotIndex++;
+				    });
+				    function styleMatchinNav(slide_index){
+					    slideNavItem.removeClass("slick-current").removeClass("slick-active");
+					    slider_nav.find('.slide-nav-item[data-slide="'+ slide_index +'"]').addClass("slick-current slick-active");
+				    }
+				    $(".slick-dots li button").click(function(e){
+					    $thisSlide_i = $(this).data("slide");
+					    styleMatchinNav($thisSlide_i);
+					});
+					// On before slide change
+					slickItems.on('afterChange', function(event, slick, currentSlide, nextSlide){
+						var $theId = currentSlide;
+						console.log($theId);
+						styleMatchinNav($theId);
+					});
+					    
                 });
             </script>
 
@@ -791,9 +743,43 @@ function get_template_by_layout($layout){
                                     <h2 class="green_border"><?php the_sub_field('title');?></h2>
                                     <?php the_sub_field('subtext');?>
                                     <!-- Button trigger modal -->
+<!--
                                     <button type="button" class="btn btn-outline btn-light mr-3 learn-more-btn" data-toggle="modal" data-target="#modal-box-<?php echo $cnt;?>">
                                         Learn More
                                     </button>
+-->
+									<!-- Button trigger popover -->
+									<button data-popover-id="<?php echo $cnt;?>" data-toggle="popover" type="button" data-container="body" data-placement="bottom" data-html="true" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button>
+									<div data-popcontent-id="<?php echo $cnt;?>" class="pop-content d-none">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <a class="nav-item nav-link active" data-toggle="tab" href=".nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true"><i class="fas fa-thumbs-up"></i> Key Benefits</a>
+                                                <a class="nav-item nav-link" data-toggle="tab" href=".nav-<?php echo $cnt;?>b" role="tab" aria-controls="nav-<?php echo $cnt;?>b" aria-selected="false"><i class="fas fa-check-square"></i> Included</a>
+                                                <a class="nav-item nav-link" data-toggle="tab" href=".nav-<?php echo $cnt;?>c" role="tab" aria-controls="nav-<?php echo $cnt;?>c" aria-selected="false"><i class="far fa-list-alt"></i> Requirements & Specs</a>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <?php
+                                            $cnt_tabs=0;
+                                            if ( have_rows('learn_more_modal') ) :
+                                            while ( have_rows('learn_more_modal') ) : the_row();
+                                            ?>
+                                                <div class="tab-pane fade show active nav-<?php echo $cnt;?>a" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>a"><?php the_sub_field('key_benefits_tab')?></div>
+                                                <div class="tab-pane fade nav-<?php echo $cnt;?>b" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>b"><?php the_sub_field('included')?></div>
+                                                <div class="tab-pane fade nav-<?php echo $cnt;?>c" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>c"><?php the_sub_field('requirements_&_specs')?></div>
+                                            <?php
+                                            endwhile;
+                                            endif;
+                                            ?>
+                                        </div>
+									</div>
+<!--
+									<a data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true" href="#" id="logout">Popover</a>
+									<div id="popover-content-login" class="hide">
+										Popover stuff goes here
+									</div>
+-->
                                     <!-- Button trigger modal -->
                                     <?php if (get_sub_field('cta_text')):?>
 	                                    <button type="button" class="btn btn-play" data-toggle="modal" data-target="#modal-action-<?php echo $cnt;?>">
@@ -811,6 +797,7 @@ function get_template_by_layout($layout){
                                     </div>
                                 </div>
                                 <!-- Modal2 -->
+<!--
                                 <div class="modal fade bd-example-modal-lg learn-more-modal" id="modal-box-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -839,6 +826,7 @@ function get_template_by_layout($layout){
                                         </div>
                                     </div>
                                 </div>
+-->
                                 <div class="col-md-5 offset-md-1 pt-5 img-col">
 	                                <div class="img-cont">
 	                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel">

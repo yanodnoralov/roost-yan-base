@@ -30,7 +30,11 @@ jQuery(document).ready(function(t){t(function(){var e="on",n="show",o="labelOn";
 //load all events
 t(".load-all-events").on("click touchstart",function(e){e.preventDefault(),console.log("load all events"),t(this).closest(".show-some").removeClass("show-some")}),
 //
--1<window.location.href.indexOf("?contact-roost")&&t("#myModal").modal("show")});
+-1<window.location.href.indexOf("?contact-roost")&&t("#myModal").modal("show"),
+//$('#popverexample-0').popover('show')
+t("[data-toggle=popover]").each(function(e,n){t(this).popover({html:!0,positionFixed:!0,content:function(){return popoverID=t(this).attr("data-popover-id"),popContent=t("[data-popcontent-id="+popoverID+"]"),popContent.html();
+//return $('#popover-content-' + id).html();
+}}),console.log("hi")})});
 //slider stuff
 /*
 $(document).ready(function(){

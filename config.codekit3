@@ -1478,6 +1478,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/testimonials-bg.png": {
+		"ft": 32768,
+		"iS": 28793,
+		"oA": 0,
+		"oAP": "/img/testimonials-bg.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"/img/the-weather-company.jpg": {
 		"ft": 16384,
 		"iS": 3336,
@@ -1744,7 +1755,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/plugins-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},

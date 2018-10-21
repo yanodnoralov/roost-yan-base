@@ -34,7 +34,6 @@
                         <div class="hover-content">
                             <img class="" <?php ar_responsive_image( $logo ,'full','200px' ); ?> alt="Card image cap">
                             <?php echo get_field('testemonial_slider_text');?>
-                            <br>
                             <?php if ( get_field('testimonial_author') ):?>
                             	<div class="card-author"><?php echo get_field('testimonial_author');?></div>
                             <?php endif;?>
@@ -58,7 +57,7 @@
             jQuery('.testimonial-slider-inner').slick({
 				infinite: true,
 				slidesToShow: 4,
-				rows: 2,
+				rows: 3,
 				slidesToScroll: 1,
 				infinite: true,
 				arrows: true,
