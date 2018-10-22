@@ -1894,13 +1894,6 @@
 		"oAP": "/page-templates/home-page.php",
 		"oF": 0
 		},
-	"/page-templates/layout-template-simple.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/page-templates/layout-template-simple.php",
-		"oF": 0
-		},
 	"/page-templates/layout-template.php": {
 		"cB": 0,
 		"ft": 8192,
