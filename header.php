@@ -172,6 +172,9 @@
 	if (!get_field('page_subtitle')) {
 		$headerHasNotClass = $headerHasNotClass . " no-sub-title";
 	}
+	if (!get_field('page_hero_title')) {
+		$headerHasNotClass = $headerHasNotClass . " no-title";
+	}
 	if (!get_field('enable_button')) {
 		$headerHasNotClass = $headerHasNotClass . " no-button";
 	}

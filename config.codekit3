@@ -1191,6 +1191,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/img/press_news_2_mobileupdate.jpg.jpg": {
+		"ft": 16384,
+		"iS": 33336,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/press_news_2_mobileupdate.jpg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/press_news_2_update.jpg": {
+		"ft": 16384,
+		"iS": 198840,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/press_news_2_update.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/img/prev.png": {
 		"ft": 32768,
 		"iS": 302,

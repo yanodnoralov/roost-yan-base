@@ -4438,6 +4438,11 @@ nav.mobile-navigation {
     .site-footer .bottom-footer .footer-sub-menu li a {
       color: white; }
 
+.flexible-hero.page-hero-mobile.no-title.no-sub-title {
+  min-height: 0; }
+  .flexible-hero.page-hero-mobile.no-title.no-sub-title .mobile-hero-content-row {
+    display: none; }
+
 .page-hero {
   position: relative;
   background-size: cover;

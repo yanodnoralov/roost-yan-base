@@ -896,8 +896,15 @@ function get_template_by_layout($layout){
             break;
         // Full width hero flexible
         case 'layout_20':
+        	$headerHasNotClass = "";
+			if (!get_sub_field('title')) {
+				$headerHasNotClass = $headerHasNotClass . " no-title";
+			}
+			if (!get_sub_field('subtext')) {
+				$headerHasNotClass = $headerHasNotClass . " no-sub-title";
+			}
             ?>
-            <div class="page-hero flexible-hero" style="
+            <div class="page-hero flexible-hero <?php echo $headerHasNotClass?>" style="
                     background-image:url(<?php echo get_sub_field('background_image');?>);
                     background-position: <?php if (get_sub_field('subtext')) { the_sub_field('background_position'); } else { echo 'center center'; }?>;
                     background-size: cover;">
@@ -911,7 +918,7 @@ function get_template_by_layout($layout){
                 </div>
             </div>
             
-            <div class="page-hero flexible-hero page-hero-mobile">
+            <div class="page-hero flexible-hero page-hero-mobile <?php echo $headerHasNotClass?>">
 		        <div class="mobile-hero-row"></div>
 	            <div class="container">
 	                <div class="row mobile-hero-content-row">
@@ -1125,7 +1132,7 @@ function get_template_by_layout($layout){
 	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
 	                    </div>
 	                </div>
-	                <div class="row justify-content-center">
+	                <div class="row">
 	                <?php
 		            $counter = 0;
 		            while ( have_posts() ) : the_post();?>
@@ -1186,7 +1193,7 @@ function get_template_by_layout($layout){
 	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
 	                    </div>
 	                </div>
-	                <div class="row justify-content-center">
+	                <div class="row">
 	                <?php
 		            $counter = 0;
 		            while ( have_posts() ) : the_post();?>
@@ -1705,7 +1712,7 @@ function get_template_by_layout($layout){
 		                    </div>
 				        </div>
 			        <?php endif;?>
-	                <div class="row justify-content-center">
+	                <div class="row">
 	                <?php
 		            $counter = 0;
 		            while ( $events_query->have_posts() ) : $events_query->the_post(); ?>
