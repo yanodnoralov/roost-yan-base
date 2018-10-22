@@ -805,37 +805,6 @@ function get_template_by_layout($layout){
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Modal2 -->
-<!--
-                                <div class="modal fade bd-example-modal-lg learn-more-modal" id="modal-box-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-	                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <nav>
-                                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                                    <a class="nav-item nav-link active" id="nav-<?php echo $cnt;?>a-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true"><i class="fas fa-thumbs-up"></i> Key Benefits</a>
-                                                    <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>b-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>b" role="tab" aria-controls="nav-<?php echo $cnt;?>b" aria-selected="false"><i class="fas fa-check-square"></i> Included</a>
-                                                    <a class="nav-item nav-link" id="nav-<?php echo $cnt;?>c-tab" data-toggle="tab" href="#nav-<?php echo $cnt;?>c" role="tab" aria-controls="nav-<?php echo $cnt;?>c" aria-selected="false"><i class="far fa-list-alt"></i> Requirements & Specs</a>
-                                                </div>
-                                            </nav>
-                                            <div class="tab-content" id="nav-tabContent">
-                                                <?php
-                                                $cnt_tabs=0;
-                                                if ( have_rows('learn_more_modal') ) :
-                                                while ( have_rows('learn_more_modal') ) : the_row();
-                                                ?>
-                                                    <div class="tab-pane fade show active" id="nav-<?php echo $cnt;?>a" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>a"><?php the_sub_field('key_benefits_tab')?></div>
-                                                    <div class="tab-pane fade" id="nav-<?php echo $cnt;?>b" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>b"><?php the_sub_field('included')?></div>
-                                                    <div class="tab-pane fade" id="nav-<?php echo $cnt;?>c" role="tabpanel" aria-labelledby="nav-<?php echo $cnt;?>c"><?php the_sub_field('requirements_&_specs')?></div>
-                                                <?php
-                                                endwhile;
-                                                endif;
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
--->
                                 <div class="col-md-5 offset-md-1 pt-5 img-col">
 	                                <div class="img-cont">
 	                                    <div id="carouselExampleIndicators<?php echo $cnt;?>" class="carou-items carousel slide slco image-cont-<?php echo $slide_cnt;?>" data-ride="carousel" data-interval="false">
