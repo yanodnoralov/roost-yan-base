@@ -970,7 +970,7 @@ function get_template_by_layout($layout){
 	                    </div>
 	                </div>
 	                <div class="row">
-	                    <div class="col-12 col-lg-4">
+	                    <div class="col-12 col-lg-4 offset-lg-1">
 	                        <?php
 	                        if ( have_rows('left_boxes') ) :
 	                        while ( have_rows('left_boxes') ) : the_row();
@@ -990,7 +990,7 @@ function get_template_by_layout($layout){
 	                        endif;
 	                        ?>
 	                    </div>
-	                    <div class="col-12 col-lg-6 offset-lg-2 text-center">
+	                    <div class="col-12 col-lg-6 text-center">
 	                        <img class="w-auto mx-auto sli mt-5 mt-lg-0" <?php ar_responsive_image(get_sub_field('right_side_image'),'full','1540px');?>>
 	                    </div>
 	                </div>
