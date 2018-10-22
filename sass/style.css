@@ -5354,6 +5354,11 @@ nav.mobile-navigation {
       margin-left: 0; }
     .horizontal-boxes .modal-content .tab-content li {
       margin-bottom: 10px; }
+  .horizontal-boxes .popover {
+    transform: translate3d(0, 0, 0px) !important;
+    width: 100%; }
+    .horizontal-boxes .popover .arrow {
+      left: 50px !important; }
   @media (min-width: 768px) {
     .horizontal-boxes .learn-more-modal .modal-dialog {
       max-width: 90%;

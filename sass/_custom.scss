@@ -2462,6 +2462,13 @@ $spacerx: 3.5rem;
 			}
 		}
 	}
+	.popover {
+		transform: translate3d(0, 0, 0px) !important;
+		width: 100%;
+		.arrow {
+			left: 50px !important;
+		}
+	}
 	@include media-breakpoint-up(md) {
 		.learn-more-modal {
 			.modal-dialog {

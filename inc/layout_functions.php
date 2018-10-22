@@ -756,8 +756,10 @@ function get_template_by_layout($layout){
                                     </button>
 -->
 									<!-- Button trigger popover -->
-									<button data-popover-id="<?php echo $cnt;?>" data-toggle="popover" type="button" data-container="body" data-placement="bottom" data-html="true" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button>
-									<div data-popcontent-id="<?php echo $cnt;?>" class="pop-content d-none">
+<!-- 									<button data-popover-id="<?php echo $cnt;?>" data-toggle="popover" type="button" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button> -->
+									<button id="popid-<?php echo $cnt;?>" data-toggle="popover" type="button" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button>
+<!-- 								<div id="popcontent-<?php echo $cnt;?>" data-popcontent-id="<?php echo $cnt;?>" class="pop-content d-none"> -->
+									<div id="popcontent-<?php echo $cnt;?>" class="pop-content d-none">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
                                         <nav>
                                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -874,15 +876,42 @@ function get_template_by_layout($layout){
 	                                                <li data-target="#carouselExampleIndicators<?php echo $cnt;?>" data-slide-to="<?php echo $i;?>" class="<?php echo $acl;?>"></li>
 	                                                <?php
 	                                            }
-	                                            $cnt++;
-	                                            $slide_cnt++;
 	                                            ?>
 	                                        </ol>
 	                                    </div>
 	                                </div><!-- /img-cont -->
                                 </div>
                                 </div><!-- /row -->
+                                <div class="row">
+	                                <div class="col-12">
+<!-- 		                                <div id="popover-contained-<?php echo $cnt;?>" class="w-100 d-block position-relative" data-containerPadding="100" data-container="#popover-contained-<?php echo $cnt;?>" data-placement="top" data-html="true" >1</div> -->
+		                                <div id="popover-contained-<?php echo $cnt;?>" class="w-100 d-block position-relative"></div>
+	                                </div>
+                                </div>
+                                <script>
+	                                jQuery(document).ready(function(){
+		                                console.log("inline-js");
+		                                popHTML = $("#popcontent-<?php echo $cnt;?>").html();
+		                                popContained = $("#popover-contained-<?php echo $cnt;?>");
+		                                negativeMargin = $('#popid-<?php echo $cnt;?>').offset().top - $("#popover-contained-<?php echo $cnt;?>").offset().top + 45;
+		                                console.log("maring = "+negativeMargin);
+		                                popContained.css('margin-top', negativeMargin);
+		                                $('#popid-<?php echo $cnt;?>').popover({
+							                 trigger: 'manual',
+							                 placement: 'top',
+							                 content: popHTML,
+							                 container: popContained,
+							                 html: true
+							              }).on('click touchstart', function(e) {
+							                 e.preventDefault();
+							                 // Exibe o popover.
+							                 $(this).popover('show');
+							            });
+						            })
+	                            </script>
                             <?php
+	                            $cnt++;
+	                            $slide_cnt++;
                             endwhile;
                         endif;
                         ?>
