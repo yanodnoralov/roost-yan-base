@@ -61,30 +61,39 @@
 		<div class="container-wide pb-5">
             <div class="row">
                 <div class="col-md-6 col-lg-4 pr-xl-5">
-                    <div class="footer-logo">
-                        <img width="115" height="29" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg">
-                    </div>
+	                <?php if( get_field('footer_logo', 'option') ): ?>
+	                    <div class="footer-logo">
+		                    <img <?php ar_responsive_image(get_field('footer_logo', 'option'),'full','120px');?>>
+	                    </div>
+                    <?php endif; ?>
                     <?php if( get_field('footer_bio', 'option') ): ?>
 	                    <div class="footer-text-logo">
 							<?php the_field('footer_bio', 'option'); ?>
 	                    </div>
                     <?php endif; ?>
-                    <div class="footer-social-icons">
-                        <a href="https://www.facebook.com/SmartRoost"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/smartroost"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/channel/UCS8er25tSFr1n-HH8zMGZaw"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.linkedin.com/company/roost-inc-/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <?php if( get_field('footer_social_icons', 'option') ): ?>
+	                    <div class="footer-social-icons">
+							<?php the_field('footer_social_icons', 'option'); ?>
+	                    </div>
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-6 col-lg-2 fot-pad-top footer-widget-wrapper">
-                    <div class="signup-text">Sign Up for Roost news</div>
+	                <?php if( get_field('footer_signup_title', 'option') ): ?>
+	                    <div class="signup-text">
+							<?php the_field('footer_signup_title', 'option'); ?>
+	                    </div>
+                    <?php endif; ?>
                     <a class="btn btn-primary" data-toggle="modal" data-target="#myModal" href="#">Sign Up</a>
                 </div>
                 <div class="col-12 col-lg-6 fot-pad-top footer-widget-wrapper">
                     <div class="row footer-menus">
                         <!-- footer menus -->
                         <div class="col-md-4 mb-5 mb-md-0">
-                            <div class="footer-menu-title">Company</div>
+	                        <?php if( get_field('footer_menu_1_title', 'option') ): ?>
+			                    <div class="footer-menu-title">
+									<?php the_field('footer_menu_1_title', 'option'); ?>
+			                    </div>
+		                    <?php endif; ?>
                             <?php
                             wp_nav_menu( array(
                                 'theme_location' => 'menu-3',
@@ -93,7 +102,11 @@
                             ?>
                         </div>
                         <div class="col-md-4 mb-5 mb-md-0">
-                            <div class="footer-menu-title">Solutions</div>
+	                        <?php if( get_field('footer_menu_2_title', 'option') ): ?>
+			                    <div class="footer-menu-title">
+									<?php the_field('footer_menu_2_title', 'option'); ?>
+			                    </div>
+		                    <?php endif; ?>
                             <?php
                             wp_nav_menu( array(
                                 'theme_location' => 'menu-4'
@@ -101,7 +114,11 @@
                             ?>
                         </div>
                         <div class="col-md-4">
-                            <div class="footer-menu-title">Contact</div>
+	                        <?php if( get_field('footer_menu_3_title', 'option') ): ?>
+			                    <div class="footer-menu-title">
+									<?php the_field('footer_menu_3_title', 'option'); ?>
+			                    </div>
+		                    <?php endif; ?>
                             <?php
                             wp_nav_menu( array(
                                 'theme_location' => 'menu-5'

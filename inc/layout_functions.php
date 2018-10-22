@@ -1033,7 +1033,7 @@ function get_template_by_layout($layout){
 		                                <?php endif; ?>
 		                                <div class="story-body justify-content-center">
 	                                        <h5 class="story-title"><?php the_field('slider_title');?></h5>
-	                                        <p><?php the_field('slider_excerpt');?>...</p>
+	                                        <p><?php the_field('slider_excerpt');?></p>
 	                                        <a href="<?php the_permalink()?>">Read More</a>
 		                                </div>
 									</div>
