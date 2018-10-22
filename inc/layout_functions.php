@@ -742,25 +742,17 @@ function get_template_by_layout($layout){
                         <?php
                         $cnt=0;
                         $slide_cnt=1;
+                        $ttlcount = count(get_sub_field('boxes'));
                         if ( have_rows('boxes') ) :
                             while ( have_rows('boxes') ) : the_row();
                                 ?>
-                                <div class="row boxs-row">
+                                <div class="row boxs-row <?php if ($ttlcount == $slide_cnt) { echo "last-row";}?>">
                                 <div class="col-md-6 dotted-gradient">
                                     <h2 class="green_border"><?php the_sub_field('title');?></h2>
                                     <?php the_sub_field('subtext');?>
-                                    <!-- Button trigger modal -->
-<!--
-                                    <button type="button" class="btn btn-outline btn-light mr-3 learn-more-btn" data-toggle="modal" data-target="#modal-box-<?php echo $cnt;?>">
-                                        Learn More
-                                    </button>
--->
-									<!-- Button trigger popover -->
-<!-- 									<button data-popover-id="<?php echo $cnt;?>" data-toggle="popover" type="button" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button> -->
 									<button id="popid-<?php echo $cnt;?>" data-toggle="popover" type="button" class="btn btn-outline btn-light mr-3 learn-more-btn">Learn More</button>
-<!-- 								<div id="popcontent-<?php echo $cnt;?>" data-popcontent-id="<?php echo $cnt;?>" class="pop-content d-none"> -->
 									<div id="popcontent-<?php echo $cnt;?>" class="pop-content d-none">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<button type="button" class="close">&times;</button>
                                         <nav>
                                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                                 <a class="nav-item nav-link active" data-toggle="tab" href=".nav-<?php echo $cnt;?>a" role="tab" aria-controls="nav-<?php echo $cnt;?>a" aria-selected="true"><i class="fas fa-thumbs-up"></i> Key Benefits</a>
@@ -783,12 +775,7 @@ function get_template_by_layout($layout){
                                             ?>
                                         </div>
 									</div>
-<!--
-									<a data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true" href="#" id="logout">Popover</a>
-									<div id="popover-content-login" class="hide">
-										Popover stuff goes here
-									</div>
--->
+									
                                     <!-- Button trigger modal -->
                                     <?php if (get_sub_field('cta_text')):?>
 	                                    <button type="button" class="btn btn-play" data-toggle="modal" data-target="#modal-action-<?php echo $cnt;?>">
@@ -798,7 +785,7 @@ function get_template_by_layout($layout){
                                 </div>
 
                                 <!-- Modal1 -->
-                                <div class="modal fade" id="modal-action-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade modal-video" id="modal-action-<?php echo $cnt;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <?php the_sub_field('modal2_content');?>
@@ -853,29 +840,37 @@ function get_template_by_layout($layout){
                                 </div><!-- /row -->
                                 <div class="row">
 	                                <div class="col-12">
-<!-- 		                                <div id="popover-contained-<?php echo $cnt;?>" class="w-100 d-block position-relative" data-containerPadding="100" data-container="#popover-contained-<?php echo $cnt;?>" data-placement="top" data-html="true" >1</div> -->
-		                                <div id="popover-contained-<?php echo $cnt;?>" class="w-100 d-block position-relative"></div>
+		                                <div id="popover-contained-<?php echo $cnt;?>" class="w-100 d-block position-relative popover-contained"></div>
 	                                </div>
                                 </div>
                                 <script>
 	                                jQuery(document).ready(function(){
-		                                console.log("inline-js");
-		                                popHTML = $("#popcontent-<?php echo $cnt;?>").html();
+		                                popHTMLElement = $("#popcontent-<?php echo $cnt;?>");
+		                                popHTML = popHTMLElement.html();
+		                                popHTMLElement.remove();
 		                                popContained = $("#popover-contained-<?php echo $cnt;?>");
-		                                negativeMargin = $('#popid-<?php echo $cnt;?>').offset().top - $("#popover-contained-<?php echo $cnt;?>").offset().top + 45;
-		                                console.log("maring = "+negativeMargin);
+		                                popBtn = $("#popid-<?php echo $cnt;?>");
+		                                negativeMargin = popBtn.offset().top - popContained.offset().top + 45;
 		                                popContained.css('margin-top', negativeMargin);
-		                                $('#popid-<?php echo $cnt;?>').popover({
+		                                popBtn.popover({
 							                 trigger: 'manual',
 							                 placement: 'top',
 							                 content: popHTML,
 							                 container: popContained,
-							                 html: true
-							              }).on('click touchstart', function(e) {
+							                 html: true,
+							            }).on('click touchstart', function(e) {
 							                 e.preventDefault();
-							                 // Exibe o popover.
-							                 $(this).popover('show');
+							                 $(this).popover('toggle');
+							                 closePopOver();
+							                 $(this).toggleClass("active");
 							            });
+							            function closePopOver($btn) {
+								            $("#popover-contained-<?php echo $cnt;?>").find("button.close").on('click touchstart', function(e) {
+				                                console.log("close");
+				                                $('#popid-<?php echo $cnt;?>').popover('hide');
+				                                $(".learn-more-btn.active").removeClass('active');
+				                            });
+			                            };
 						            })
 	                            </script>
                             <?php
