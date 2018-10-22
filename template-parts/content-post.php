@@ -57,6 +57,7 @@
 			'after'  => '</div>',
 		) );
 		?>
+		<?php echo do_shortcode("[ssba-buttons]");?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
