@@ -449,8 +449,14 @@ function get_template_by_layout($layout){
                     <div class="row">
 	                    <div class="col-12">
                             <p class="lead px-xl-75"><?php the_sub_field('subtitle');?></p>
-                            <a href="<?php the_sub_field('cta_1_url');?>" class="btn btn-white mr-md-1 mb-3"><?php the_sub_field('cta_1_text');?></a>
-                            <a href="<?php the_sub_field('cta_2_url');?>" class="btn btn-white ml-md-1 mb-3"><?php the_sub_field('cta_2_text');?></a>
+                            <?php if (get_sub_field('cta_1_button') ):?>
+			                	<?php $link = get_sub_field('cta_1_button');?>
+			                	<a class="btn btn-white mr-md-1 mb-3" title="<?php echo $link['title'];?>" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+			                <?php endif;?>
+			                <?php if (get_sub_field('cta_2_button') ):?>
+			                	<?php $link = get_sub_field('cta_2_button');?>
+			                	<a class="btn btn-white mr-md-1 mb-3" title="<?php echo $link['title'];?>" href="<?php echo $link['url'];?>" class="btn"><?php echo $link['title'];?></a>
+			                <?php endif;?>
 	                    </div>
                     </div>
                 </div>
