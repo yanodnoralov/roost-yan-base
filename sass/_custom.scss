@@ -2890,7 +2890,7 @@ $spacerx: 3.5rem;
 			max-width: 50%;
 			@include media-breakpoint-up(lg) {
 				width: 25%;
-				width: 25%;
+				max-width: 25%;
 			}
 			@media (max-width:980px) {
 				.hover-content {

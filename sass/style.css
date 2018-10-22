@@ -5667,7 +5667,7 @@ nav.mobile-navigation {
       @media (min-width: 992px) {
         .all-insurance-wrapper .all-insurance-slider-inner .card {
           width: 25%;
-          width: 25%; } }
+          max-width: 25%; } }
       @media (max-width: 980px) {
         .all-insurance-wrapper .all-insurance-slider-inner .card .hover-content {
           display: none !important; } }
