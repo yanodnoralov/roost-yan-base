@@ -80,11 +80,13 @@
 			});
         });
     </script>
+    <?php if (get_field('carousel_cta','option')):?>
     <div class="row">
         <div class="col-md-12 text-center">
             <a href="<?php echo get_field('carousel_cta_url','option'); ?>" class="btn btn-primary cta-carousel mt-md-5 mt-4"><?php echo get_field('carousel_cta','option'); ?></a>
         </div>
     </div>
+    <?php endif;?>
 </div>
 </div>
 <!-- end testimonials -->

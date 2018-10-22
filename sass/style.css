@@ -4043,8 +4043,6 @@ nav.mobile-navigation {
   background-size: contain;
   background-position: center bottom;
   background-color: #fdfdfd; }
-  .testimonials-wrapper .btn {
-    display: none; }
   .testimonials-wrapper .section {
     padding-bottom: 6rem; }
 
@@ -4821,90 +4819,90 @@ nav.mobile-navigation {
     bottom: auto;
     left: 0; }
 
-@media (min-width: 1200px) {
-  .sensors {
-    max-width: 1100px; } }
-
-.sensors .col-md-4 {
-  padding: 0px;
-  height: 380px;
+.sensors {
+  z-index: 1;
   position: relative; }
-  @media (min-width: 768px) {
-    .sensors .col-md-4 {
-      height: 520px; } }
-  .sensors .col-md-4:nth-child(2) .item {
-    background-color: #f5f5f5; }
-  .sensors .col-md-4:nth-child(3) .item {
-    background-color: #efefef; }
-
-.sensors .item {
-  background-color: #fafafa;
-  background-position: center center !important;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  z-index: 5;
-  background-size: 348px auto;
-  transition: all 0.3s; }
-  @media (max-width: 767.98px) {
-    .sensors .item {
-      background-position: center 60px !important; } }
-  @media (max-width: 991.98px) {
-    .sensors .item {
-      background-size: 240px auto; } }
-  .sensors .item .item-text {
-    transition: all 0.4s, opacity 0.1s; }
-    .sensors .item .item-text p:last-child {
-      margin-bottom: 0; }
-    @media (min-width: 992px) {
-      .sensors .item .item-text {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        padding-left: 30px;
-        padding-right: 30px; } }
-  .sensors .item .item-copy {
+  @media (min-width: 1200px) {
+    .sensors {
+      max-width: 1100px; } }
+  .sensors .col-md-4 {
+    padding: 0px;
+    height: 380px;
+    position: relative; }
+    @media (min-width: 768px) {
+      .sensors .col-md-4 {
+        height: 520px; } }
+    .sensors .col-md-4:nth-child(2) .item {
+      background-color: #f5f5f5; }
+    .sensors .col-md-4:nth-child(3) .item {
+      background-color: #efefef; }
+  .sensors .item {
+    background-color: #fafafa;
+    background-position: center center !important;
+    background-repeat: no-repeat;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 4em 1em 2.5em 1em;
-    text-align: center;
-    transition: all 0.3s;
-    perspective: 200px; }
-    .sensors .item .item-copy .item-title {
-      color: #3283c8; }
-  .sensors .item .link {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     top: 0;
-    text-align: center; }
-  @media (min-width: 992px) {
-    .sensors .item:hover {
-      bottom: -1.5em;
-      top: -1.5em;
-      z-index: 10;
-      background-size: 390px auto; }
-      .sensors .item:hover .item-copy {
-        padding-bottom: 8rem; }
-        .sensors .item:hover .item-copy .item-text {
-          visibility: visible;
-          transition: all 0.4s;
-          opacity: 1; } }
-
-@media (max-width: 767.98px) {
-  .sensors .sensor-items-row {
-    padding-left: 15px;
-    padding-right: 15px; } }
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    z-index: 5;
+    background-size: 348px auto;
+    transition: all 0.3s; }
+    @media (max-width: 767.98px) {
+      .sensors .item {
+        background-position: center 60px !important; } }
+    @media (max-width: 991.98px) {
+      .sensors .item {
+        background-size: 240px auto; } }
+    .sensors .item .item-text {
+      transition: all 0.4s, opacity 0.1s; }
+      .sensors .item .item-text p:last-child {
+        margin-bottom: 0; }
+      @media (min-width: 992px) {
+        .sensors .item .item-text {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          padding-left: 30px;
+          padding-right: 30px; } }
+    .sensors .item .item-copy {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 4em 1em 2.5em 1em;
+      text-align: center;
+      transition: all 0.3s;
+      perspective: 200px; }
+      .sensors .item .item-copy .item-title {
+        color: #3283c8; }
+    .sensors .item .link {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-align: center; }
+    @media (min-width: 992px) {
+      .sensors .item:hover {
+        bottom: -1.5em;
+        top: -1.5em;
+        z-index: 10;
+        background-size: 390px auto; }
+        .sensors .item:hover .item-copy {
+          padding-bottom: 8rem; }
+          .sensors .item:hover .item-copy .item-text {
+            visibility: visible;
+            transition: all 0.4s;
+            opacity: 1; } }
+  @media (max-width: 767.98px) {
+    .sensors .sensor-items-row {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .img-text-cont {
   background-color: white;
