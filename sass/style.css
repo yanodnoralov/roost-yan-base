@@ -5698,12 +5698,16 @@ body:not(.page-template-page-templates) .title-hero.page-hero + #primary.content
       text-align: left; } }
 
 .nav-links .nav-previous a, .nav-links .nav-next a {
-  background: #e9e9e9;
-  color: black;
-  padding: 4px 10px;
+  /*
+		background: #e9e9e9;
+		color: black;
+		padding: 4px 10px;
+		display: block;
+		border-radius: 5px;
+*/
   font-size: .9em;
-  display: block;
-  border-radius: 5px; }
+  text-decoration: underline;
+  color: #3283c8; }
 
 article .entry-footer {
   padding-top: 10px;
