@@ -1135,7 +1135,9 @@ function get_template_by_layout($layout){
 	                                <div class="img float-left">
 		                                <?php if ( has_post_thumbnail() ) {
 											the_post_thumbnail("medium");
-										} ?>
+										} else {?>
+										<img src="<?php echo get_stylesheet_directory_uri()?>/img/thumb-placeholder.png" height="100" width="235"/>
+										<?php }?>
 	                                </div>
 	                                <div class="meta float-right">
 		                                <?php echo get_the_date('m/d/y'); ?>
@@ -1194,7 +1196,9 @@ function get_template_by_layout($layout){
 	                                <div class="img mb-3">
 		                                <?php if ( has_post_thumbnail() ) {?>
 											<a href="<?php echo the_permalink();?>"><?php the_post_thumbnail();?></a>
-										<?php } ?>
+										<?php } else {?>
+										<img src="<?php echo get_stylesheet_directory_uri()?>/img/thumb-placeholder.png" height="100" width="235"/>
+										<?php }?>
 	                                </div>
 	                                <div class="meta w-100 mb-2">
 		                                <?php echo get_the_date('m/d/y'); ?>

@@ -35,9 +35,15 @@ $(document).ready(function(){
 	})();
 	
 	//insurance testimonials slider
+	if ( $(".insurance-slider:not(.all-insurance-slider)").length) {
+		$insuranceBreak = 576;
+	}
+	if ( $(".all-insurance-slider").length) {
+		$insuranceBreak = 980;
+	}
 	if ( $(".insurance-slider").length) {
 		function wrapCards() {
-			if ($(window).width() < 576) {
+			if ($(window).width() < $insuranceBreak) {
 				$(".insurance-slider").each(function(){
 					$card_body = $(this).find('.card.card-body');
 					$card_body.each(function(){

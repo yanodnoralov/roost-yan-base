@@ -2879,14 +2879,23 @@ $spacerx: 3.5rem;
 
 //Insurance Customers
 .all-insurance-wrapper {
+	position: relative;
+	z-index: 1;
 	.all-insurance-slider-inner {
 		box-shadow: 0 4px 60px 0 rgba(0,0,0,0.12);
 		flex-wrap: wrap;
 		display: flex;
 		.card {
 			width: 50%;
+			max-width: 50%;
 			@include media-breakpoint-up(lg) {
 				width: 25%;
+				width: 25%;
+			}
+			@media (max-width:980px) {
+				.hover-content {
+					display: none !important;
+				}
 			}
 		}
 	}

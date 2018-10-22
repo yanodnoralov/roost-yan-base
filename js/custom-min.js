@@ -2,13 +2,13 @@ function openMenuFunction(){preMenuContainer.css("display","block"),bod.addClass
 //nav dropdown plugin
 $(function(){$(".desktop-navigation #primary-menu").smartmenus({showTimeout:75,hideTimeout:100,collapsibleBehavior:"toggle",hideOnClick:!1,showOnClick:!1})}),
 //appear effects
-$(document).ready(function(){function e(){$(window).width()<576&&$(".insurance-slider").each(function(){$card_body=$(this).find(".card.card-body"),$card_body.each(function(){$(this).addClass("poop"),thisHref=$(this).find(".read-more a").attr("href"),console.log(thisHref),$(this).wrapInner('<a href="'+thisHref+'" class="wrapped-link"></a>')})})}
+$(document).ready(function(){function e(){$(window).width()<$insuranceBreak&&$(".insurance-slider").each(function(){$card_body=$(this).find(".card.card-body"),$card_body.each(function(){$(this).addClass("poop"),thisHref=$(this).find(".read-more a").attr("href"),console.log(thisHref),$(this).wrapInner('<a href="'+thisHref+'" class="wrapped-link"></a>')})})}
 //appear effects
 bod.addClass("hide-elements");
 //timers function
 var n=(t={},function(e,n,o){o||(o="Don't call this twice without a uniqueId"),t[o]&&clearTimeout(t[o]),t[o]=setTimeout(e,n)}),t;
 //insurance testimonials slider
-$(".insurance-slider").length&&(e(),$(window).resize(function(){n(function(){console.log("Resize..."),e()},500,"unique_s")}))}),inView(".hide").on("enter",function(e){setTimeout(function(){$(e).addClass("now-in-view")},200)}),
+$(".insurance-slider:not(.all-insurance-slider)").length&&($insuranceBreak=576),$(".all-insurance-slider").length&&($insuranceBreak=980),$(".insurance-slider").length&&(e(),$(window).resize(function(){n(function(){console.log("Resize..."),e()},500,"unique_s")}))}),inView(".hide").on("enter",function(e){setTimeout(function(){$(e).addClass("now-in-view")},200)}),
 //gravity forms confirmation
 jQuery(document).ready(function(){hidethese=$(".modal-header"),jQuery(document).bind("gform_confirmation_loaded",function(){hidethese.hide()})});
 //navigation stuff

@@ -5654,15 +5654,23 @@ nav.mobile-navigation {
       .image_and_content_column .image_content_row > div:first-child {
         margin-bottom: 30px; } }
 
-.all-insurance-wrapper .all-insurance-slider-inner {
-  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.12);
-  flex-wrap: wrap;
-  display: flex; }
-  .all-insurance-wrapper .all-insurance-slider-inner .card {
-    width: 50%; }
-    @media (min-width: 992px) {
-      .all-insurance-wrapper .all-insurance-slider-inner .card {
-        width: 25%; } }
+.all-insurance-wrapper {
+  position: relative;
+  z-index: 1; }
+  .all-insurance-wrapper .all-insurance-slider-inner {
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.12);
+    flex-wrap: wrap;
+    display: flex; }
+    .all-insurance-wrapper .all-insurance-slider-inner .card {
+      width: 50%;
+      max-width: 50%; }
+      @media (min-width: 992px) {
+        .all-insurance-wrapper .all-insurance-slider-inner .card {
+          width: 25%;
+          width: 25%; } }
+      @media (max-width: 980px) {
+        .all-insurance-wrapper .all-insurance-slider-inner .card .hover-content {
+          display: none !important; } }
 
 .flexible_cards_row .flex-cards-row > div {
   display: flex;
