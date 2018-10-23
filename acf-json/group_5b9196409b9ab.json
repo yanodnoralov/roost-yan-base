@@ -2517,6 +2517,50 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5bcf3dc0cb7fe": {
+                    "key": "layout_5bcf3dc0cb7fe",
+                    "name": "blog_roll",
+                    "label": "Blog Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bcf3dc0cb7ff",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bcf3dc0cb800",
+                            "label": "Background Color",
+                            "name": "bg-color",
+                            "type": "color_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5bc3b781429c8": {
                     "key": "layout_5bc3b781429c8",
                     "name": "events-post-roll",
@@ -3772,5 +3816,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540195385
+    "modified": 1540333650
 }

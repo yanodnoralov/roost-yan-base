@@ -277,6 +277,50 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/img/blog-thumb-alt-2.jpg": {
+		"ft": 16384,
+		"iS": 26150,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/blog-thumb-alt-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/blog-thumb-alt-3.jpg": {
+		"ft": 16384,
+		"iS": 20501,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/blog-thumb-alt-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/blog-thumb-alt.jpg": {
+		"ft": 16384,
+		"iS": 74013,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/blog-thumb-alt.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/blog-thumb.jpg": {
+		"ft": 16384,
+		"iS": 27192,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/blog-thumb.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/img/brand.png": {
 		"ft": 32768,
 		"iS": 124858,
@@ -571,6 +615,35 @@
 		"oIPL": 0,
 		"opt": 1,
 		"q": 100
+		},
+	"/img/hero/dark-blue-generic-bg-mobile.jpg": {
+		"ft": 16384,
+		"iS": 8060,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/hero/dark-blue-generic-bg-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/hero/dark-blue-generic-bg.jpg": {
+		"ft": 16384,
+		"iS": 45387,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/img/hero/dark-blue-generic-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/img/hero/dark-blue-generic-bg.psd": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/img/hero/dark-blue-generic-bg.psd",
+		"oF": 0
 		},
 	"/img/hero/light-generic-bg-mobile.jpg": {
 		"ft": 16384,

@@ -1562,10 +1562,10 @@ function get_template_by_layout($layout){
         	
         	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			    $query = new WP_Query( array(
-			        'posts_per_page' => 6,
+			        'posts_per_page' => 10,
 			        'paged' => $paged,
-			        //'post_type' => 'policyholder_stories',
 			        'post_type' => 'post',
+			        'cat' => 14,
 			    ) );
 			?> 
 	        
@@ -1583,11 +1583,17 @@ function get_template_by_layout($layout){
 			                <div class="post-roll-outer">
 				                <?php
 					            $counter = 0;
-					            while ( $query->have_posts() ) : $query->the_post(); ?>
+					            while ( $query->have_posts() ) : $query->the_post();
+					            	if ( get_the_post_thumbnail_url(get_the_ID(), "post-roll") ) {
+										$post_img = get_the_post_thumbnail_url(get_the_ID(), "post-roll");
+									} else {
+										$post_img = get_stylesheet_directory_uri().'/img/blog-thumb-alt-3.jpg';
+									}
+					            ?>
 		                          	<article class="post-roll">
 			                          	<h2><a href="<?php echo the_permalink();?>"><?php echo get_the_title();?></a></h2>
 			                          	<div class="post-roll-content">
-			                                <div class="post-img" style="background-image: url(<?php the_post_thumbnail_url("post-roll");?>);">
+			                                <div class="post-img" style="background-image: url(<?php echo $post_img;?>);">
 					                                <a class="block-link d-block" href="<?php echo the_permalink();?>"></a>
 			                                </div>
 			                                <div class="post-text">
