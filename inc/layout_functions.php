@@ -1573,11 +1573,15 @@ function get_template_by_layout($layout){
 			
             <div class="policyholder-stories-roll" style="background-color: <?php echo $secbgcolor;?>;">
 	            <div class="container section">
-	                <div class="row">
-	                    <div class="col-md-12 first-sec title green_border">
-	                        <h2 class="section-title"><?php the_sub_field('title');?></h2>
-	                    </div>
-	                </div>
+		            <?php if (get_sub_field('title')):?>
+				        <div class="row">
+					        <div class="col-md-12 first-sec title green_border">
+						        <?php if (get_sub_field('title') ):?>
+		                        	<h2 class="section-title"><?php the_sub_field('title');?></h2>
+		                        <?php endif;?>
+		                    </div>
+				        </div>
+			        <?php endif;?>
 	                <div class="row">
 		                <div class="col-12">
 			                <div class="post-roll-outer">
