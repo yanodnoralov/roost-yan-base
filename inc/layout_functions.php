@@ -487,7 +487,7 @@ function get_template_by_layout($layout){
                             $cnt++;
                             if ($cnt>1) { $size='';}
                             ?>
-                            <div class="mb-5 col-md-4 <?php echo $size;?>">
+                            <div class="mb-5 col-md-4">
                                 <div class="image mb-3">
                                     <?php
                                     if (get_sub_field('image')){

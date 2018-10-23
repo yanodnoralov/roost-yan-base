@@ -1656,12 +1656,14 @@ $spacerx: 3.5rem;
 		}
 	}
 	@include media-breakpoint-down(md) {
+		background-size: 210%;
 		.claim-item {
 			width: 50%;
 			flex-basis: 50%;
 		}
 	}
 	@include media-breakpoint-down(sm) {
+		background-size: 500%;
 		.claim-item {
 			width: 100%;
 			flex-basis: 100%;

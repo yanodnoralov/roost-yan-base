@@ -4709,22 +4709,26 @@ nav.mobile-navigation {
         padding: 0 10px;
         display: block; }
   @media (max-width: 991.98px) {
-    .section-claims .claim-item {
-      width: 50%;
-      flex-basis: 50%; } }
+    .section-claims {
+      background-size: 210%; }
+      .section-claims .claim-item {
+        width: 50%;
+        flex-basis: 50%; } }
   @media (max-width: 767.98px) {
-    .section-claims .claim-item {
-      width: 100%;
-      flex-basis: 100%;
-      margin-bottom: 15px;
-      padding-top: 40px; }
-    .section-claims .annual-claims-title {
-      width: 300px;
-      min-width: 0;
-      padding-top: 14px;
-      max-width: 100%; }
-    .section-claims .white-sec-inner > div:nth-child(2) {
-      padding-top: 80px; } }
+    .section-claims {
+      background-size: 500%; }
+      .section-claims .claim-item {
+        width: 100%;
+        flex-basis: 100%;
+        margin-bottom: 15px;
+        padding-top: 40px; }
+      .section-claims .annual-claims-title {
+        width: 300px;
+        min-width: 0;
+        padding-top: 14px;
+        max-width: 100%; }
+      .section-claims .white-sec-inner > div:nth-child(2) {
+        padding-top: 80px; } }
 
 .ecosystem .brand-small {
   text-align: center;
