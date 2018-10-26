@@ -1190,8 +1190,8 @@ nav {
 		background: white;
 	}
 	.gform_button {
-		@extend btn;
-		@extend btn-primary;
+		@extend .btn;
+		@extend .btn-primary;
 		color: fff;
 	}
 	.half-col {

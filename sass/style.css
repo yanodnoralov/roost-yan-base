@@ -3712,10 +3712,10 @@ nav.mobile-navigation {
       color: white; }
     nav.mobile-navigation li.show-sub a {
       font-weight: 700; }
-    nav.mobile-navigation li.btn {
+    nav.mobile-navigation li.btn, nav.mobile-navigation .gform_wrapper li.gform_button, .gform_wrapper nav.mobile-navigation li.gform_button {
       display: none;
       padding: 0; }
-      nav.mobile-navigation li.btn a {
+      nav.mobile-navigation li.btn a, nav.mobile-navigation .gform_wrapper li.gform_button a, .gform_wrapper nav.mobile-navigation li.gform_button a {
         padding: 10px 30px; }
   nav.mobile-navigation .menu-item-has-children > a:after {
     content: '';
@@ -3920,7 +3920,7 @@ nav.mobile-navigation {
   .container {
     max-width: 1230px; } }
 
-.btn {
+.btn, .gform_wrapper .gform_button {
   background: none;
   border-radius: 3px;
   padding: 10px 15px;
@@ -3933,37 +3933,37 @@ nav.mobile-navigation {
   transition: all 0.35s ease-out;
   position: relative;
   white-space: normal; }
-  .btn:visited {
+  .btn:visited, .gform_wrapper .gform_button:visited {
     color: inherit; }
-  .btn:hover {
+  .btn:hover, .gform_wrapper .gform_button:hover {
     transition: all 0.2s ease-in; }
   @media (min-width: 992px) {
-    .btn {
+    .btn, .gform_wrapper .gform_button {
       padding: 11px 30px; } }
 
 .btn-outline {
   border: 2px solid; }
   .btn-outline:hover {
     color: white !important; }
-  .btn-outline.btn-primary {
+  .btn-outline.btn-primary, .gform_wrapper .btn-outline.gform_button {
     border-color: #378fdb;
     background-color: transparent;
     color: #378fdb; }
-    .btn-outline.btn-primary:visited {
+    .btn-outline.btn-primary:visited, .gform_wrapper .btn-outline.gform_button:visited {
       color: #378fdb; }
-    .btn-outline.btn-primary:not([href]):not([tabindex]) {
+    .btn-outline.btn-primary:not([href]):not([tabindex]), .gform_wrapper .btn-outline.gform_button:not([href]):not([tabindex]) {
       color: #378fdb; }
   .btn-outline.btn-light {
     border-color: #d2d2d2;
     color: #4e4e4e; }
 
-.btn-primary {
+.btn-primary, .gform_wrapper .gform_button {
   color: #fff;
   background: #378fdb;
   border-color: #378fdb; }
-  .btn-primary:visited {
+  .btn-primary:visited, .gform_wrapper .gform_button:visited {
     color: #fff; }
-  .btn-primary:hover {
+  .btn-primary:hover, .gform_wrapper .gform_button:hover {
     background: #235b8b;
     border-color: #235b8b; }
 
@@ -4214,7 +4214,7 @@ nav.mobile-navigation {
   .bottom-cta p {
     font-size: 1.25rem;
     font-weight: 300; }
-  .bottom-cta a.btn {
+  .bottom-cta a.btn, .bottom-cta .gform_wrapper a.gform_button, .gform_wrapper .bottom-cta a.gform_button {
     margin-top: 1.5em; }
 
 .globe-area {
@@ -4492,15 +4492,15 @@ nav.mobile-navigation {
   .page-hero.light-text * {
     color: #fff;
     text-shadow: none; }
-    .page-hero.light-text * .btn, .page-hero.light-text * .btn-primary {
+    .page-hero.light-text * .btn, .page-hero.light-text * .gform_wrapper .gform_button, .gform_wrapper .page-hero.light-text * .gform_button, .page-hero.light-text * .btn-primary, .page-hero.light-text * .gform_wrapper .gform_button, .gform_wrapper .page-hero.light-text * .gform_button {
       background: transparent;
       border-color: white; }
-      .page-hero.light-text * .btn i, .page-hero.light-text * .btn-primary i {
+      .page-hero.light-text * .btn i, .page-hero.light-text * .gform_wrapper .gform_button i, .gform_wrapper .page-hero.light-text * .gform_button i, .page-hero.light-text * .btn-primary i, .page-hero.light-text * .gform_wrapper .gform_button i, .gform_wrapper .page-hero.light-text * .gform_button i {
         transition: all 0.35s ease-out; }
-      .page-hero.light-text * .btn:hover, .page-hero.light-text * .btn-primary:hover {
+      .page-hero.light-text * .btn:hover, .page-hero.light-text * .gform_wrapper .gform_button:hover, .gform_wrapper .page-hero.light-text * .gform_button:hover, .page-hero.light-text * .btn-primary:hover, .page-hero.light-text * .gform_wrapper .gform_button:hover, .gform_wrapper .page-hero.light-text * .gform_button:hover {
         color: #378fdb !important;
         background: white; }
-        .page-hero.light-text * .btn:hover i, .page-hero.light-text * .btn-primary:hover i {
+        .page-hero.light-text * .btn:hover i, .page-hero.light-text * .gform_wrapper .gform_button:hover i, .gform_wrapper .page-hero.light-text * .gform_button:hover i, .page-hero.light-text * .btn-primary:hover i, .page-hero.light-text * .gform_wrapper .gform_button:hover i, .gform_wrapper .page-hero.light-text * .gform_button:hover i {
           color: #378fdb;
           transition: all 0.2s ease-in; }
   .page-hero.fluid-height {
@@ -4528,7 +4528,7 @@ nav.mobile-navigation {
       background-position: right center !important;
       text-shadow: 0 0 15px white;
       padding-top: 80px; }
-      .page-hero .btn {
+      .page-hero .btn, .page-hero .gform_wrapper .gform_button, .gform_wrapper .page-hero .gform_button {
         text-shadow: none !important; } }
   @media (max-width: 767.98px) {
     .page-hero:not(.default-hero):not(.no-hero-img):not(.page-hero-mobile) {
@@ -4555,7 +4555,7 @@ nav.mobile-navigation {
     @media (max-width: 767.98px) {
       .page-hero .border-green-left {
         border: 0; } }
-  .page-hero .header-action .btn {
+  .page-hero .header-action .btn, .page-hero .header-action .gform_wrapper .gform_button, .gform_wrapper .page-hero .header-action .gform_button {
     color: white;
     min-width: auto; }
   .page-hero .container {
@@ -5187,7 +5187,7 @@ nav.mobile-navigation {
     font-size: 20px;
     font-weight: 900;
     color: #2a4878; }
-  .meet-roost .btn {
+  .meet-roost .btn, .meet-roost .gform_wrapper .gform_button, .gform_wrapper .meet-roost .gform_button {
     border: 2px solid #378fdb;
     border-radius: 2px;
     text-transform: none;
@@ -5201,7 +5201,7 @@ nav.mobile-navigation {
 .whats-new {
   color: #fff;
   position: relative; }
-  .whats-new .btn {
+  .whats-new .btn, .whats-new .gform_wrapper .gform_button, .gform_wrapper .whats-new .gform_button {
     min-width: 200px; }
 
 .the-team .top-name-title {
@@ -5224,7 +5224,7 @@ nav.mobile-navigation {
   text-align: center; }
   .roost-careers h2 {
     color: white; }
-  .roost-careers .btn {
+  .roost-careers .btn, .roost-careers .gform_wrapper .gform_button, .gform_wrapper .roost-careers .gform_button {
     background-color: #378fdb;
     color: white;
     margin-top: 40px; }
