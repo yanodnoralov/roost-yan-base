@@ -1180,7 +1180,20 @@ nav {
 }
 
 //Gravity forms custom styles
+
+
+
 .gform_wrapper {
+	input:not([type="button"]):not(.gform_button), textarea, select {
+		padding: 10px;
+		border: 1px solid $color-primary;
+		background: white;
+	}
+	.gform_button {
+		@extend btn;
+		@extend btn-primary;
+		color: fff;
+	}
 	.half-col {
 	    width: 50%;
 	    display: inline-block;

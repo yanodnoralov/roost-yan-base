@@ -4344,6 +4344,14 @@ nav.mobile-navigation {
   margin-left: auto;
   margin-right: auto; }
 
+.gform_wrapper input:not([type="button"]):not(.gform_button), .gform_wrapper textarea, .gform_wrapper select {
+  padding: 10px;
+  border: 1px solid #378fdb;
+  background: white; }
+
+.gform_wrapper .gform_button {
+  color: fff; }
+
 .gform_wrapper .half-col {
   width: 50%;
   display: inline-block;
