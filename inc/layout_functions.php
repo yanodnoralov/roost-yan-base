@@ -1509,7 +1509,7 @@ function get_template_by_layout($layout){
 			                                </div>
 			                                <div class="post-text">
 				                                <div class="meta w-100">
-					                                Posted <?php echo get_the_date('m/d/y'); ?> by <?php the_author();?>
+					                                Posted <?php echo get_the_date('m/d/y'); ?>
 				                                </div>
 			                                    <p class="mb-2"><?php echo excerpt(265)?>...</p>
 			                                    <div class="read-more-wrap">
