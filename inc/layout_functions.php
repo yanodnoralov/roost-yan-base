@@ -1391,7 +1391,7 @@ function get_template_by_layout($layout){
 	                        <div class="row flex-cards-row">
 		                        <?php
 	                            while ( have_rows('boxes') ) : the_row();
-	                            if (!get_sub_field('button') || !get_sub_field('title')) || !get_sub_field('button') || !get_sub_field('text') ) {
+	                            if (!get_sub_field('button') || !get_sub_field('title') || !get_sub_field('button') || !get_sub_field('text') ) {
 		                            $emptyCol = "border-0";
 	                            }
 	                            ?>
