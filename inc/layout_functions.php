@@ -1390,9 +1390,13 @@ function get_template_by_layout($layout){
                         if ( have_rows('boxes') ) :?>
 	                        <div class="row flex-cards-row">
 		                        <?php
-	                            while ( have_rows('boxes') ) : the_row();?>
+	                            while ( have_rows('boxes') ) : the_row();
+	                            if (!get_sub_field('button') || !get_sub_field('title')) || !get_sub_field('button') || !get_sub_field('text') ) {
+		                            $emptyCol = "border-0";
+	                            }
+	                            ?>
 	                            	<div class="<?php echo $column_class; echo $column_class_md; ?>">
-		                              	<div class="img-text-cont no-floats">
+		                              	<div class="img-text-cont no-floats <?php echo $emptyCol?>">
 			                              	<?php if (get_sub_field('image')):?>
 				                                <div class="img-more w-100">
 			                                    	<img class="p-0 mb-3" <?php ar_responsive_image(get_sub_field('image'),'full','540px');?>>
