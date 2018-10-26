@@ -1392,7 +1392,7 @@ function get_template_by_layout($layout){
 		                        <?php
 	                            while ( have_rows('boxes') ) : the_row();
 	                            if (!get_sub_field('button') && !get_sub_field('title') && !get_sub_field('button') && !get_sub_field('text') ) {
-		                            $emptyCol = "border-0";
+		                            $emptyCol = "placeholder-col";
 	                            } else {
 		                            $emptyCol = "";
 	                            }

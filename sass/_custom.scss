@@ -3071,3 +3071,10 @@ body.page {
 		margin-bottom: 30px;
 	}
 }
+
+.placeholder-col {
+	height: 1px !important;
+	overflow: hidden;
+	padding:  !important;
+	border: 0 !important;
+}
