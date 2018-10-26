@@ -1393,6 +1393,8 @@ function get_template_by_layout($layout){
 	                            while ( have_rows('boxes') ) : the_row();
 	                            if (!get_sub_field('button') || !get_sub_field('title') || !get_sub_field('button') || !get_sub_field('text') ) {
 		                            $emptyCol = "border-0";
+	                            } else {
+		                            $emptyCol = "";
 	                            }
 	                            ?>
 	                            	<div class="<?php echo $column_class; echo $column_class_md; ?>">
