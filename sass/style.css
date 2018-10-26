@@ -5601,7 +5601,7 @@ nav.mobile-navigation {
   .policyholder-stories-roll .post-roll-content .post-img {
     width: 50%;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat; }
     @media (max-width: 1199.98px) {
       .policyholder-stories-roll .post-roll-content .post-img {

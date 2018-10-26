@@ -2809,7 +2809,7 @@ $spacerx: 3.5rem;
 		.post-img {
 			width: 50%;
 			background-position: center center;
-			background-size: cover;
+			background-size: contain;
 			background-repeat: no-repeat;
 			@include media-breakpoint-down(lg) {
 				max-height: 190px;
