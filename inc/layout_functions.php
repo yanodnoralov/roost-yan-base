@@ -1015,7 +1015,7 @@ function get_template_by_layout($layout){
 
                             $args=array(
                                 'post_type' => 'policyholder_stories',
-                                'posts_per_page' => -1,
+                                'posts_per_page' => 8,
                                 'post_status' => 'publish'
                             );
                             $query = new WP_Query( $args );
