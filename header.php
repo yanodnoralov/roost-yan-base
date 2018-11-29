@@ -162,7 +162,8 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMN4C5"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-
+	
+<?php if (!is_page_template('page-app-redirect.php')):?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'yan-base' ); ?></a>
 	
@@ -352,3 +353,4 @@
 	}
 	?>
 
+<?php endif; /* is not template page-app-redirect */ ?>
