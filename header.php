@@ -86,9 +86,78 @@
         }
 	}
 	</style>
+	
+	
+	<!-- app template redirection code -->
+	<?php if (is_page_template('page-app-redirect.php')):?>
+		<?php $onload = 'onload="DetectAndServe()"';?>
+		<script>
+			function getMobileOperatingSystem() {
+			  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+			
+			      // Windows Phone must come first because its UA also contains "Android"
+			    if (/windows phone/i.test(userAgent)) {
+			        return "Windows Phone";
+			    }
+			
+			    if (/android/i.test(userAgent)) {
+			        return "Android";
+			    }
+			
+			    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+			    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+			        return "iOS";
+			    }
+			
+			    return "unknown";
+			}
+			
+			function DetectAndServe(){
+				
+			<?php if (get_field('android-link')):
+				$androidLink = get_field('android-link');?>
+			
+				if (getMobileOperatingSystem() == "Android") {
+				    window.location.href = "<?php echo $androidLink;?>";
+				}
+			
+			<?php endif;?>  
+			
+			<?php if (get_field('ios-link')):
+				$iosLink = get_field('ios-link');?>
+			
+				if (getMobileOperatingSystem() == "iOS") {
+				    window.location.href = "<?php echo $iosLink;?>";
+				}
+			
+			<?php endif;?>
+			
+			<?php if (get_field('windows-phone-link')):
+				$windowsPhoneLink = get_field('windows-phone-link');?>
+			
+				if (getMobileOperatingSystem() == "Windows Phone") {
+				    window.location.href = "<?php echo $windowsPhoneLink;?>";
+				}
+			
+			<?php endif;?>
+			
+			<?php if (get_field('other-link')):
+				$otherLink = get_field('other-link');?>
+			
+				if (getMobileOperatingSystem() == "unknown") {
+				    window.location.href = "<?php echo $otherLink;?>";
+				}
+			
+			<?php endif;?>
+			
+			};
+			
+		</script>
+	<?php endif;?>
+	
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php echo $onload;?> <?php body_class();?> >
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMN4C5"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
