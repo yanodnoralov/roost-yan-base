@@ -3,6 +3,22 @@
     "title": "App Redirection Fields",
     "fields": [
         {
+            "key": "field_5c00490c07ad2",
+            "label": "URLs",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c002ec8625bc",
             "label": "Android link",
             "name": "android-link",
@@ -35,10 +51,10 @@
             "placeholder": ""
         },
         {
-            "key": "field_5c002ff6625be",
-            "label": "Windows Phone link",
-            "name": "windows-phone-link",
-            "type": "url",
+            "key": "field_5c00494107ad3",
+            "label": "Page Content",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -47,14 +63,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_5c00300b625bf",
-            "label": "Other Devices Link",
-            "name": "other-link",
-            "type": "text",
+            "key": "field_5c00481407ad0",
+            "label": "Image",
+            "name": "logo",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -63,11 +79,35 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c0048f707ad1",
+            "label": "Message",
+            "name": "message",
+            "type": "wysiwyg",
+            "instructions": "If left blank, default message will load",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -98,5 +138,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543545085
+    "modified": 1543553900
 }

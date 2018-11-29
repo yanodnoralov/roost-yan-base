@@ -95,7 +95,7 @@
 			function getMobileOperatingSystem() {
 			  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 			
-			      // Windows Phone must come first because its UA also contains "Android"
+			    // Windows Phone must come first because its UA also contains "Android"
 			    if (/windows phone/i.test(userAgent)) {
 			        return "Windows Phone";
 			    }
@@ -132,24 +132,6 @@
 			
 			<?php endif;?>
 			
-			<?php if (get_field('windows-phone-link')):
-				$windowsPhoneLink = get_field('windows-phone-link');?>
-			
-				if (getMobileOperatingSystem() == "Windows Phone") {
-				    window.location.href = "<?php echo $windowsPhoneLink;?>";
-				}
-			
-			<?php endif;?>
-			
-			<?php if (get_field('other-link')):
-				$otherLink = get_field('other-link');?>
-			
-				if (getMobileOperatingSystem() == "unknown") {
-				    window.location.href = "<?php echo $otherLink;?>";
-				}
-			
-			<?php endif;?>
-			
 			};
 			
 		</script>
@@ -163,10 +145,11 @@
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	
-<?php if (!is_page_template('page-app-redirect.php')):?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'yan-base' ); ?></a>
 	
+	<?php if (!is_page_template('page-app-redirect.php')):?>
 	<div class="pre-menu-container">
 		<div class="pre-menu-background">
 			<div class="pre-menu-slide"></div>
@@ -352,5 +335,4 @@
 	<?php
 	}
 	?>
-
-<?php endif; /* is not template page-app-redirect */ ?>
+	<?php endif; /* is not template page-app-redirect */ ?>
