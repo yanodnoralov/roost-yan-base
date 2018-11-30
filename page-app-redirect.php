@@ -24,9 +24,12 @@ get_header();
 			<div class="row">
 			<div class="col-12">
 				<main id="main" class="site-main row">
-					<?php if (get_field('logo')):?>
-					<div class="col-sm-3 mb-4 text-sm-right">
-						<img <?php ar_responsive_image(get_field('logo'),'full','350px');?>>
+					<?php if (get_field('logo')):
+						$image = get_field('logo');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+					?>
+					<div class="col-sm-3 mb-4 text-sm-right img-container">
+						<?php echo wp_get_attachment_image( $image, $size );?>
 					</div>
 					<?php endif;?>
 					<div class="col-sm-9">
