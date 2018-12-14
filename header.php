@@ -134,7 +134,9 @@
 			
 		</script>
 	<?php endif;?>
-	
+	<?php if(is_front_page()){
+  	echo '<link rel="preload" href="http://staging.getroost.com/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888" as="font">';
+	} ?>
 </head>
 
 <body <?php echo $onload;?> <?php body_class();?> >
