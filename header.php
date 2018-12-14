@@ -17,6 +17,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
+	<!-- Preload Important Scripts -->
+	<?php if(is_front_page()){
+  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
+	} ?>
+	<link rel="preload" href="https://use.typekit.net/fsl8swr.js" as="script">
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -146,9 +151,6 @@
 			
 		</script>
 	<?php endif;?>
-	<?php if(is_front_page()){
-  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
-	} ?>
 </head>
 
 <body <?php echo $onload;?> <?php body_class();?> >
