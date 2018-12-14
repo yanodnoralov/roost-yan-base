@@ -58,10 +58,10 @@
 	<style>
 	h1, .h2, h2, h3, .h3, p, a {
 	    opacity: 0;
-	    transition: all .5s ease-in-out;
+	    transition: all .1s ease-in-out;
 	}
 	.wf-active h1, .wf-active .h2, .wf-active h2, .wf-active h3, .wf-active .h3, .wf-active p, .wf-active a {
-	    transition: opacity 1s ease-in-out;
+	    transition: opacity .1s ease-in-out;
 	    opacity: 1;
 	}
 	.logo a {
