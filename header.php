@@ -59,7 +59,7 @@
 	    transition: opacity 1s ease-in-out;
 	    opacity: 1;
 	}
-	a img {
+	.logo a {
   	  opacity: 1;
 	}
 	#rev_slider_1_1_wrapper{
