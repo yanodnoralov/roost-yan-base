@@ -51,6 +51,15 @@
     <?php wp_head(); ?>
 
 	<style>
+	h1, .h2, h2, h3, .h3, p, a {
+	    visibility: hidden;
+	    opacity: 0;
+	    transition: all .5s ease-in-out;
+	}
+	.wf-active h1, .wf-active .h2, .wf-active h2, .wf-active h3, .wf-active .h3, .wf-active p, .wf-loading a {
+	    transition: opacity 1s ease-in-out;
+	    opacity: 1;
+	}
 	body.hide-elements .hide {
 		opacity: 0;
 	}
@@ -75,7 +84,14 @@
         }
 	}
 	</style>
-	
+	<noscript>
+	  <style>
+  	  h1, .h2, h2, h3, .h3, p, a {
+    	    transition: opacity 1s ease-in-out;
+    	    opacity: 1;
+    	}
+  	</style>
+	</noscript>
 	
 	<!-- app template redirection code -->
 	<?php if (is_page_template('page-app-redirect.php')):?>
