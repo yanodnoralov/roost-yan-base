@@ -135,7 +135,7 @@
 		</script>
 	<?php endif;?>
 	<?php if(is_front_page()){
-  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888" as="font">';
+  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
 	} ?>
 </head>
 
