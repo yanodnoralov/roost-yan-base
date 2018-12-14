@@ -77,6 +77,15 @@
 		opacity: 1;
 		transition: all .5s cubic-bezier(0.5, 1, 0.3, 1);
 	}
+  img[data-lazy-src] {
+    opacity: 0;
+  }
+  img.lazyloaded {
+    -webkit-transition: opacity .5s linear 0.2s;
+    -moz-transition: opacity .5s linear 0.2s;
+    transition: opacity .5s linear 0.2s;
+    opacity: 1;
+  }
 	@media (max-width:767px){
 		.page-hero-mobile:not(.flexible-hero) .mobile-hero-row {
 			<?php if(get_field('page_hero_background_image_mobile')):?>
