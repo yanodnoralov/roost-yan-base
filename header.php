@@ -64,7 +64,6 @@
 	}
 	#rev_slider_1_1_wrapper{
   	  height: 687px;
-  	  background: url(/wp-content/uploads/2018/09/slide1-compressed.jpg) no-repeat top center / cover;
   }
 	body.hide-elements .hide {
 		opacity: 0;
