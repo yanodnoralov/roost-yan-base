@@ -130,6 +130,10 @@ add_action( 'widgets_init', 'yan_base_widgets_init' );
 function yan_base_scripts() {
 	wp_enqueue_style( 'yan-base-style', get_stylesheet_uri(), '1.25', true );
 	
+	wp_enqueue_style( 'bootstrap',get_template_directory_uri() . '/css/bootstrap.min.css', '5.3.1', true );
+	
+	wp_enqueue_style( 'font-awesome',get_template_directory_uri() . '/css/font-awesome-all.css', '5.3.1', true );
+	
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '1', true );
 
 	wp_enqueue_script( 'yan-base-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
