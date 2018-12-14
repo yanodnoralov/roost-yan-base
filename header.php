@@ -59,6 +59,9 @@
 	    transition: opacity 1s ease-in-out;
 	    opacity: 1;
 	}
+	#rev_slider_1_1_wrapper{
+  	  height: 687px;
+  }
 	body.hide-elements .hide {
 		opacity: 0;
 	}
