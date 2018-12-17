@@ -17,6 +17,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
+	<!-- Preload Important Scripts -->
+	<link rel="preload" href="https://use.typekit.net/fsl8swr.js" as="script">
+	<?php if(is_front_page()){
+  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
+	} ?>
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -43,25 +48,28 @@
 	    var config = {
 	      kitId: 'fsl8swr',
 	      scriptTimeout: 3000,
-	      async: true
+	      async: false
 	    },
 	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 	  })(document);
 	</script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <?php wp_head(); ?>
 
 	<style>
-	.wf-loading h1, .wf-loading .h2, .wf-loading h2, .wf-loading h3, .wf-loading .h3, .wf-loading p, .wf-loading a {
-	    visibility: hidden;
+	h1, .h2, h2, h3, .h3, p, a {
 	    opacity: 0;
-	    transition: all .5s ease-in-out;
+	    transition: all .2s ease-in-out;
 	}
-	.wf-active h1, .wf-active .h2, .wf-active h2, .wf-active h3, .wf-active .h3, .wf-active p, .wf-loading a {
-	    transition: opacity 1s ease-in-out;
+	.wf-active h1, .wf-active .h2, .wf-active h2, .wf-active h3, .wf-active .h3, .wf-active p, .wf-active a {
+	    transition: opacity .2s ease-in-out;
 	    opacity: 1;
 	}
+	.logo a {
+  	  opacity: 1;
+	}
+	#rev_slider_1_1_wrapper{
+  	  height: 687px;
+  }
 	body.hide-elements .hide {
 		opacity: 0;
 	}
@@ -69,6 +77,15 @@
 		opacity: 1;
 		transition: all .5s cubic-bezier(0.5, 1, 0.3, 1);
 	}
+  img[data-lazy-src] {
+    opacity: 0;
+  }
+  img.lazyloaded {
+    -webkit-transition: opacity .5s linear 0.2s;
+    -moz-transition: opacity .5s linear 0.2s;
+    transition: opacity .5s linear 0.2s;
+    opacity: 1;
+  }
 	@media (max-width:767px){
 		.page-hero-mobile:not(.flexible-hero) .mobile-hero-row {
 			<?php if(get_field('page_hero_background_image_mobile')):?>
@@ -86,7 +103,14 @@
         }
 	}
 	</style>
-	
+	<noscript>
+	  <style>
+  	  h1, .h2, h2, h3, .h3, p, a {
+    	    transition: opacity 1s ease-in-out;
+    	    opacity: 1;
+    	}
+  	</style>
+	</noscript>
 	
 	<!-- app template redirection code -->
 	<?php if (is_page_template('page-app-redirect.php')):?>
@@ -136,7 +160,6 @@
 			
 		</script>
 	<?php endif;?>
-	
 </head>
 
 <body <?php echo $onload;?> <?php body_class();?> >
