@@ -94,14 +94,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/acf-json/group_5c002ebbf3ece.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/acf-json/group_5c002ebbf3ece-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/archive-post.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1959,13 +1951,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/LICENSE",
-		"oF": 0
-		},
-	"/page-app-redirect.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/page-app-redirect.php",
 		"oF": 0
 		},
 	"/page-past-events.php": {

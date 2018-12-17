@@ -167,10 +167,6 @@ $(document).on('click', '.site-main a[href^="#"], .home .btn-header', function (
 
 //contact modal
 jQuery(document).ready(function ($) {
-	
-	//var targetElement = document.querySelector("#myModal");
-	
-	
 
     $(function () {
         var onClass = "on";
@@ -206,7 +202,6 @@ jQuery(document).ready(function ($) {
 	//
 	if(window.location.href.indexOf("?contact-roost") > -1) {
        $('#myModal').modal('show');
-       //bodyScrollLock.disableBodyScroll(targetElement);
     }
     
     //$('#popverexample-0').popover('show')

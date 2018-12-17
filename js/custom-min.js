@@ -26,9 +26,7 @@ $hashnavlinks=$('.main-navigation li:not(.menu-item-has-children) a[href*="#"]')
 //all hash links smooth scroll
 $(document).on("click",'.site-main a[href^="#"], .home .btn-header',function(e){e.preventDefault(),$("html, body").animate({scrollTop:$($.attr(this,"href")).offset().top},500)}),
 //contact modal
-jQuery(document).ready(function(t){
-//var targetElement = document.querySelector("#myModal");
-t(function(){var e="on",n="show",o="labelOn";t(".js-floatInput").bind("checkval",function(){var e=t(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),t(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),t(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){t(this).trigger("checkval")}).on("focus",function(){t(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){t(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")}),
+jQuery(document).ready(function(t){t(function(){var e="on",n="show",o="labelOn";t(".js-floatInput").bind("checkval",function(){var e=t(this).closest(".formGroup ").find(".js-floatLabel");""!==this.value?(e.addClass(n),t(this).closest(".formGroup ").addClass(o)):(e.removeClass(n),t(this).closest(".formGroup ").removeClass(o))}).on("keyup",function(){t(this).trigger("checkval")}).on("focus",function(){t(this).closest(".formGroup ").find(".js-floatLabel").addClass(e)}).on("blur",function(){t(this).closest(".formGroup ").find(".js-floatLabel").removeClass(e)}).trigger("checkval")}),
 //load all events
 t(".load-all-events").on("click touchstart",function(e){e.preventDefault(),console.log("load all events"),t(this).closest(".show-some").removeClass("show-some")}),
 //
