@@ -199,6 +199,9 @@
     </div>
 </div>
 <?php wp_footer(); ?>
+<?php if (get_field('custom_css')):?>
+    <style><?php echo get_field('custom_css');?></style>
+<?php endif;?>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         jQuery('.modal-target-contact').find('a').attr('data-toggle', 'modal');
