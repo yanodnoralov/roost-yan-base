@@ -134,7 +134,7 @@ function yan_base_scripts() {
 	
 	wp_enqueue_style( 'fontawesome',get_template_directory_uri() . '/css/fontawesome/css/all.css', '5.3.2', true );
 	
-	wp_enqueue_style( 'yan-base-style', get_stylesheet_uri(), '1.25', true );
+	wp_enqueue_style( 'yan-base-style', get_stylesheet_uri(), '1.26', true );
 	
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '1.1', true );
 
