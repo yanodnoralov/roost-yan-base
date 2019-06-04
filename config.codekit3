@@ -129,6 +129,16 @@
 		"oAP": "/comments.php",
 		"oF": 0
 		},
+	"/css/bootstrap.min-purge.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/bootstrap.min-purge-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/css/bootstrap.min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -16040,6 +16050,16 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/home-purge-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/home-purge-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/home-purge.css": {
 		"aP": 1,
 		"bl": 0,
@@ -18815,6 +18835,16 @@
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
+		},
+	"/style-all.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/style-all-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/style.css": {
 		"aP": 1,

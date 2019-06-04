@@ -128,16 +128,17 @@ add_action( 'widgets_init', 'yan_base_widgets_init' );
  * Enqueue scripts and styles.
  */
 function yan_base_scripts() {	
-	wp_enqueue_style( 'bootstrap',get_template_directory_uri() . '/css/bootstrap.min.css', '4.1.4', true );
 	
 	wp_dequeue_style( 'simple-share-buttons-adder-font-awesome-css' );
 
 	if(!is_front_page()){
+		wp_enqueue_style( 'bootstrap',get_template_directory_uri() . '/css/bootstrap.min.css', '4.1.4', true );
 		wp_enqueue_style( 'fontawesome',get_template_directory_uri() . '/css/fontawesome/css/all.css', '5.3.2', true );
 		wp_enqueue_style( 'yan-all-style', get_template_directory_uri() . '/style-all.css', '1', true );
 	}
 
 	if(is_front_page()){
+		wp_enqueue_style( 'bootstrap',get_template_directory_uri() . '/css/bootstrap.min-purge.css', '1', true );
 		//wp_enqueue_style( 'yan-all-style', get_template_directory_uri() . '/style-all.css', '1', true );
 		wp_enqueue_style( 'yan-all-style', get_template_directory_uri() . '/home-purge-min.css', '1', true );
 	}

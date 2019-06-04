@@ -32,6 +32,37 @@ module.exports = function (grunt) {
                 files: {
                     'home-purge.css': ['style-all.css']
                 }
+            },
+            bootstrap_purge: {
+                options: {
+                    content: [
+                        'page-templates/**/*.php',
+                        'page-templates/sections/*.php',
+                        'header.php',
+                        'footer.php',
+                        'archive.php',
+                        '404.php',
+                        'author.php',
+                        'category-blog.php',
+                        'category.php',
+                        'comments.php',
+                        'index.php',
+                        'page.php',
+                        'search.php',
+                        'sidebar.php',
+                        'single-products.php',
+                        'single.php',
+                        'author.php',
+                        'author.php',
+                        'custom.js',
+                        'functions.php',
+                        'inc/*.php',
+                        'template-parts/*.php'
+                    ]
+                },
+                files: {
+                    'css/bootstrap.min-purge.css': ['css/bootstrap.min.css']
+                }
             }
         }
     });
