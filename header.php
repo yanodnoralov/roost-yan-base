@@ -20,7 +20,7 @@
 	<!-- Preload Important Scripts -->
 	<link rel="preload" href="https://use.typekit.net/fsl8swr.js" as="script">
 	<?php if(is_front_page()){
-  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
+  	echo '<link href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888">';
 	} ?>
 	
 	<!-- Google Tag Manager -->
@@ -167,6 +167,11 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMN4C5"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="cookie-popup">
+		This website uses cookies to improve your experience. If you continue without changing your settings, we assume you are hapyp to recieve all cookies from getroost.com. You can change your cookie settings at any time.
+		<button type="button" class="close"	>×</button>
+	</div>
 	
 
 <div id="page" class="site">

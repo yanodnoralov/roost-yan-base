@@ -1,5 +1,7 @@
+/* purgecss start ignore */
 @import "custom-mixins";
 @import "plugins";
+/* purgecss end ignore */
 
 //global vars
 $color-primary: #378fdb;
@@ -166,6 +168,7 @@ b, strong {
 }
 
 // header
+/* purgecss start ignore */
 .site-header {
 	position: fixed;
 	width: 100%;
@@ -181,7 +184,7 @@ b, strong {
 	.container-wide {
 		padding-right: 0;
 		margin: 0 auto;
-		@media (min-width:1700px) {
+		@media (min-width:1720px) {
 			padding-left: 0;
 		}
 		@media (max-width:1100px) {
@@ -516,8 +519,10 @@ nav {
     transform-origin: center center;
     background: #444546;
 }
+/* purgecss end ignore */
 
 //home hero
+/* purgecss start ignore */
 .rev_slider {
 	.tparrows:before {
 		color: $color-hero-title;
@@ -595,7 +600,7 @@ nav {
 		}
 	}
 }
-
+/* purgecss end ignore */
 
 
 //footer
@@ -814,6 +819,7 @@ nav {
 }
 
 // testimonials
+/* purgecss start ignore */
 .testimonials-wrapper {
 	overflow: hidden;
 	background-image: url(img/testimonials-bg.png);
@@ -1012,6 +1018,8 @@ nav {
 	}
 
 }
+/* purgecss end ignore */
+
 .bottom-cta {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1193,7 +1201,7 @@ nav {
 
 //Gravity forms custom styles
 
-
+/* purgecss start ignore */
 
 .gform_wrapper {
 	input:not([type="button"]):not(.gform_button), textarea, select {
@@ -1355,6 +1363,8 @@ nav {
 		}
 	}
 }
+/* purgecss end ignore */
+
 .flexible-hero {
 	&.page-hero-mobile.no-title.no-sub-title {
 		min-height: 0;

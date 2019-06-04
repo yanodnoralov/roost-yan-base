@@ -15999,6 +15999,28 @@
 		"oAP": "/functions.php",
 		"oF": 0
 		},
+	"/gruntfile-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gruntfile-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/gruntfile.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/gruntfile-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -16017,6 +16039,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/home-purge.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/home-purge-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/img/alt-blue-wave-bg.jpg": {
 		"ft": 16384,
@@ -17851,6 +17883,28 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/page-app-redirect.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -18610,9 +18664,9 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/style.css",
+		"oAP": "/style-all.css",
 		"oF": 2,
-		"oS": 3,
+		"oS": 2,
 		"uL": 1
 		},
 	"/sass/typography/_copy.scss": {
@@ -18767,9 +18821,9 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/style-min.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 3
 		},
 	"/style.css.orig": {
