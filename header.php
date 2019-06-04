@@ -19,9 +19,6 @@
 	
 	<!-- Preload Important Scripts -->
 	<link rel="preload" href="https://use.typekit.net/fsl8swr.js" as="script">
-	<?php if(is_front_page()){
-  	echo '<link href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888">';
-	} ?>
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
