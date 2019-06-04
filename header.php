@@ -164,11 +164,6 @@
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHMN4C5"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-
-	<div class="cookie-popup">
-		This website uses cookies to improve your experience. If you continue without changing your settings, we assume you are hapyp to recieve all cookies from getroost.com. You can change your cookie settings at any time.
-		<button type="button" class="close"	>×</button>
-	</div>
 	
 
 <div id="page" class="site">
@@ -180,6 +175,16 @@
 			<div class="pre-menu-slide"></div>
 		</div>
 	</div>
+
+	<?php
+	
+	if (is_first_time()):?>
+	    <div class="cookie-popup">	
+			We use cookies to provide and improve our services. By using our site, you consent to cookies. <a href="<?php echo esc_url( home_url( '/' ) ); ?>/cookie-policy/">Learn More</a>
+		</div>
+	<?php endif;?>
+
+	
 	
 	<header id="masthead" class="site-header light">
 		<div class="container-wide">

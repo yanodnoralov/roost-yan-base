@@ -229,6 +229,20 @@ return $urls;
 
 
 
+function is_first_time() {
+    if (isset($_COOKIE['_wp_first_time']) || is_user_logged_in()) {
+        return false;
+    } else {
+        // expires in 30 days.
+        setcookie('_wp_first_time', 1, time() + (WEEK_IN_SECONDS * 4), COOKIEPATH, COOKIE_DOMAIN, false);
+
+        return true;
+    }
+}
+add_action( 'init', 'is_first_time');
+
+
+
 
 /**
  * Implement the Custom Header feature.

@@ -988,6 +988,8 @@ nav.mobile-navigation .menu-item-has-children.show-sub > a:after { -webkit-trans
 .site-footer .bottom-footer .footer-sub-menu li:last-child::after { content: ''; }
 
 .site-footer .bottom-footer .footer-sub-menu li a { color: white; }
+
+.cookie-popup { z-index: 1; font-size: 14px; color: #999; width: 100%; text-align: center; padding: 5px; }
 .flexible-hero.page-hero-mobile.no-title.no-sub-title { min-height: 0; }
 
 .flexible-hero.page-hero-mobile.no-title.no-sub-title .mobile-hero-content-row { display: none; }
