@@ -1,0 +1,669 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"background-",
+				"background-position"
+			],
+			[
+				"marg",
+				"margin-bottom\tproperty"
+			],
+			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"fl",
+				"flex-start\talign-content"
+			],
+			[
+				"align",
+				"align-content"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"fle",
+				"flex-start\talign-items"
+			],
+			[
+				"spa",
+				"space-between\tjustify-content"
+			],
+			[
+				"u",
+				"uppercase\ttext-transform"
+			],
+			[
+				"text",
+				"text-decoration\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"border-t",
+				"border-top-right-radius\tproperty"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"over",
+				"overflow-x\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"alig",
+				"align-content"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"color",
+				"color-primary-dark"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"c",
+				"cover\tbackground-size"
+			],
+			[
+				"inlin",
+				"inline-block\tdisplay"
+			],
+			[
+				"r",
+				"row-reverse\tflex-direction"
+			],
+			[
+				"no",
+				"noopener"
+			],
+			[
+				"dum",
+				"var_dump"
+			],
+			[
+				"d-in",
+				"d-inline-block \tBootstrap 4 Class"
+			],
+			[
+				"import",
+				"important"
+			],
+			[
+				"sp",
+				"space-between\tjustify-content"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sass/_custom.scss",
+			"settings":
+			{
+				"buffer_size": 58767,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "footer.php",
+			"settings":
+			{
+				"buffer_size": 8747,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 3562,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "header.php",
+			"settings":
+			{
+				"buffer_size": 13655,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 11656,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 818,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 2488,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "gruntfile.js"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Sassb",
+				"SassBeautify"
+			],
+			[
+				"Pack ",
+				"Package Control: Install Package"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"Package Control:",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/yanodnoralov/Documents/work/Roost/dev/getroost.loc/wp-content/themes/yan-base",
+		"/Users/yanodnoralov/Documents/work/Roost/dev/getroost.loc/wp-content/themes/yan-base/page-templates",
+		"/Users/yanodnoralov/Documents/work/Roost/dev/getroost.loc/wp-content/themes/yan-base/sass"
+	],
+	"file_history":
+	[
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/TSL/dev/dev.theseniorlist.loc/wp-content/themes/yan-base/gruntfile.js",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/TSL/dev/dev.theseniorlist.loc/wp-content/themes/yan-base/package.json",
+		"/Users/yanodnoralov/Documents/work/Roost/dev/getroost.loc/wp-content/themes/yan-base/package.json",
+		"/Users/yanodnoralov/Documents/work/Roost/dev/getroost.loc/wp-content/themes/yan-base/inc/layout_functions.php",
+		"/Users/yanodnoralov/Desktop/httpd-app.conf",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/mobilehelpdirect.com/dev/wp-content/themes/mhd19/style.css",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/t-best-home-security-static.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/t-best-home-security-static-production.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/sh-theme/_nav.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/style.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/gruntfile.js",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/best.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/sh-theme/_global.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/sh-theme/_inside-pages.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/t-security-advisor.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/t-system.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/inc/system_header.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/home.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/functions.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/package.json",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/page-security-advisor.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/sass/inside-pages.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/SafeHome/Dev/wp-content/themes/safehome-2018/home.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/inc/layout_functions.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/source/sass/_inside-page-acf-modules.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/source/sass/_nav.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/source/sass/_custom.scss",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/source/js/custom.js",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/inc/custom-objects.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/page-templates/best-template.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/page-templates/layout-template.php",
+		"/Users/yanodnoralov/Documents/work/CRE Simple/style.css",
+		"/Users/yanodnoralov/Documents/work/Stem/stemgit.wpengine.loc/wp-content/themes/stem_v4/single.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/inc/template-functions.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/functions.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/source/js/plugins.js",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/inc/functions-theme-customize.php",
+		"/Users/yanodnoralov/Desktop/wp-config.php",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/package.json",
+		"/Users/yanodnoralov/Documents/work/Tyler Stample/CordCutting/dev/wp-content/themes/cordcutting-yo/gruntfile.js",
+		"/Volumes/Yan Seagate Drive/temp/Work/Roost/dev/getroost.loc/wp-content/themes/yan-base/footer.php",
+		"/Users/yanodnoralov/Documents/work/Think Tree/ThinkTree2.0/thinktreestudios.loc/wp-content/themes/yan-base/page-templates/layout-template.php",
+		"/Users/yanodnoralov/Documents/work/Think Tree/ThinkTree2.0/thinktreestudios.loc/wp-content/themes/yan-base/header.php",
+		"/Users/yanodnoralov/Documents/work/Think Tree/ThinkTree2.0/thinktreestudios.loc/wp-content/themes/yan-base/functions.php",
+		"/Library/Application Support/appsolute/MAMP PRO/phpMyAdmin/config.inc.php"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 136.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"boots",
+			"boot",
+			"right-me",
+			"nav",
+			"nav li",
+			"nav#",
+			"@im",
+			"impor",
+			"slider-c",
+			"slick",
+			"revic",
+			"rev",
+			"padding-left: 0;",
+			"1680",
+			"1680px",
+			"boots",
+			"front",
+			"fa-",
+			"awes",
+			"awe",
+			"ffawesom",
+			"fa-s",
+			"prel",
+			".container-wide",
+			"1680"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sass/_custom.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 58767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28467,
+								28467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "footer.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5248,
+								5261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3562,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1144,
+								1144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5736,
+								5736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11656,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7929,
+								7942
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								818,
+								818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2488,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2298,
+								2298
+							]
+						],
+						"settings":
+						{
+							"auto_name": "gruntfile.js",
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JavaScript (Gruntfile).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Roost.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

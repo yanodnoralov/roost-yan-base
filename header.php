@@ -19,9 +19,6 @@
 	
 	<!-- Preload Important Scripts -->
 	<link rel="preload" href="https://use.typekit.net/fsl8swr.js" as="script">
-	<?php if(is_front_page()){
-  	echo '<link rel="preload" href="/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888" as="font">';
-	} ?>
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -178,6 +175,9 @@
 			<div class="pre-menu-slide"></div>
 		</div>
 	</div>
+
+
+	
 	
 	<header id="masthead" class="site-header light">
 		<div class="container-wide">

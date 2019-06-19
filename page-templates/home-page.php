@@ -21,11 +21,11 @@ get_header();
 <!-- first cta -->
 <div class="container cta-cont mt-10">
     <div class="row">
-        <div class="card-deck">
+        <div class="card-deck" style="width:100%">
             <?php if( have_rows('homepage_cta','option') ): while ( have_rows('homepage_cta','option') ) : the_row(); ?>
-            <div class="card p-4 p-lg-5">
+            <div class="card p-4 p-lg-5" style="align-items:flex-start;">
                 <img class="card-img-top w-auto mr-auto" <?php ar_responsive_image(get_sub_field('image')['id'],'full','540px'); ?>/>
-                <div class="card-body p-0">
+                <div class="card-body p-0" style="width:100%">
                     <h4><?php echo get_sub_field('title'); ?></h4>
                     <p class="card-text"><?php echo get_sub_field('text'); ?></p>
 
