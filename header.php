@@ -176,13 +176,6 @@
 		</div>
 	</div>
 
-	<?php
-	
-	if (is_first_time()):?>
-	    <div class="cookie-popup">	
-			We use cookies to provide and improve our services. By using our site, you consent to cookies. <a href="<?php echo esc_url( home_url( '/' ) ); ?>/cookie-policy/">Learn More</a>
-		</div>
-	<?php endif;?>
 
 	
 	
