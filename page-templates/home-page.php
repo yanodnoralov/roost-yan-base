@@ -21,7 +21,7 @@ get_header();
 <!-- first cta -->
 <div class="container cta-cont mt-10">
     <div class="row">
-        <div class="card-deck">
+        <div class="card-deck" style="width:100%">
             <?php if( have_rows('homepage_cta','option') ): while ( have_rows('homepage_cta','option') ) : the_row(); ?>
             <div class="card p-4 p-lg-5">
                 <img class="card-img-top w-auto mr-auto" <?php ar_responsive_image(get_sub_field('image')['id'],'full','540px'); ?>/>
